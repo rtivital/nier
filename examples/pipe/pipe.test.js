@@ -12,7 +12,7 @@ const piped = pipe(
 );
 
 test('pipe', (t) => {
-  t.equals(piped(), 3, '1 equals 1');
+  t.equals(piped(1), 1, '1 equals 1');
 
   t.end();
 });
