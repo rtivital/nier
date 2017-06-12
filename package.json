@@ -1,0 +1,27 @@
+{
+  "name": "fp-guide",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "tape examples/**/*.test.js | tap-spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rtivital/fp-guide.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rtivital/fp-guide/issues"
+  },
+  "homepage": "https://github.com/rtivital/fp-guide#readme",
+  "dependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "tap-spec": "^4.1.1",
+    "tape": "^4.6.3"
+  }
+}
