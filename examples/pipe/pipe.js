@@ -3,12 +3,10 @@ function pipe(...fns) {
     throw new Error('pipe requires at least one argument');
   }
 
-  const applyFunctions = (...args) => fns.reduce(
+  return (...args) => fns.reduce(
     (acc, fn) => (acc ? fn(acc) : fn(...args)),
     null
   );
-
-  return (...args) => applyFunctions(...args);
 }
 
 module.exports = pipe;
