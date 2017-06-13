@@ -1,5 +1,3 @@
-const pipe = require('./pipe');
-
 /**
  * Performs right-to-left function composition. The rightmost function may have
  * any arity, the remaining functions will receive only one argument.
@@ -9,8 +7,14 @@ const pipe = require('./pipe');
  */
 module.exports = function compose(...fns) {
   if (fns.length === 0) {
-    throw new Error('compose requires at least one argument');
+    throw new Error('pipe requires at least one function argument');
   }
 
-  return pipe(...fns.reverse());
+  const lastFunction = fns[fns.length - 1];
+  const tailFunctions = fns.slice(0, fns.length - 1).reverse();
+
+  return (...args) => tailFunctions.reduce(
+    (acc, fn) => fn(acc),
+    lastFunction(...args)
+  );
 };
