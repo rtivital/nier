@@ -19,7 +19,7 @@
  */
 module.exports = function pipe(...fns) {
   if (fns.length === 0) {
-    throw new Error('pipe requires at least one argument');
+    throw new Error('pipe requires at least one function argument');
   }
 
   const firstFunction = fns[0];
