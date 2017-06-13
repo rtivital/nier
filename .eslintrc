@@ -1,6 +1,7 @@
 {
   "extends": "airbnb-base",
   "rules": {
+    "max-len": [2, { "code": 120, "ignoreStrings": true, "ignoreComments": true }],
     "comma-dangle": ["error", {
       "arrays": "always-multiline",
       "objects": "always-multiline",
