@@ -19,7 +19,7 @@ const pipedDoubleArgument = pipe(
   concat, // вызывается первой
   upperFirst, // вызывается второй
   upperLast // вызывается последней
-); // эквивалентно –> (value) => concat(upperFirst(upperLast(value)))
+); // эквивалентно –> (value) => divideBy3(add1(mutiplyBy2(value)))
 
 test('pipe', (t) => {
   // функция pipe должна вернуть ошибку,
@@ -33,13 +33,17 @@ test('pipe', (t) => {
   // принимающими один аргумент
   t.equals(
     pipeSingleArgument(1),
-    1,
+    divideBy3(add1(mutiplyBy2(1))),
     'works with single argument functions'
   );
 
   // функция, созданная с помощью pipe должна работать с функциями,
   // принимающими более одного аргумента
-  t.equals(pipedDoubleArgument('hello', 'there'), 'Hello therE', 'workds with functions that accept multiple arguments');
+  t.equals(
+    pipedDoubleArgument('hello', 'there'),
+    upperFirst(upperLast(concat('hello', 'there'))),
+    'workds with functions that accept multiple arguments'
+  );
 
   t.end();
 });
