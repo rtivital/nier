@@ -20,6 +20,7 @@ const pipedDoubleArgument = pipe(
 );
 
 test('pipe', (t) => {
+  t.throws(() => pipe(), 'throws error if argument is not passed');
   t.equals(pipeSingleArgument(1), 1, 'works with single argument functions');
   t.equals(pipedDoubleArgument('hello', 'there'), 'Hello therE', 'workds with functions that accept multiple arguments');
 
