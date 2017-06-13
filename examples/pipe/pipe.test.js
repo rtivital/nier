@@ -21,6 +21,14 @@ const pipedDoubleArgument = pipe(
   upperLast // вызывается последней
 ); // эквивалентно –> (value) => divideBy3(add1(mutiplyBy2(value)))
 
+const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
+const getUndefined = () => undefined;
+const pipedWithUndefinedReturn = pipe(
+  getUndefined,
+  undefinedToZero,
+  add1
+);
+
 test('pipe', (t) => {
   // функция pipe должна вернуть ошибку,
   // если ей не было передано ни одного аргумента
@@ -42,7 +50,14 @@ test('pipe', (t) => {
   t.equals(
     pipedDoubleArgument('hello', 'there'),
     upperFirst(upperLast(concat('hello', 'there'))),
-    'workds with functions that accept multiple arguments'
+    'works with functions that accept multiple arguments'
+  );
+
+  // функции, передаваемые в pipe дол
+  t.equals(
+    pipedWithUndefinedReturn(),
+    add1(undefinedToZero(getUndefined())),
+    'works with function that return falsy values'
   );
 
   t.end();
