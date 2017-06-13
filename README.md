@@ -1,9 +1,9 @@
 # fp-guide
 
 ## DONE
-* [-] compose
-* [-] pipe
-* [-] complement
+* [x] compose
+* [x] pipe
+* [x] complement
 
 
 ## TODO
