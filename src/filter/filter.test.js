@@ -4,7 +4,7 @@ const filter = require('./filter');
 const isEven = value => value % 2 === 0;
 const indexGreaterThanZero = (value, index) => index > 0;
 const filterEven = filter(isEven);
-const filterByIndex = filter(indexGreaterThanZero);
+const filterByIndex = filter(indexGreaterThanZero, true);
 
 test('filter', (t) => {
   t.throws(

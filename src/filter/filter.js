@@ -10,16 +10,18 @@ function applyFilter(filterFn, data) {
   return result;
 }
 
-module.exports = function filter(fn, data, withIndex = true) {
+module.exports = function filter(fn, withIndex = false, data) {
   if (typeof fn !== 'function') {
     throw new Error('filter received callback that is not function');
   }
+
+  const finalData = Array.isArray(withIndex) ? withIndex : data;
 
   const filterFn = withIndex
     ? (value, index) => fn(value, index)
     : value => fn(value);
 
-  if (data) {
+  if (finalData) {
     return applyFilter(filterFn, data);
   }
 
