@@ -6,6 +6,7 @@
 * [x] pipe
 * [x] curry, curryN – combined in single function
 * [x] flip
+* [x] partial
 
 ### Logic
 * [x] complement
@@ -158,7 +159,6 @@
 * [ ] or
 * [ ] over
 * [ ] pair
-* [ ] partial
 * [ ] partialRight
 * [ ] partition
 * [ ] path
