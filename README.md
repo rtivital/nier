@@ -10,24 +10,34 @@
 * [x] partial
 
 ### Array
-* [x] iterator
+* [x] iterator – also handles addIndex function
 * [x] filter
 * [x] map
 * [x] some
 
 ## TODO
-* [ ] F
-* [ ] T
-* [ ] __
-* [ ] add
-* [ ] addIndex
-* [ ] adjust
-* [ ] all
+### Function
+* [ ] __ – placeholder
 * [ ] allPass
-* [ ] always
-* [ ] and
-* [ ] any
 * [ ] anyPass
+
+### Array
+* [ ] adjust – updates array element with provided callback
+* [ ] all (every)
+
+## Other implementations and removed
+### List
+* [ ] ~~addIndex~~ – includes in every iterable method with iterator function
+
+### Logic
+* ~~and~~ – not implemented now
+* ~~any~~ – implemented with some
+* ~~or~~ – implemented with anyPass
+* ~~both~~ – implemented with allPass
+
+
+
+## Unsorted
 * [ ] ap
 * [ ] aperture
 * [ ] append
@@ -38,7 +48,6 @@
 * [ ] assocPath
 * [ ] binary
 * [ ] bind
-* [ ] both
 * [ ] call
 * [ ] chain
 * [ ] clamp
@@ -158,7 +167,6 @@
 * [ ] of
 * [ ] omit
 * [ ] once
-* [ ] or
 * [ ] over
 * [ ] pair
 * [ ] partialRight
