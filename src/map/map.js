@@ -1,13 +1,13 @@
-const createIterator = require('../internal/createIterator');
+const iterator = require('../iterator/iterator');
 
-function map(iterator, data) {
+function map(mapFn, data) {
   const result = [];
 
   for (let i = 0, length = data.length; i < length; i += 1) {
-    result.push(iterator(data[i], i));
+    result.push(mapFn(data[i], i));
   }
 
   return result;
 }
 
-module.exports = createIterator('map', map);
+module.exports = iterator(map, 'map');

@@ -1,4 +1,4 @@
-const createIterator = require('../internal/createIterator');
+const iterator = require('../iterator/iterator');
 
 function filter(filterFn, data) {
   const result = [];
@@ -12,4 +12,4 @@ function filter(filterFn, data) {
   return result;
 }
 
-module.exports = createIterator('filter', filter);
+module.exports = iterator(filter, 'filter');
