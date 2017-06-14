@@ -13,6 +13,7 @@
 
 ### Array
 * [x] filter
+* [x] map
 
 ## TODO
 * [ ] F
@@ -123,7 +124,6 @@
 * [ ] liftN
 * [ ] lt
 * [ ] lte
-* [ ] map
 * [ ] mapAccum
 * [ ] mapAccumRight
 * [ ] mapObjIndexed
