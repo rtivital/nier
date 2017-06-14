@@ -10,8 +10,10 @@
 * [x] partial
 
 ### Array
+* [x] iterator
 * [x] filter
 * [x] map
+* [x] some
 
 ## TODO
 * [ ] F
