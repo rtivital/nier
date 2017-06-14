@@ -1,4 +1,4 @@
-const createIterator = require('../internal/createIterator/createIterator');
+const createIterator = require('../internal/createIterator');
 
 function filter(filterFn, data) {
   const result = [];
