@@ -2,14 +2,12 @@
 
 ## DONE
 ### Function
+* [x] complement
 * [x] compose
 * [x] pipe
 * [x] curry, curryN – combined in single function
 * [x] flip
 * [x] partial
-
-### Logic
-* [x] complement
 
 ### Array
 * [x] filter
