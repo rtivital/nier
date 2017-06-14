@@ -5,6 +5,7 @@
 * [x] compose
 * [x] pipe
 * [x] curry, curryN – combined in single function
+* [x] flip
 
 ### Logic
 * [x] complement
@@ -74,7 +75,6 @@
 * [ ] findLast
 * [ ] findLastIndex
 * [ ] flatten
-* [ ] flip
 * [ ] forEach
 * [ ] forEachObjIndexed
 * [ ] fromPairs
