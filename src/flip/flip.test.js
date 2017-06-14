@@ -7,6 +7,11 @@ const concat = (str1, str2) => `${str1} ${str2}`;
 const concat3 = (str1, str2, str3) => `${str1} ${str2} ${str3}`;
 
 test('flip', (t) => {
+  t.throws(
+    () => flip(),
+    'trows error if provided argument is not a function'
+  );
+
   t.equal(
     flip(getZero)(),
     getZero(),
