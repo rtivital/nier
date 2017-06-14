@@ -6,15 +6,14 @@ module.exports = function createIterator(method, iterator) {
 
     const shorthand = Array.isArray(withIndex);
     const finalData = shorthand ? withIndex : data;
-
-    const filterFn = !shorthand && withIndex
+    const iterableFn = !shorthand && withIndex
       ? (value, index) => fn(value, index)
       : value => fn(value);
 
     if (finalData) {
-      return iterator(filterFn, finalData);
+      return iterator(iterableFn, finalData);
     }
 
-    return curriedData => iterator(filterFn, curriedData);
+    return curriedData => iterator(iterableFn, curriedData);
   };
 };
