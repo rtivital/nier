@@ -11,6 +11,9 @@
 ### Logic
 * [x] complement
 
+### Array
+* [x] filter
+
 ## TODO
 * [ ] F
 * [ ] T
@@ -70,7 +73,6 @@
 * [ ] eqProps
 * [ ] equals
 * [ ] evolve
-* [ ] filter
 * [ ] find
 * [ ] findIndex
 * [ ] findLast
