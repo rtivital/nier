@@ -7,11 +7,6 @@ const filterEven = filter(isEven);
 const filterByIndex = filter(indexGreaterThanZero, true);
 
 test('filter', (t) => {
-  t.throws(
-    () => filter('hello'),
-    'throws if first received argument is not a function'
-  );
-
   t.equal(
     typeof filterEven,
     'function',
@@ -22,12 +17,6 @@ test('filter', (t) => {
     filterEven([1, 2, 3]),
     [1, 2, 3].filter(isEven),
     'filtering works as regular filter method'
-  );
-
-  t.deepEqual(
-    filter(parseInt, [2, 2, 2]),
-    [2, 2, 2].filter(value => parseInt(value, 10)),
-    'filter does not provide index by default'
   );
 
   t.deepEqual(
