@@ -1,11 +1,15 @@
-module.exports = function curry(fn) {
+module.exports = function curry(fn, receivedArgs = 0, acc = []) {
   if (typeof fn !== 'function') {
     throw new Error('curry received argument that is not function');
   }
 
-  const arity = fn.length;
+  const callsRemain = receivedArgs || fn.length;
 
-  if (arity === 0) {
-    throw new Error('curry received function with zero arity, concider using curryN');
-  }
+  return (...args) => {
+    if (args.length < callsRemain - acc.length) {
+      return curry(fn, callsRemain - 1, acc.concat(args));
+    }
+
+    return fn(...acc, ...args);
+  };
 };
