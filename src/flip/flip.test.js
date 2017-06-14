@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const flip = require('./flip');
 
 const getZero = () => 0;

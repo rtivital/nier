@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const partial = require('./partial');
 
 const sum = (...args) => args.reduce((acc, item) => item + acc, 0);

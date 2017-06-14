@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const some = require('./some');
 
 const is2 = value => value === 2;

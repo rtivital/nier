@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const complement = require('./complement');
 
 const getFalse = () => false;

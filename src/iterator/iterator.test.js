@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const iterator = require('./iterator');
 
 test('iterator', (t) => {

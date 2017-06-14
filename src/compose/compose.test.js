@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const compose = require('./compose');
 
 const mutiplyBy2 = value => value * 2;

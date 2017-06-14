@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const map = require('./map');
 
 const multiplyBy2 = value => value * 2;

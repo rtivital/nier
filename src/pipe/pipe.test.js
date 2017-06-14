@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const pipe = require('./pipe');
 
 const mutiplyBy2 = value => value * 2;

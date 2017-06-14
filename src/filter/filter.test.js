@@ -1,4 +1,4 @@
-const test = require('tape');
+const test = require('tape-catch');
 const filter = require('./filter');
 
 const isEven = value => value % 2 === 0;
