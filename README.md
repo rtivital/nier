@@ -1,10 +1,13 @@
 # fp-guide
 
 ## DONE
+### Function
 * [x] compose
 * [x] pipe
-* [x] complement
+* [x] curry, curryN – combined in single function
 
+### Logic
+* [x] complement
 
 ## TODO
 * [ ] F
@@ -44,8 +47,6 @@
 * [ ] contains
 * [ ] converge
 * [ ] countBy
-* [ ] curry
-* [ ] curryN
 * [ ] dec
 * [ ] defaultTo
 * [ ] descend
