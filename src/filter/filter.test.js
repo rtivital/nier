@@ -25,9 +25,15 @@ test('filter', (t) => {
   );
 
   t.deepEqual(
+    filter(parseInt, [2, 2, 2]),
+    [2, 2, 2].filter(value => parseInt(value, 10)),
+    'filter does not provide index by default'
+  );
+
+  t.deepEqual(
     filterByIndex([1, 2, 3]),
     [1, 2, 3].filter(indexGreaterThanZero),
-    'filter function provides index by default'
+    'filter function provides index when required'
   );
 
   t.end();
