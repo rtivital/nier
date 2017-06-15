@@ -22,6 +22,7 @@
 * upperFirst **new**
 * upperCase
 * lowerCase
+* trim
 
 ## TODO
 ### Function
@@ -32,16 +33,6 @@
 ### Array
 * [ ] adjust – updates array element with provided callback
 * [ ] all (every)
-
-## Other implementations and removed
-### List
-* [ ] ~~addIndex~~ – includes in every iterable method with iterator function
-
-### Logic
-* ~~and~~ – not implemented now
-* ~~any~~ – implemented with some
-* ~~or~~ – implemented with anyPass
-* ~~both~~ – implemented with allPass
 
 
 
@@ -231,11 +222,9 @@
 * [ ] tap
 * [ ] test
 * [ ] times
-* [ ] toLower
 * [ ] toPairs
 * [ ] toPairsIn
 * [ ] toString
-* [ ] toUpper
 * [ ] transduce
 * [ ] transpose
 * [ ] traverse
