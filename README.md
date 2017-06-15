@@ -16,7 +16,7 @@
 * some
 * append
 * prepend
-* uniq – TODO: add more tests
+* uniq – TODO: add more tests and error handling
 
 ### String
 * upperFirst **new**
@@ -228,7 +228,6 @@
 * [ ] transduce
 * [ ] transpose
 * [ ] traverse
-* [ ] trim
 * [ ] tryCatch
 * [ ] type
 * [ ] unapply
