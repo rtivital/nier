@@ -10,8 +10,8 @@
 * partial
 
 ### Object
-* set – TODO: add more tests, add type checks
-* unset – TODO: add more tests, add type checks
+* set (assoc) – TODO: add more tests, add type checks
+* unset (dissoc) – TODO: add more tests, add type checks
 
 ### Array
 * iterator – also handles addIndex function **new**
@@ -49,15 +49,9 @@
 
 
 ## Unsorted
-* [ ] ap
-* [ ] aperture
-* [ ] apply
-* [ ] applySpec
 * [ ] ascend
-* [ ] assoc
 * [ ] assocPath
 * [ ] binary
-* [ ] bind
 * [ ] call
 * [ ] chain
 * [ ] clamp
@@ -77,7 +71,6 @@
 * [ ] descend
 * [ ] difference
 * [ ] differenceWith
-* [ ] dissoc
 * [ ] dissocPath
 * [ ] divide
 * [ ] drop
