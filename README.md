@@ -17,6 +17,7 @@
 * append
 * prepend
 * uniq – TODO: add more tests and error handling
+* chunk (splitAt) – TODO: add more tests, add type checks and type conversions for non array values
 
 ### String
 * upperFirst **new**
@@ -28,6 +29,7 @@
 * isString
 * isNumber
 * isFunction
+* isArrayLike **new**
 
 ## TODO
 ### Function
