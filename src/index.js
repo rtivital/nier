@@ -17,6 +17,7 @@ module.exports = {
   partial: require('./partial/partial'),
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
+  set: require('./set/set'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
   uniq: require('./uniq/uniq'),

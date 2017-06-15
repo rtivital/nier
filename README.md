@@ -9,6 +9,9 @@
 * flip
 * partial
 
+### Object
+* set – TODO: add more tests, add type checks
+
 ### Array
 * iterator – also handles addIndex function **new**
 * filter
