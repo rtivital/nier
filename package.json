@@ -11,13 +11,13 @@
     "url": "git+https://github.com/rtivital/fp-guide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Vitaly Rtishchev <rtivital@gmail.com> (http://github.com/rtivital)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rtivital/fp-guide/issues"
   },
   "homepage": "https://github.com/rtivital/fp-guide#readme",
-  "dependencies": {
+  "devDependencies": {
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
