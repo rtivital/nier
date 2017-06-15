@@ -4,6 +4,7 @@ module.exports = {
   complement: require('./complement/complement'),
   compose: require('./compose/compose'),
   curry: require('./curry/curry'),
+  every: require('./every/every'),
   filter: require('./filter/filter'),
   flip: require('./flip/flip'),
   isArrayLike: require('./isArrayLike/isArrayLike'),
