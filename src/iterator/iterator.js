@@ -1,12 +1,14 @@
+const isFunction = require('../isFunction/isFunction');
+
 module.exports = function iterator(iteratorFn, methodName) {
-  if (typeof iteratorFn !== 'function') {
+  if (!isFunction(iteratorFn)) {
     throw new Error('iterator received callback that is not function');
   }
 
   const name = methodName || iteratorFn.name || 'iterator callback';
 
   return function iterable(fn, withIndex = false, data) {
-    if (typeof fn !== 'function') {
+    if (!isFunction(fn)) {
       throw new Error(`${name} received callback that is not function`);
     }
 

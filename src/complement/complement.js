@@ -1,5 +1,7 @@
+const isFunction = require('../isFunction/isFunction');
+
 module.exports = function complement(fn) {
-  if (typeof fn !== 'function') {
+  if (!isFunction(fn)) {
     throw new Error('complement received argument that is not function');
   }
 

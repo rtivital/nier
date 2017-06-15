@@ -1,5 +1,7 @@
+const isFunction = require('../isFunction/isFunction');
+
 module.exports = function curry(fn, receivedArgs = 0, acc = []) {
-  if (typeof fn !== 'function') {
+  if (!isFunction(fn)) {
     throw new Error('curry received argument that is not function');
   }
 
