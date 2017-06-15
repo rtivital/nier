@@ -16,6 +16,7 @@
 * [x] some
 * [x] append
 * [x] prepend
+* [x] uniq – TODO: add more tests
 
 ## TODO
 ### Function
@@ -242,7 +243,6 @@
 * [ ] unfold
 * [ ] union
 * [ ] unionWith
-* [ ] uniq
 * [ ] uniqBy
 * [ ] uniqWith
 * [ ] unless
