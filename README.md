@@ -14,6 +14,7 @@
 * filter
 * map
 * some
+* every
 * append
 * prepend
 * uniq – TODO: add more tests and error handling
