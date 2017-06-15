@@ -20,6 +20,7 @@ module.exports = {
   set: require('./set/set'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
+  unset: require('./unset/unset'),
   uniq: require('./uniq/uniq'),
   upperCase: require('./upperCase/upperCase'),
   upperFirst: require('./upperFirst/upperFirst'),
