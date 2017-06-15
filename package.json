@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "Vitaly Rtishchev <rtivital@gmail.com> (http://github.com/rtivital)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/rtivital/fp-guide/issues"
   },
