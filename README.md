@@ -2,21 +2,26 @@
 
 ## DONE
 ### Function
-* [x] complement
-* [x] compose
-* [x] pipe
-* [x] curry, curryN – combined in single function
-* [x] flip
-* [x] partial
+* complement
+* compose
+* pipe
+* curry, curryN – combined in single function **new**
+* flip
+* partial
 
 ### Array
-* [x] iterator – also handles addIndex function
-* [x] filter
-* [x] map
-* [x] some
-* [x] append
-* [x] prepend
-* [x] uniq – TODO: add more tests
+* iterator – also handles addIndex function **new**
+* filter
+* map
+* some
+* append
+* prepend
+* uniq – TODO: add more tests
+
+### String
+* upperFirst **new**
+* upperCase
+* lowerCase
 
 ## TODO
 ### Function
