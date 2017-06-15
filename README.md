@@ -24,6 +24,11 @@
 * lowerCase
 * trim
 
+### Language
+* isString
+* isNumber
+* isFunction
+
 ## TODO
 ### Function
 * [ ] __ – placeholder
@@ -113,7 +118,6 @@
 * [ ] invert
 * [ ] invertObj
 * [ ] invoker
-* [ ] is
 * [ ] isEmpty
 * [ ] isNil
 * [ ] join
