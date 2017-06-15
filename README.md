@@ -14,6 +14,8 @@
 * [x] filter
 * [x] map
 * [x] some
+* [x] append
+* [x] prepend
 
 ## TODO
 ### Function
@@ -40,7 +42,6 @@
 ## Unsorted
 * [ ] ap
 * [ ] aperture
-* [ ] append
 * [ ] apply
 * [ ] applySpec
 * [ ] ascend
@@ -181,7 +182,6 @@
 * [ ] pipeK
 * [ ] pipeP
 * [ ] pluck
-* [ ] prepend
 * [ ] product
 * [ ] project
 * [ ] prop
