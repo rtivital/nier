@@ -1,3 +1,7 @@
 const curry = require('../curry/curry');
 
-module.exports = curry((element, array) => [...array, element], 2);
+function append(element, array) {
+  return [...array, element];
+}
+
+module.exports = curry(append, 2);
