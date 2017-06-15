@@ -1,5 +1,7 @@
+const isString = require('../isString/isString');
+
 module.exports = function upperFirst(str) {
-  if (typeof str !== 'string') {
+  if (!isString(str)) {
     throw new Error('upperFirst received argument that is not string');
   }
 
