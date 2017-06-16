@@ -12,6 +12,6 @@ module.exports = function curry(fn, receivedArgs = 0, acc = []) {
       return curry(fn, callsRemain - 1, acc.concat(args));
     }
 
-    return fn(...acc, ...args);
+    return fn(...acc, ...args.slice(0, callsRemain));
   };
 };

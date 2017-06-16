@@ -24,8 +24,8 @@ test('curry', (t) => {
 
   t.equal(
     curriedSumWithZeroArity(1, 2, 3),
-    sum(1, 2, 3),
-    'curries zero arity function with single call'
+    sum(),
+    'curries zero arity function with single call without provinding any arguments'
   );
 
   t.end();
