@@ -11,6 +11,7 @@
 
 ### Object
 * set (assoc) – TODO: add more tests, add type checks
+* setPath (assocPath) – TODO: add more tests, add array handling, add type checks
 * unset (dissoc) – TODO: add more tests, add type checks
 
 ### Array

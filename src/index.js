@@ -18,6 +18,7 @@ module.exports = {
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
   set: require('./set/set'),
+  setPath: require('./setPath/setPath'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
   unset: require('./unset/unset'),
