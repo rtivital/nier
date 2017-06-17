@@ -17,6 +17,7 @@
 ### Array
 * iterator – also handles addIndex function **new**
 * filter
+* reject
 * map
 * some
 * every
@@ -198,7 +199,6 @@
 * [ ] reduceRight
 * [ ] reduceWhile
 * [ ] reduced
-* [ ] reject
 * [ ] remove
 * [ ] repeat
 * [ ] replace
