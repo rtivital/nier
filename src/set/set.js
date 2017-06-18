@@ -19,10 +19,10 @@ function set(path, value, object) {
     return value;
   }
 
-  const pathToSet = pathIsArray ? path[0] : path;
+  const pathToSet = path[0];
   let finalValue = value;
 
-  if (pathIsArray && path.length > 1) {
+  if (path.length > 1) {
     const nextObject = has(pathToSet, object) ? object[pathToSet] : {};
     finalValue = set(path.slice(1), value, nextObject);
   }
