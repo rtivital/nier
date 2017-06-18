@@ -1,24 +1,38 @@
 const test = require('tape-catch');
-const setPath = require('./setPath');
+const set = require('./setPath');
 
-const original = {
-  hello: {
-    world: 'you',
-  },
+const whoIsAwesome = Object.freeze({
+  who: 'you',
+  are: 'are',
+  awesome: 'awesome',
+});
 
-  there: 'you',
-};
+const setWho = set('who');
+const setNot = set('not');
 
-test('setPath', (t) => {
-  t.throws(
-    () => setPath('path', 'value', original),
-    'throws an error if received non array path'
+
+test('set', (t) => {
+  t.equal(typeof setWho, 'function', 'is curried');
+
+  t.deepEqual(
+    setWho('they', whoIsAwesome),
+    {
+      who: 'they',
+      are: 'are',
+      awesome: 'awesome',
+    },
+    'sets value that aready exists in the object'
   );
 
   t.deepEqual(
-    setPath(['hello', 'world'], 'there', original),
-    { hello: { world: 'there' }, there: 'you' },
-    'sets deep nested path'
+    setNot('not', whoIsAwesome),
+    {
+      who: 'you',
+      are: 'are',
+      not: 'not',
+      awesome: 'awesome',
+    },
+    'adds value to the object that was not there'
   );
 
   t.end();
