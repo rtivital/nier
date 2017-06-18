@@ -4,6 +4,12 @@ const isArray = require('../isArray/isArray');
 const has = require('../has/has');
 const set = require('../set/set');
 
+function removeProp(path, object) {
+  const newObject = Object.assign({}, object);
+  delete newObject[path];
+  return newObject;
+}
+
 function unset(path, object) {
   const pathIsString = isString(path);
   const pathIsArray = isArray(path);
@@ -17,9 +23,7 @@ function unset(path, object) {
   }
 
   if (pathIsString) {
-    const newObject = Object.assign({}, object);
-    delete newObject[path];
-    return newObject;
+    return removeProp(path, object);
   }
 
   let finalProp = object;
@@ -27,11 +31,7 @@ function unset(path, object) {
     finalProp = finalProp[path[i]];
   }
 
-  const finalClone = Object.assign({}, finalProp);
-  delete finalClone[path[path.length - 1]];
-
-
-  return set(path.slice(0, path.length - 1), finalClone, object);
+  return set(path.slice(0, path.length - 1), removeProp(path[path.length - 1], finalProp), object);
 }
 
 module.exports = curry(unset, 2);
