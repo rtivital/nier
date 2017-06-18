@@ -26,12 +26,18 @@ function unset(path, object) {
     return removeProp(path, object);
   }
 
-  let finalProp = object;
-  for (let i = 0, l = path.length - 1; i < l; i += 1) {
-    finalProp = finalProp[path[i]];
+  const lastPathIndex = path.length - 1;
+
+  let finalObject = object;
+  for (let i = 0; i < lastPathIndex; i += 1) {
+    finalObject = finalObject[path[i]];
   }
 
-  return set(path.slice(0, path.length - 1), removeProp(path[path.length - 1], finalProp), object);
+  return set(
+    path.slice(0, lastPathIndex),
+    removeProp(path[lastPathIndex], finalObject),
+    object
+  );
 }
 
 module.exports = curry(unset, 2);
