@@ -8,6 +8,7 @@
 * curry, curryN – combined in single function **new**
 * flip
 * partial
+* partialRight
 
 ### Object
 * set – handles both set and setPath logic
@@ -174,7 +175,6 @@
 * [ ] once
 * [ ] over
 * [ ] pair
-* [ ] partialRight
 * [ ] partition
 * [ ] path
 * [ ] pathEq
