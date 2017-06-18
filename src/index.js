@@ -21,7 +21,6 @@ module.exports = {
   prepend: require('./prepend/prepend'),
   reject: require('./reject/reject'),
   set: require('./set/set'),
-  setPath: require('./setPath/setPath'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
   unset: require('./unset/unset'),
