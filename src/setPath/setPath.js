@@ -1,9 +1,6 @@
 const curry = require('../curry/curry');
 const set = require('../set/set');
-
-function has(path, object) {
-  return object != null && Object.prototype.hasOwnProperty.call(object, path);
-}
+const has = require('../has/has');
 
 function setPath(path, value, object) {
   if (path.length === 0) {
