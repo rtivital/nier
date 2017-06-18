@@ -12,8 +12,8 @@
 
 ### Object
 * set – handles both set and setPath logic
-* unset (dissoc) – TODO: add more tests, add type checks
-* has
+* unset – handles both unset and unsetPath logic
+* has – works with array and string values
 
 ### Array
 * iterator – also handles addIndex function **new**
