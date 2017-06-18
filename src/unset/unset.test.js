@@ -13,6 +13,8 @@ const testObject = {
   nope: true,
 };
 
+const unsetTesting = unset('testing');
+const unsetUnexistingKey = unset('hello');
 const unsetFeel = unset(['testing', 'makes', 'you', 'feel']);
 const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 
@@ -26,6 +28,18 @@ test('unset', (t) => {
     typeof unsetFeel,
     'function',
     'is curried'
+  );
+
+  t.deepEqual(
+    unsetTesting(testObject),
+    { nope: true },
+    'unsets path with string'
+  );
+
+  t.deepEqual(
+    unsetUnexistingKey(testObject),
+    testObject,
+    'returns initial object if key was not found in object'
   );
 
   t.deepEqual(
