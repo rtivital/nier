@@ -7,6 +7,7 @@ module.exports = {
   every: require('./every/every'),
   filter: require('./filter/filter'),
   flip: require('./flip/flip'),
+  isArray: require('./isArray/isArray'),
   isArrayLike: require('./isArrayLike/isArrayLike'),
   isFunction: require('./isFunction/isFunction'),
   isNumber: require('./isNumber/isNumber'),

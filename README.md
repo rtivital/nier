@@ -27,7 +27,7 @@
 * chunk (splitAt) – TODO: add more tests, add type checks and type conversions for non array values
 
 ### String
-* upperFirst **new**
+* upperFirst
 * upperCase
 * lowerCase
 * trim
@@ -36,7 +36,8 @@
 * isString
 * isNumber
 * isFunction
-* isArrayLike **new**
+* isArray
+* isArrayLike
 
 ## TODO
 ### Function
