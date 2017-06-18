@@ -10,6 +10,11 @@ const original = {
 };
 
 test('setPath', (t) => {
+  t.throws(
+    () => setPath('path', 'value', original),
+    'throws an error if received non array path'
+  );
+
   t.deepEqual(
     setPath(['hello', 'world'], 'there', original),
     { hello: { world: 'there' }, there: 'you' },

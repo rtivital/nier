@@ -1,8 +1,13 @@
 const curry = require('../curry/curry');
 const set = require('../set/set');
 const has = require('../has/has');
+const isArray = require('../isArray/isArray');
 
 function setPath(path, value, object) {
+  if (!isArray(path)) {
+    throw new Error('setPath received path that is not an array');
+  }
+
   if (path.length === 0) {
     return value;
   }
