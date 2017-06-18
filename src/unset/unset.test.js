@@ -14,6 +14,7 @@ const testObject = {
 };
 
 const unsetFeel = unset(['testing', 'makes', 'you', 'feel']);
+const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 
 test('unset', (t) => {
   t.throws(
@@ -40,5 +41,12 @@ test('unset', (t) => {
     },
     'deletes deeply nested path from object'
   );
+
+  t.deepEqual(
+    unsetUnexistingPath(testObject),
+    testObject,
+    'returns initial object if provided object does not have path'
+  );
+
   t.end();
 });
