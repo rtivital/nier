@@ -18,6 +18,7 @@ module.exports = {
   map: require('./map/map'),
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
+  path: require('./path/path'),
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
   reject: require('./reject/reject'),
