@@ -23,6 +23,7 @@ module.exports = {
   prepend: require('./prepend/prepend'),
   reject: require('./reject/reject'),
   set: require('./set/set'),
+  setWith: require('./setWith/setWith'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
   unset: require('./unset/unset'),

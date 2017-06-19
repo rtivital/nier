@@ -12,6 +12,7 @@
 
 ### Object
 * set – handles both set and setPath logic
+* setWith
 * unset – handles both unset and unsetPath logic
 * has – works with array and string values
 * path – handles both prop and path logic
