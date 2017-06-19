@@ -56,7 +56,6 @@
 
 ## Unsorted
 * [ ] ascend
-* [ ] assocPath
 * [ ] binary
 * [ ] call
 * [ ] chain
@@ -77,7 +76,6 @@
 * [ ] descend
 * [ ] difference
 * [ ] differenceWith
-* [ ] dissocPath
 * [ ] divide
 * [ ] drop
 * [ ] dropLast
@@ -178,7 +176,6 @@
 * [ ] over
 * [ ] pair
 * [ ] partition
-* [ ] path
 * [ ] pathEq
 * [ ] pathOr
 * [ ] pathSatisfies
