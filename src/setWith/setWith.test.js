@@ -34,5 +34,18 @@ test('setWith', (t) => {
     'updated deeply nested prop with provided callback based on existing value'
   );
 
+  t.deepEqual(
+    setWith(['deeply', 'notSoNested'], value => typeof value === 'undefined', testObject),
+    {
+      deeply: {
+        nested: true,
+        notSoNested: true,
+      },
+
+      notDeeply: 'nested',
+    },
+    'provies undefined as value if value does not exist'
+  );
+
   t.end();
 });
