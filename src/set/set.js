@@ -1,20 +1,17 @@
+const validatePath = require('../_internal/validatePath/validatePath');
 const curry = require('../curry/curry');
 const has = require('../has/has');
-const isArray = require('../isArray/isArray');
 const isString = require('../isString/isString');
 
 function set(path, value, object) {
-  const pathIsString = isString(path);
-  const pathIsArray = isArray(path);
+  // if path is not an array or string throw TypeError
+  validatePath('set', path);
 
-  if (!pathIsString && !pathIsArray) {
-    throw new Error('set received path that is not an array or string');
-  }
-
-  if (pathIsString) {
+  if (isString(path)) {
     return Object.assign({}, object, { [path]: value });
   }
 
+  // assume that path is an array
   if (path.length === 0) {
     return value;
   }

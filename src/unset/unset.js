@@ -1,6 +1,6 @@
+const validatePath = require('../_internal/validatePath/validatePath');
 const curry = require('../curry/curry');
 const isString = require('../isString/isString');
-const isArray = require('../isArray/isArray');
 const has = require('../has/has');
 const set = require('../set/set');
 
@@ -11,18 +11,13 @@ function removeProp(path, object) {
 }
 
 function unset(path, object) {
-  const pathIsString = isString(path);
-  const pathIsArray = isArray(path);
-
-  if (!pathIsString && !pathIsArray) {
-    throw new Error('unset received path that is not an array or string');
-  }
+  validatePath('unset', path);
 
   if (!has(path, object)) {
     return object;
   }
 
-  if (pathIsString) {
+  if (isString(path)) {
     return removeProp(path, object);
   }
 
