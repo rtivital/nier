@@ -16,6 +16,7 @@
 * unset – handles both unset and unsetPath logic
 * has – works with array and string values
 * path – handles both prop and path logic
+* keys
 
 ### Array
 * iterator – also handles addIndex function **new**

@@ -14,6 +14,7 @@ module.exports = {
   isNumber: require('./isNumber/isNumber'),
   isString: require('./isString/isString'),
   iterator: require('./iterator/iterator'),
+  keys: require('./keys/keys'),
   lowerCase: require('./lowerCase/lowerCase'),
   map: require('./map/map'),
   partial: require('./partial/partial'),
