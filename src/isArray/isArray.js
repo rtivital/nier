@@ -1,3 +1,1 @@
-module.exports = function isArray(value) {
-  return Array.isArray(value);
-};
+module.exports = Array.isArray;
