@@ -6,6 +6,7 @@ module.exports = {
   curry: require('./curry/curry'),
   every: require('./every/every'),
   filter: require('./filter/filter'),
+  find: require('./find/find'),
   flip: require('./flip/flip'),
   has: require('./has/has'),
   isArray: require('./isArray/isArray'),

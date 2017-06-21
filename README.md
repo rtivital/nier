@@ -21,6 +21,7 @@
 ### Array
 * iterator – also handles addIndex function **new**
 * filter
+* find
 * reject
 * map
 * some
