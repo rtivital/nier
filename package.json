@@ -23,7 +23,7 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "2.2.0",
     "tap-summary": "^3.0.2",
-    "tape": "^4.6.3",
+    "tape": "^4.7.0",
     "tape-catch": "^1.0.6"
   }
 }
