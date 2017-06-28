@@ -26,6 +26,7 @@
 * map
 * some
 * every
+* reduce
 * append
 * prepend
 * uniq – TODO: add more tests and error handling
@@ -196,7 +197,6 @@
 * [ ] propSatisfies
 * [ ] props
 * [ ] range
-* [ ] reduce
 * [ ] reduceBy
 * [ ] reduceRight
 * [ ] reduceWhile

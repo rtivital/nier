@@ -23,6 +23,7 @@ module.exports = {
   path: require('./path/path'),
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
+  reduce: require('./reduce/reduce'),
   reject: require('./reject/reject'),
   set: require('./set/set'),
   setWith: require('./setWith/setWith'),
