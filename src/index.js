@@ -1,5 +1,6 @@
 module.exports = {
   append: require('./append/append'),
+  call: require('./call/call'),
   chunk: require('./chunk/chunk'),
   complement: require('./complement/complement'),
   compose: require('./compose/compose'),

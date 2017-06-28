@@ -9,6 +9,7 @@
 * flip
 * partial
 * partialRight
+* call
 
 ### Object
 * set – handles both set and setPath logic
@@ -60,7 +61,6 @@
 ## Unsorted
 * [ ] ascend
 * [ ] binary
-* [ ] call
 * [ ] chain
 * [ ] clamp
 * [ ] clone
