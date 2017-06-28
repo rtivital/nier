@@ -1,4 +1,3 @@
-console.log('check');
 module.exports = {
   append: require('./append/append'),
   chunk: require('./chunk/chunk'),
