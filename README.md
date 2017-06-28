@@ -18,6 +18,7 @@
 * has – works with array and string values
 * path – handles both prop and path logic
 * keys
+* values
 
 ### Array
 * iterator – also handles addIndex function **new**
@@ -250,7 +251,6 @@
 * [ ] until
 * [ ] update
 * [ ] useWith
-* [ ] values
 * [ ] valuesIn
 * [ ] view
 * [ ] when

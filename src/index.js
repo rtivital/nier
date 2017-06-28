@@ -34,4 +34,5 @@ module.exports = {
   uniq: require('./uniq/uniq'),
   upperCase: require('./upperCase/upperCase'),
   upperFirst: require('./upperFirst/upperFirst'),
+  values: require('./values/values'),
 };
