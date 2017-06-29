@@ -40,6 +40,9 @@
 * lowerCase
 * trim
 
+### Number
+* clamp
+
 ### Language
 * isString
 * isNumber
@@ -63,7 +66,6 @@
 * [ ] ascend
 * [ ] binary
 * [ ] chain
-* [ ] clamp
 * [ ] clone
 * [ ] comparator
 * [ ] composeK

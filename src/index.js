@@ -2,6 +2,7 @@ module.exports = {
   append: require('./append/append'),
   call: require('./call/call'),
   chunk: require('./chunk/chunk'),
+  clamp: require('./clamp/clamp'),
   complement: require('./complement/complement'),
   compose: require('./compose/compose'),
   curry: require('./curry/curry'),
