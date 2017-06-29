@@ -26,6 +26,7 @@
 * find
 * findIndex
 * findLast
+* findLastIndex
 * reject
 * map
 * some
@@ -98,7 +99,6 @@
 * [ ] eqProps
 * [ ] equals
 * [ ] evolve
-* [ ] findLastIndex
 * [ ] flatten
 * [ ] forEach
 * [ ] forEachObjIndexed
