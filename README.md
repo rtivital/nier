@@ -52,6 +52,7 @@
 * isFunction
 * isArray
 * isArrayLike
+* min
 
 ## TODO
 ### Function
@@ -162,7 +163,6 @@
 * [ ] mergeDeepWithKey
 * [ ] mergeWith
 * [ ] mergeWithKey
-* [ ] min
 * [ ] minBy
 * [ ] modulo
 * [ ] multiply

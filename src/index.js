@@ -24,6 +24,7 @@ module.exports = {
   keys: require('./keys/keys'),
   lowerCase: require('./lowerCase/lowerCase'),
   map: require('./map/map'),
+  min: require('./min/min'),
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
   path: require('./path/path'),
