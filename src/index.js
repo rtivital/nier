@@ -10,6 +10,7 @@ module.exports = {
   filter: require('./filter/filter'),
   find: require('./find/find'),
   findIndex: require('./findIndex/findIndex'),
+  findLast: require('./findLast/findLast'),
   flip: require('./flip/flip'),
   has: require('./has/has'),
   isArray: require('./isArray/isArray'),

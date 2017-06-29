@@ -25,6 +25,7 @@
 * filter
 * find
 * findIndex
+* findLast
 * reject
 * map
 * some
@@ -97,7 +98,6 @@
 * [ ] eqProps
 * [ ] equals
 * [ ] evolve
-* [ ] findLast
 * [ ] findLastIndex
 * [ ] flatten
 * [ ] forEach
