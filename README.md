@@ -24,6 +24,7 @@
 * iterator – also handles addIndex function **new**
 * filter
 * find
+* findIndex
 * reject
 * map
 * some
@@ -96,8 +97,6 @@
 * [ ] eqProps
 * [ ] equals
 * [ ] evolve
-* [ ] find
-* [ ] findIndex
 * [ ] findLast
 * [ ] findLastIndex
 * [ ] flatten
