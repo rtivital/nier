@@ -53,6 +53,7 @@
 * isArray
 * isArrayLike
 * min
+* max
 
 ## TODO
 ### Function
@@ -149,7 +150,6 @@
 * [ ] mapObjIndexed
 * [ ] match
 * [ ] mathMod
-* [ ] max
 * [ ] maxBy
 * [ ] mean
 * [ ] median

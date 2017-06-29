@@ -23,6 +23,7 @@ module.exports = {
   iterator: require('./iterator/iterator'),
   keys: require('./keys/keys'),
   lowerCase: require('./lowerCase/lowerCase'),
+  max: require('./max/max'),
   map: require('./map/map'),
   min: require('./min/min'),
   partial: require('./partial/partial'),
