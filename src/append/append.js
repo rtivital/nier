@@ -4,4 +4,4 @@ function append(element, array) {
   return [...array, element];
 }
 
-module.exports = curry(append, 2);
+module.exports = curry(append);

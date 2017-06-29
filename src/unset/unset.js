@@ -35,4 +35,4 @@ function unset(path, object) {
   );
 }
 
-module.exports = curry(unset, 2);
+module.exports = curry(unset);

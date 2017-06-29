@@ -27,4 +27,4 @@ function set(path, value, object) {
   return set(pathToSet, finalValue, object);
 }
 
-module.exports = curry(set, 3);
+module.exports = curry(set);

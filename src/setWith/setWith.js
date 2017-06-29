@@ -11,4 +11,4 @@ function setWith(pathToSet, callback, object) {
   return set(pathToSet, callback(), object);
 }
 
-module.exports = curry(setWith, 3);
+module.exports = curry(setWith);

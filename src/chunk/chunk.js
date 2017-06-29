@@ -19,4 +19,4 @@ function chunk(size, array) {
   return result;
 }
 
-module.exports = curry(chunk, 2);
+module.exports = curry(chunk);

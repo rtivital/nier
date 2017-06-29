@@ -4,4 +4,4 @@ function prepend(element, array) {
   return [element, ...array];
 }
 
-module.exports = curry(prepend, 2);
+module.exports = curry(prepend);

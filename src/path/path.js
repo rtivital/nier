@@ -24,4 +24,4 @@ function path(pathTo, object) {
   return acc;
 }
 
-module.exports = curry(path, 2);
+module.exports = curry(path);

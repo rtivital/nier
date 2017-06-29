@@ -24,4 +24,4 @@ function has(path, object) {
   return has(pathToTest, object);
 }
 
-module.exports = curry(has, 2);
+module.exports = curry(has);

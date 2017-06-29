@@ -10,4 +10,4 @@ function reduce(callback, initialValue, data) {
   return acc;
 }
 
-module.exports = curry(reduce, 3);
+module.exports = curry(reduce);
