@@ -36,6 +36,7 @@
 * prepend
 * uniq – TODO: add more tests and error handling
 * chunk (splitAt) – TODO: add more tests, add type checks and type conversions for non array values
+* update
 
 ### String
 * upperFirst
@@ -55,19 +56,12 @@
 * min
 * max
 
-## TODO
-### Function
+## Unsorted
 * [ ] __ – placeholder
 * [ ] allPass
 * [ ] anyPass
-
-### Array
 * [ ] adjust – updates array element with provided callback
 * [ ] all (every)
-
-
-
-## Unsorted
 * [ ] ascend
 * [ ] binary
 * [ ] chain
@@ -248,7 +242,6 @@
 * [ ] uniqWith
 * [ ] unless
 * [ ] until
-* [ ] update
 * [ ] useWith
 * [ ] valuesIn
 * [ ] view
