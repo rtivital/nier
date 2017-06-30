@@ -16,5 +16,11 @@ test('update', (t) => {
     'does not update array if value does not exist'
   );
 
+  t.deepEqual(
+    update(-1, 'hello', [1, 2, 3]),
+    [1, 2, 'hello'],
+    'updates value with negative index'
+  );
+
   t.end();
 });
