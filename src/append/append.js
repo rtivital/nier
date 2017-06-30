@@ -1,15 +1,6 @@
-const curry = require('../curry/curry');
 const isArrayLike = require('../isArrayLike/isArrayLike');
-
-function cloneArrayLike(array) {
-  const result = [];
-
-  for (let i = 0, l = array.length; i < l; i += 1) {
-    result[i] = array[i];
-  }
-
-  return result;
-}
+const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
+const curry = require('../curry/curry');
 
 function append(element, array) {
   if (!isArrayLike(array)) {
