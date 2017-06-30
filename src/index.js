@@ -5,6 +5,7 @@ module.exports = {
   clamp: require('./clamp/clamp'),
   complement: require('./complement/complement'),
   compose: require('./compose/compose'),
+  concat: require('./concat/concat'),
   curry: require('./curry/curry'),
   every: require('./every/every'),
   filter: require('./filter/filter'),

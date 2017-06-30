@@ -1,4 +1,4 @@
-# fp-guide
+# Unknown library
 
 ## DONE
 ### Function
@@ -37,6 +37,7 @@
 * uniq – TODO: add more tests and error handling
 * chunk (splitAt) – TODO: add more tests, add type checks and type conversions for non array values
 * update
+* concat
 
 ### String
 * upperFirst
@@ -60,8 +61,7 @@
 * [ ] __ – placeholder
 * [ ] allPass
 * [ ] anyPass
-* [ ] adjust – updates array element with provided callback
-* [ ] all (every)
+* [ ] adjust
 * [ ] ascend
 * [ ] binary
 * [ ] chain
@@ -69,7 +69,6 @@
 * [ ] comparator
 * [ ] composeK
 * [ ] composeP
-* [ ] concat
 * [ ] cond
 * [ ] construct
 * [ ] constructN
