@@ -2,11 +2,17 @@ const isArrayLike = require('../isArrayLike/isArrayLike');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
-const ERROR_MESSAGE = 'N.append received data that is not array or array like structure';
-
+/**
+ * Creates new array containing the contents of the given array or array like structure,
+ * folowed by the given value.
+ *
+ * @param {*} value element to add at the end of array
+ * @param {Array} data array to add element to
+ * @return {Array} new array folowed by provided value
+ */
 function append(value, data) {
   if (!isArrayLike(data)) {
-    throw new Error(ERROR_MESSAGE);
+    throw new Error('N.append received data that is not array or array like structure');
   }
 
   const result = cloneArrayLike(data);
