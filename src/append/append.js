@@ -7,9 +7,18 @@ const curry = require('../curry/curry');
  * folowed by the given value. Note that append will create only a shallow copy of provided
  * data structure.
  *
+ * @since v1.0.0
+ *
  * @param {*} value element to add at the end of array
  * @param {Array} data array to add element to
  * @return {Array} new array folowed by provided value
+ *
+ * @see prepend, concat
+ *
+ * @example
+ * N.append('nier', ['hello']); // -> ['hello', 'nier']
+ * N.append('nier')(['who loves you?']); // ['who loves you?', 'nier']
+ * N.append(['nier'], ['hello']); // ['hello', ['nier']]
  */
 function append(value, data) {
   if (!isArrayLike(data)) {
