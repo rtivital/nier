@@ -3,11 +3,6 @@ const chunk = require('./chunk');
 
 test('chunk', (t) => {
   t.throws(
-    () => chunk('hello', [1, 2, 3]),
-    'throws if provided chunk size value has incorrect type'
-  );
-
-  t.throws(
     () => chunk(2, null),
     'throws if provided chunk data is not array like type'
   );
