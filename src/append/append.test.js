@@ -2,8 +2,16 @@ const test = require('tape-catch');
 const append = require('./append');
 
 test('append', (t) => {
-  t.equal(typeof append('nier'), 'function', 'is curried');
-  t.throws(() => append('nier')(null), 'throws if receives non array or array like value');
+  t.equal(
+    typeof append('nier'),
+    'function',
+    'is curried'
+  );
+
+  t.throws(
+    () => append('nier', null),
+    'throws if receives non array or array like value'
+  );
 
   t.deepEqual(
     append('nier', ['hello', 'world']),
