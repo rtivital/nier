@@ -1,5 +1,5 @@
 {
-  "name": "fp-guide",
+  "name": "nier",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,15 +9,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rtivital/fp-guide.git"
+    "url": "git+https://github.com/rtivital/nier.git"
   },
   "keywords": [],
   "author": "Vitaly Rtishchev <rtivital@gmail.com> (http://github.com/rtivital)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rtivital/fp-guide/issues"
+    "url": "https://github.com/rtivital/nier/issues"
   },
-  "homepage": "https://github.com/rtivital/fp-guide#readme",
+  "homepage": "https://github.com/rtivital/nier#readme",
   "devDependencies": {
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
