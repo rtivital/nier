@@ -16,7 +16,6 @@ module.exports = {
   flatten: require('./flatten/flatten'),
   flip: require('./flip/flip'),
   has: require('./has/has'),
-  isArray: require('./isArray/isArray'),
   isArrayLike: require('./isArrayLike/isArrayLike'),
   isFunction: require('./isFunction/isFunction'),
   isNumber: require('./isNumber/isNumber'),
