@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "tape 'src/**/*.test.js' | tap-summary",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "docs": "node scripts/docs"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,9 @@
     "url": "https://github.com/rtivital/nier/issues"
   },
   "homepage": "https://github.com/rtivital/nier#readme",
+  "dependencies": {},
   "devDependencies": {
+    "dox": "^0.9.0",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.6.0",
