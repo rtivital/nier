@@ -24,25 +24,25 @@ test('unset', (t) => {
     'throws if provided path is not array or string'
   );
 
-  t.equal(
+  t.equals(
     typeof unsetFeel,
     'function',
     'is curried'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     unsetTesting(testObject),
     { nope: true },
     'unsets path with string'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     unsetUnexistingKey(testObject),
     testObject,
     'returns initial object if key was not found in object'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     unsetFeel(testObject),
     {
       testing: {
@@ -56,7 +56,7 @@ test('unset', (t) => {
     'deletes deeply nested path from object'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     unsetUnexistingPath(testObject),
     testObject,
     'returns initial object if provided object does not have path'

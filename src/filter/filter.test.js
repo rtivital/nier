@@ -7,19 +7,19 @@ const filterEven = filter(isEven);
 const filterByIndex = filter(indexGreaterThanZero, true);
 
 test('filter', (t) => {
-  t.equal(
+  t.equals(
     typeof filterEven,
     'function',
     'filter called with callback returns function'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     filterEven([1, 2, 3]),
     [1, 2, 3].filter(isEven),
     'filtering works as regular filter method'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     filterByIndex([1, 2, 3]),
     [1, 2, 3].filter(indexGreaterThanZero),
     'filter function provides index when required'

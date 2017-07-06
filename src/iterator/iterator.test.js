@@ -32,7 +32,7 @@ test('iterator', (t) => {
     'returns function with provided iteratorFn'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     mapIterator(combineValueWithIndex, true, [1, 2, 3]),
     [1, 2, 3].map(combineValueWithIndex),
     'creates valid iterator callback'

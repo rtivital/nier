@@ -7,7 +7,7 @@ test('trim', (t) => {
     'throws error if receives non string param'
   );
 
-  t.equal(
+  t.equals(
     trim('  \t  hello \n'),
     'hello',
     'trims all whitespace'

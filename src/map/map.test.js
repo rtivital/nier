@@ -6,19 +6,19 @@ const multiplyByIndex = (value, index) => value * index;
 const mapMultiply = map(multiplyBy2);
 
 test('map', (t) => {
-  t.deepEqual(
+  t.deepEquals(
     map(multiplyBy2, [1, 2, 3]),
     [1, 2, 3].map(multiplyBy2),
     'works as regular map function'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     mapMultiply([1, 2, 3]),
     [1, 2, 3].map(multiplyBy2),
     'supports curring'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     map(multiplyByIndex, true, [1, 2, 3]),
     [1, 2, 3].map(multiplyByIndex),
     'passes index down when it isn required'

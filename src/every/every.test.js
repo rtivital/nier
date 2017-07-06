@@ -6,19 +6,19 @@ const is2Index = (value, index) => index === 2;
 const everyIs2 = every(is2);
 
 test('every', (t) => {
-  t.equal(
+  t.equals(
     every(is2, [2, 2, 3]),
     [2, 2, 3].every(is2),
     'works as regular every method'
   );
 
-  t.equal(
+  t.equals(
     everyIs2([2, 2, 2]),
     [2, 2, 2].every(is2),
     'supports curring'
   );
 
-  t.equal(
+  t.equals(
     every(is2Index, true, [2, 2, 3]),
     [2, 2, 3].every(is2Index),
     'provides index value if it is required'

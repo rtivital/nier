@@ -12,25 +12,25 @@ test('flip', (t) => {
     'trows error if provided argument is not a function'
   );
 
-  t.equal(
+  t.equals(
     flip(getZero)(),
     getZero(),
     'does not change the behavior of function with no arguments'
   );
 
-  t.equal(
+  t.equals(
     flip(greet)('John'),
     greet('John'),
     'does not change the behavior of function with single argument'
   );
 
-  t.equal(
+  t.equals(
     flip(concat)('world', 'hello'),
     concat('hello', 'world'),
     'flips function with two arguments'
   );
 
-  t.equal(
+  t.equals(
     flip(concat3)('!', 'world', 'hello'),
     concat3('hello', 'world', '!'),
     'flips function with three arguments'

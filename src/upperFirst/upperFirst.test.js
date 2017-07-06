@@ -7,7 +7,7 @@ test('upperFirst', (t) => {
     'throws error if receives non string param'
   );
 
-  t.equal(
+  t.equals(
     upperFirst('hello'),
     'Hello',
     'converts first letter to upperCase'

@@ -8,19 +8,19 @@ const rejectEven = reject(isEven);
 const rejectByIndex = reject(indexGreaterThanZero, true);
 
 test('reject', (t) => {
-  t.equal(
+  t.equals(
     typeof rejectEven,
     'function',
     'reject called with callback returns function'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     rejectEven([1, 2, 3]),
     [1, 2, 3].filter(complement(isEven)),
     'rejecting works as regular reject method'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     rejectByIndex([1, 2, 3]),
     [1, 2, 3].filter(complement(indexGreaterThanZero)),
     'reject function provides index when required'

@@ -7,7 +7,7 @@ test('lowerCase', (t) => {
     'throws error if receives non string param'
   );
 
-  t.equal(
+  t.equals(
     lowerCase('HELLO'),
     'hello',
     'converts all charachters to lowerCase'

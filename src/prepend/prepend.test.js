@@ -5,19 +5,19 @@ const prependValue = prepend('value');
 const original = ['hello', 'world'];
 
 test('prepend', (t) => {
-  t.equal(
+  t.equals(
     typeof prependValue,
     'function',
     'produces curried function'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     prependValue(original),
     ['value', ...original],
     'prepends value to array'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     original,
     ['hello', 'world'],
     'does not mutate original array'

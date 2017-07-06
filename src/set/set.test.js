@@ -22,9 +22,9 @@ test('set', (t) => {
     'throws error if provided value is not array or string'
   );
 
-  t.equal(typeof setWho, 'function', 'is curried');
+  t.equals(typeof setWho, 'function', 'is curried');
 
-  t.deepEqual(
+  t.deepEquals(
     setWho('they', whoIsAwesome),
     {
       who: 'they',
@@ -38,7 +38,7 @@ test('set', (t) => {
     'sets value that aready exists in the object'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     setNot('not', whoIsAwesome),
     {
       who: 'you',
@@ -53,7 +53,7 @@ test('set', (t) => {
     'adds value to the object that was not there'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     doubleExclamation(whoIsAwesome),
     {
       who: 'you',
@@ -67,7 +67,7 @@ test('set', (t) => {
     'sets deeply nested property that already exists in the object'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     setComma(whoIsAwesome),
     {
       who: 'you',
@@ -82,7 +82,7 @@ test('set', (t) => {
     'sets deeply nested property that did not exist in the object'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     whoIsAwesome,
     {
       who: 'you',

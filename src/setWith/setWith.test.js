@@ -10,7 +10,7 @@ const testObject = {
 };
 
 test('setWith', (t) => {
-  t.deepEqual(
+  t.deepEquals(
     setWith('notDeeply', value => `i am not ${value}`, testObject),
     {
       deeply: {
@@ -22,7 +22,7 @@ test('setWith', (t) => {
     'updates not nested value with provided callback based on existing value'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     setWith(['deeply', 'nested'], value => value.toString(), testObject),
     {
       deeply: {
@@ -34,7 +34,7 @@ test('setWith', (t) => {
     'updated deeply nested prop with provided callback based on existing value'
   );
 
-  t.deepEqual(
+  t.deepEquals(
     setWith(['deeply', 'notSoNested'], value => typeof value === 'undefined', testObject),
     {
       deeply: {

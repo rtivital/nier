@@ -10,19 +10,19 @@ const curriedConcat = curry(concat);
 test('curry', (t) => {
   t.throws(() => curry(), 'curry throws error if called without arguments');
 
-  t.equal(
+  t.equals(
     curriedSum(1)(2),
     sum(1, 2),
     'curries function with specificified arity',
   );
 
-  t.equal(
+  t.equals(
     curriedConcat('hello')('there'),
     concat('hello', 'there'),
     'curries function based on its arity'
   );
 
-  t.equal(
+  t.equals(
     curriedSumWithZeroArity(1, 2, 3),
     sum(1, 2, 3),
     'curries zero arity function with single call'
