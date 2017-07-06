@@ -22,6 +22,9 @@ test('equals', (t) => {
   t.true(equals(true, true), 'detects equal booleans');
   t.false(equals(true, false), 'detects unequal booleans');
 
+  t.false(equals({}, 1), 'detects unequal primitive and object');
+  t.false(equals(1, {}), 'detects unequal object and primitive');
+
   t.true(equals({}, {}), 'detects equal empty objects');
   t.true(equals({ a: 1 }, { a: 1 }), 'detects equal non empty objects');
   t.false(equals({}, { a: 1 }), 'detects unequal objects');
