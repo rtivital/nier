@@ -13,6 +13,7 @@ test('equals', (t) => {
   t.true(equals(1, 1), 'detects equal numbers');
   t.false(equals(1, 2), 'detects unequal numbers');
   t.true(equals(NaN, NaN), 'detects equal NaN values');
+  t.true(equals(Infinity, Infinity), 'detects equal infinities');
 
   t.true(equals(null, null), 'detects equal null values');
   t.true(equals(undefined, undefined), 'detects equal undefined values');
