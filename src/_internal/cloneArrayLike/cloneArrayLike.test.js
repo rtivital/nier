@@ -5,7 +5,7 @@ function cloneArguments() {
   return cloneArrayLike(arguments); // eslint-disable-line
 }
 
-test('cloneArrayLike', (t) => {
+test('_internal/cloneArrayLike', (t) => {
   t.deepEquals(
     cloneArrayLike([1, 2, 3]),
     [1, 2, 3],
