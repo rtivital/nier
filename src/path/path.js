@@ -1,12 +1,8 @@
-const validatePath = require('../_internal/validatePath/validatePath');
 const has = require('../has/has');
 const curry = require('../curry/curry');
 const isString = require('../isString/isString');
 
 function path(pathTo, object) {
-  // if path is not an array or string throw TypeError
-  validatePath('path', pathTo);
-
   if (!has(pathTo, object)) {
     return undefined;
   }
