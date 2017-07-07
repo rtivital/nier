@@ -1,4 +1,3 @@
-const validatePath = require('../_internal/validatePath/validatePath');
 const curry = require('../curry/curry');
 const isString = require('../isString/isString');
 const has = require('../has/has');
@@ -11,8 +10,6 @@ function removeProp(path, object) {
 }
 
 function unset(path, object) {
-  validatePath('unset', path);
-
   if (!has(path, object)) {
     return object;
   }

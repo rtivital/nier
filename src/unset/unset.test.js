@@ -19,11 +19,6 @@ const unsetFeel = unset(['testing', 'makes', 'you', 'feel']);
 const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 
 test('unset', (t) => {
-  t.throws(
-    () => unset(0, testObject),
-    'throws if provided path is not array or string'
-  );
-
   t.equals(
     typeof unsetFeel,
     'function',
