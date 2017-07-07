@@ -1,5 +1,6 @@
 const isPrimitive = require('../_internal/isPrimitive/isPrimitive');
 const curry = require('../curry/curry');
+const every = require('../every/every');
 
 function equals(a, b) {
   const aIsPrimitive = isPrimitive(a);
@@ -19,7 +20,34 @@ function equals(a, b) {
     return false;
   }
 
-  return true;
+  // assume a and b are objects, arrays or functions
+  const aType = Object.prototype.toString.call(a).slice(8, -1);
+  const bType = Object.prototype.toString.call(b).slice(8, -1);
+
+  if (aType !== bType) {
+    return false;
+  }
+
+  if (aType === 'Array') {
+    if (a.length !== b.length) {
+      return false;
+    }
+
+    return every((item, index) => equals(item, b[index]), true, a);
+  }
+
+  if (aType === 'Object') {
+    const aKeys = Object.keys(a).sort();
+    const bKeys = Object.keys(b).sort();
+
+    if ((aKeys.length !== bKeys.length) || !equals(aKeys, bKeys)) {
+      return false;
+    }
+
+    return every(key => equals(a[key], b[key]), true, aKeys);
+  }
+
+  return a === b;
 }
 
 module.exports = curry(equals);
