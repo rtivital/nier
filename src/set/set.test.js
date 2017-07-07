@@ -17,11 +17,6 @@ const doubleExclamation = set(['signs', 'exclamation'], '!!');
 const setComma = set(['signs', 'comma'], ',');
 
 test('set', (t) => {
-  t.throws(
-    () => set(0, 'hello', 'there'),
-    'throws error if provided value is not array or string'
-  );
-
   t.equals(typeof setWho, 'function', 'is curried');
 
   t.deepEquals(

@@ -1,11 +1,12 @@
-const validatePath = require('../_internal/validatePath/validatePath');
+const isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 const has = require('../has/has');
 const isString = require('../isString/isString');
 
 function set(path, value, object) {
-  // if path is not an array or string throw TypeError
-  validatePath('set', path);
+  if (!isValidPath(path)) {
+    return object;
+  }
 
   if (isString(path)) {
     return Object.assign({}, object, { [path]: value });
