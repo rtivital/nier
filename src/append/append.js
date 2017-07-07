@@ -1,4 +1,4 @@
-const isArrayLike = require('../isArrayLike/isArrayLike');
+const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 

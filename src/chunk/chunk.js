@@ -1,7 +1,7 @@
 const toInteger = require('../_internal/toInteger/toInteger');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
+const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
-const isArrayLike = require('../isArrayLike/isArrayLike');
 
 
 /**
