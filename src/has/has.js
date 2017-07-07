@@ -3,11 +3,11 @@ const curry = require('../curry/curry');
 const isString = require('../isString/isString');
 
 function has(path, object) {
-  if (!isValidPath(path)) {
+  if (object == null) {
     return false;
   }
 
-  if (object == null) {
+  if (!isValidPath(path)) {
     return false;
   }
 
