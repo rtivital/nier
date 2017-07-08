@@ -13,7 +13,7 @@ test('curry', (t) => {
   t.equals(
     curriedSum(1)(2),
     sum(1, 2),
-    'curries function with specificified arity',
+    'curries function with specificified arity'
   );
 
   t.equals(

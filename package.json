@@ -6,6 +6,7 @@
   "scripts": {
     "test": "tape 'src/**/*.test.js' | tap-spec",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "docs": "node scripts/docs"
   },
   "repository": {

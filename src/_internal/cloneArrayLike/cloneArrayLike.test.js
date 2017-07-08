@@ -21,7 +21,7 @@ test('_internal/cloneArrayLike', (t) => {
   t.deepEquals(
     cloneArguments(1, 2, 3),
     [1, 2, 3],
-    'clones arguments list',
+    'clones arguments list'
   );
 
   t.deepEquals(
