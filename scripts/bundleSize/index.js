@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+
 const fs = require('fs-extra');
 
 fs.stat('./dist/index.js').then((file) => {
