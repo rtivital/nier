@@ -88,7 +88,7 @@ test('set', (t) => {
         question: '?',
       },
     },
-    'does not mutate original object',
+    'does not mutate original object'
   );
 
   t.end();

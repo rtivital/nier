@@ -6,8 +6,10 @@
   "scripts": {
     "test": "tape 'src/**/*.test.js' | tap-spec",
     "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
     "docs": "node scripts/docs",
-    "build": "rollup -c rollup.config.js"
+    "build": "rollup -c rollup.config.js",
+    "docs": "node scripts/docs"
   },
   "repository": {
     "type": "git",
