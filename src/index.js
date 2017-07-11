@@ -44,4 +44,5 @@ module.exports = {
   upperFirst: require('./upperFirst/upperFirst'),
   values: require('./values/values'),
   where: require('./where/where'),
+  whereEq: require('./whereEq/whereEq'),
 };
