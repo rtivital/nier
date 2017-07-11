@@ -7,6 +7,7 @@ module.exports = {
   compose: require('./compose/compose'),
   concat: require('./concat/concat'),
   curry: require('./curry/curry'),
+  equals: require('./equals/equals'),
   every: require('./every/every'),
   filter: require('./filter/filter'),
   find: require('./find/find'),
@@ -42,4 +43,5 @@ module.exports = {
   upperCase: require('./upperCase/upperCase'),
   upperFirst: require('./upperFirst/upperFirst'),
   values: require('./values/values'),
+  where: require('./where/where'),
 };
