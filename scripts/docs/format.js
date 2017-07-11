@@ -1,12 +1,9 @@
 const N = require('../../src');
 
-const extractParams = N.reduce((acc, item) => {
-  if (item.type === 'param') {
-    acc[item.name] = item;
-  }
-
-  return acc;
-}, {});
+const extractParams = N.pipe(
+  N.filter(N.where({ type: N.equals('param') })),
+  N.reduce((acc, item) => N.set(item.name, item, acc), {})
+);
 
 module.exports = function format(docItem) {
   return extractParams(docItem.tags);
