@@ -26,6 +26,7 @@ module.exports = {
   max: require('./max/max'),
   map: require('./map/map'),
   min: require('./min/min'),
+  normalize: require('./normalize/normalize'),
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
   path: require('./path/path'),
