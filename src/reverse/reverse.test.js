@@ -1,7 +1,7 @@
 const test = require('tape-catch');
 const reverse = require('./reverse');
 
-test.only('reverse', (t) => {
+test('reverse', (t) => {
   t.equals(
     typeof reverse(),
     'function',
