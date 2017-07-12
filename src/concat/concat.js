@@ -14,6 +14,8 @@ const curry = require('../curry/curry');
  * @return {Array|string} result of concatination
  *
  * @example
+ * N.concat([1, 2, 3], [4, 5]); // -> [1, 2, 3, 4, 5]
+ * N.concat('Hello, ', 'nier!'); // -> 'Hello, nier!' 
  */
 function concat(a, b) {
   if (!isArrayLike(a) || !isArrayLike(b)) {
