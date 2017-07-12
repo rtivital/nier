@@ -1,15 +1,32 @@
 const test = require('tape-catch');
 const complement = require('./complement');
 
-const getFalse = () => false;
-const getTrue = () => true;
-const getStringFromParams = value => `${value}`;
-
 test('complement', (t) => {
-  t.throws(() => complement(), 'throws if received argument is not function');
-  t.equals(complement(getFalse)(), true, 'complements falsy values');
-  t.equals(complement(getTrue)(), false, 'complements truthy values');
-  t.equals(complement(getStringFromParams)('hello'), false, 'complements functions with params');
+  t.throws(
+    () => complement(1),
+    'throws if received argument is not function'
+  );
+
+  t.equals(
+    typeof complement(),
+    'function',
+    'is curried'
+  );
+
+  t.true(
+    complement(() => false)(),
+    'complements falsy values'
+  );
+
+  t.false(
+    complement(() => true)(),
+    'complements truthy values'
+  );
+
+  t.false(
+    complement(name => `Hello, ${name}!`)('N'),
+    'complements functions with params'
+  );
 
   t.end();
 });
