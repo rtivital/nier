@@ -14,5 +14,17 @@ test('values', (t) => {
     'returns empty array if passed object is empty'
   );
 
+  t.deepEquals(
+    values(null),
+    [],
+    'returns empty array if passed value is null'
+  );
+
+  t.deepEquals(
+    values(undefined),
+    [],
+    'returns empty array if passed value is undefined'
+  );
+
   t.end();
 });
