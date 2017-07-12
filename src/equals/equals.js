@@ -2,6 +2,7 @@ const isPrimitive = require('../_internal/isPrimitive/isPrimitive');
 const curry = require('../curry/curry');
 const every = require('../every/every');
 const keys = require('../keys/keys');
+const type = require('../type/type');
 
 function equals(a, b) {
   const aIsPrimitive = isPrimitive(a);
@@ -21,9 +22,8 @@ function equals(a, b) {
     return false;
   }
 
-  // assume a and b are objects, arrays or functions
-  const aType = Object.prototype.toString.call(a).slice(8, -1);
-  const bType = Object.prototype.toString.call(b).slice(8, -1);
+  const aType = type(a);
+  const bType = type(b);
 
   if (aType !== bType) {
     return false;
