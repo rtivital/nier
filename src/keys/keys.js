@@ -1,3 +1,11 @@
 const curry = require('../curry/curry');
 
-module.exports = curry(Object.keys, 1);
+function keys(object) {
+  if (object == null) {
+    return [];
+  }
+
+  return Object.keys(object);
+}
+
+module.exports = curry(keys);
