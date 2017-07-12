@@ -41,6 +41,7 @@ module.exports = {
   slice: require('./slice/slice'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
+  type: require('./type/type'),
   uniq: require('./uniq/uniq'),
   unset: require('./unset/unset'),
   update: require('./update/update'),
