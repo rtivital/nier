@@ -8,6 +8,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "docs": "node scripts/docs",
+    "size": "bundlesize",
     "build": "webpack"
   },
   "repository": {
@@ -20,6 +21,10 @@
   "bugs": {
     "url": "https://github.com/rtivital/nier/issues"
   },
+  "bundlesize": [{
+    "path": "./dist/index.js",
+    "threshold": "15 Kb"
+  }],
   "homepage": "https://github.com/rtivital/nier#readme",
   "dependencies": {},
   "devDependencies": {
@@ -27,6 +32,7 @@
     "babel-loader": "^7.1.1",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-es2015": "^6.24.1",
+    "bundlesize": "^0.6.1",
     "dox": "^0.9.0",
     "eslint": "^4.1.1",
     "eslint-config-airbnb-base": "^11.2.0",
