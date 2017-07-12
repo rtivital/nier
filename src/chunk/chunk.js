@@ -8,9 +8,16 @@ const curry = require('../curry/curry');
  * Creates an array of elements split into groups with provided length value.
  * If array can't be split evenly, the final chunk will contain the remaining elements.
  *
+ * @since v1.0.0
+ *
  * @param {number} size size of each chunk
  * @param {Array} value value to process
  * @return {Array} array of chunks
+ *
+ * @example
+ * N.chunk([1, 2, 3, 4, 5], 2); // -> [[1, 2], [3, 4], [5]]
+ * N.chunk([1, 2], 3); // -> [[1, 2]]
+ * N.chunk([], 2); // -> []
  */
 function chunk(size, value) {
   if (!isArrayLike(value)) {
