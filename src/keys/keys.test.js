@@ -14,5 +14,17 @@ test('keys', (t) => {
     'works as Object.keys'
   );
 
+  t.deepEquals(
+    keys(null),
+    [],
+    'returns empty array for undefined'
+  );
+
+  t.deepEquals(
+    keys(undefined),
+    [],
+    'returns empty array for undefined'
+  );
+
   t.end();
 });
