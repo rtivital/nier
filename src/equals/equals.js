@@ -1,6 +1,7 @@
 const isPrimitive = require('../_internal/isPrimitive/isPrimitive');
 const curry = require('../curry/curry');
 const every = require('../every/every');
+const keys = require('../keys/keys');
 
 function equals(a, b) {
   const aIsPrimitive = isPrimitive(a);
@@ -37,8 +38,8 @@ function equals(a, b) {
   }
 
   if (aType === 'Object') {
-    const aKeys = Object.keys(a).sort();
-    const bKeys = Object.keys(b).sort();
+    const aKeys = keys(a).sort();
+    const bKeys = keys(b).sort();
 
     if ((aKeys.length !== bKeys.length) || !equals(aKeys, bKeys)) {
       return false;
