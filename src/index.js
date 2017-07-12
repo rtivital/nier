@@ -34,6 +34,7 @@ module.exports = {
   prepend: require('./prepend/prepend'),
   reduce: require('./reduce/reduce'),
   reject: require('./reject/reject'),
+  reverse: require('./reverse/reverse'),
   set: require('./set/set'),
   setWith: require('./setWith/setWith'),
   some: require('./some/some'),
