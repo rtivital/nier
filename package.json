@@ -8,7 +8,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "docs": "node scripts/docs",
-    "size": "bundlesize",
+    "size": "npm run build && bundlesize",
     "build": "webpack"
   },
   "repository": {
