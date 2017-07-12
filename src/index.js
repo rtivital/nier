@@ -37,6 +37,7 @@ module.exports = {
   reverse: require('./reverse/reverse'),
   set: require('./set/set'),
   setWith: require('./setWith/setWith'),
+  slice: require('./slice/slice'),
   some: require('./some/some'),
   trim: require('./trim/trim'),
   uniq: require('./uniq/uniq'),
