@@ -1,4 +1,5 @@
 const reduce = require('../reduce/reduce');
+const slice = require('../slice/slice');
 
 module.exports = function pipe(...fns) {
   if (fns.length === 0) {
@@ -6,7 +7,7 @@ module.exports = function pipe(...fns) {
   }
 
   const firstFunction = fns[0];
-  const tailFunctions = fns.slice(1);
+  const tailFunctions = slice(1, fns.length, fns);
 
   return (...args) => reduce(
     (acc, fn) => fn(acc),
