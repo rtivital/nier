@@ -17,5 +17,11 @@ test('findLastIndex', (t) => {
     'returns -1 there is no matching elements'
   );
 
+  t.equals(
+    findLastIndex((item, index, data) => index === undefined && data === undefined, [0, 1, 2, 2]),
+    3,
+    'does not provide index and data to callback'
+  );
+
   t.end();
 });
