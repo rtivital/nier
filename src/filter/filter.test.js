@@ -1,28 +1,20 @@
 const test = require('tape-catch');
 const filter = require('./filter');
-
-const isEven = value => value % 2 === 0;
-const indexGreaterThanZero = (value, index) => index > 0;
-const filterEven = filter(isEven);
-const filterByIndex = filter(indexGreaterThanZero, true);
+const isCurried = require('../../testUtils/isCurried');
 
 test('filter', (t) => {
-  t.equals(
-    typeof filterEven,
-    'function',
-    'filter called with callback returns function'
+  isCurried(t, filter(f => f));
+
+  t.deepEquals(
+    filter(f => !!f, [0, false, '', 1, true]),
+    [1, true],
+    'filters based on item'
   );
 
   t.deepEquals(
-    filterEven([1, 2, 3]),
-    [1, 2, 3].filter(isEven),
-    'filtering works as regular filter method'
-  );
-
-  t.deepEquals(
-    filterByIndex([1, 2, 3]),
-    [1, 2, 3].filter(indexGreaterThanZero),
-    'filter function provides index when required'
+    filter((item, index, data) => index === undefined && data === undefined, [1, 2, 3, 4]),
+    [1, 2, 3, 4],
+    'does not provide index and data to callback'
   );
 
   t.end();
