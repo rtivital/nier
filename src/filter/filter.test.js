@@ -1,11 +1,10 @@
 const test = require('tape-catch');
 const filter = require('./filter');
-const isCurried = require('../../testUtils/isCurried');
-const noIndex = require('../../testUtils/noIndex');
+const testUtils = require('../../testUtils');
 
 test('filter', (t) => {
-  isCurried(t, filter(f => f));
-  noIndex(t, { fn: filter, data: [1, 2, 3, 4], result: [1, 2, 3, 4] });
+  testUtils.isCurried(t, filter(f => f));
+  testUtils.noIndex(t, { fn: filter, data: [1, 2, 3, 4], result: [1, 2, 3, 4] });
 
   t.deepEquals(
     filter(f => !!f, [0, false, '', 1, true]),
