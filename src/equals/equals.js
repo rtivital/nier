@@ -17,10 +17,6 @@ function equals(a, b) {
     return a === b;
   }
 
-  if ((aIsPrimitive && !bIsPrimitive) || (!aIsPrimitive && bIsPrimitive)) {
-    return false;
-  }
-
   if (aType !== bType) {
     return false;
   }
