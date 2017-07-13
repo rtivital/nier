@@ -1,4 +1,3 @@
-const isPrimitive = require('../_internal/isPrimitive/isPrimitive');
 const curry = require('../curry/curry');
 const keys = require('../keys/keys');
 const type = require('../type/type');
@@ -11,15 +10,8 @@ function equals(a, b) {
     return false;
   }
 
-  const aIsPrimitive = isPrimitive(a);
-  const bIsPrimitive = isPrimitive(b);
-
-  if (aIsPrimitive || bIsPrimitive) {
-    if (aType === 'Number') {
-      return isNaN(a) ? isNaN(b) : a === b;
-    }
-
-    return a === b;
+  if (aType === 'Number') {
+    return isNaN(a) ? isNaN(b) : a === b;
   }
 
   if (aType === 'Array') {
