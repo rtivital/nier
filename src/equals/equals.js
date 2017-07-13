@@ -10,42 +10,46 @@ function equals(a, b) {
     return false;
   }
 
-  if (aType === 'Number') {
-    return isNaN(a) ? isNaN(b) : a === b;
-  }
-
-  if (aType === 'Array') {
-    if (a.length !== b.length) {
-      return false;
+  switch (aType) {
+    case 'Number': {
+      return isNaN(a) ? isNaN(b) : a === b;
     }
 
-    for (let i = 0; i < a.length; i += 1) {
-      if (!equals(a[i], b[i])) {
+    case 'Array': {
+      if (a.length !== b.length) {
         return false;
       }
+
+      for (let i = 0; i < a.length; i += 1) {
+        if (!equals(a[i], b[i])) {
+          return false;
+        }
+      }
+
+      return true;
     }
 
-    return true;
-  }
+    case 'Object': {
+      const aKeys = keys(a).sort();
+      const bKeys = keys(b).sort();
 
-  if (aType === 'Object') {
-    const aKeys = keys(a).sort();
-    const bKeys = keys(b).sort();
-
-    if ((aKeys.length !== bKeys.length) || !equals(aKeys, bKeys)) {
-      return false;
-    }
-
-    for (let i = 0, l = aKeys.length; i < l; i += 1) {
-      if (!equals(a[aKeys[i]], b[aKeys[i]])) {
+      if ((aKeys.length !== bKeys.length) || !equals(aKeys, bKeys)) {
         return false;
       }
+
+      for (let i = 0, l = aKeys.length; i < l; i += 1) {
+        if (!equals(a[aKeys[i]], b[aKeys[i]])) {
+          return false;
+        }
+      }
+
+      return true;
     }
 
-    return true;
+    default: {
+      return a === b;
+    }
   }
-
-  return a === b;
 }
 
 module.exports = curry(equals);
