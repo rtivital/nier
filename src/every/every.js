@@ -1,8 +1,8 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function every(everyFn, data) {
+function every(callback, data) {
   for (let i = 0, length = data.length; i < length; i += 1) {
-    if (!everyFn(data[i], i)) {
+    if (!callback(data[i], i, data)) {
       return false;
     }
   }
@@ -10,4 +10,4 @@ function every(everyFn, data) {
   return true;
 }
 
-module.exports = iterator(every, 'every');
+module.exports = curry(every);
