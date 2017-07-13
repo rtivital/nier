@@ -1,6 +1,5 @@
 const isPrimitive = require('../_internal/isPrimitive/isPrimitive');
 const curry = require('../curry/curry');
-const every = require('../every/every');
 const keys = require('../keys/keys');
 const type = require('../type/type');
 
@@ -30,11 +29,20 @@ function equals(a, b) {
   }
 
   if (aType === 'Array') {
-    if (a.length !== b.length) {
+    const aLength = a.length;
+    const bLength = b.length;
+
+    if (aLength !== bLength) {
       return false;
     }
 
-    return every((item, index) => equals(item, b[index]), true, a);
+    for (let i = 0; i < aLength; i += 1) {
+      if (!equals(a[i], b[i])) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   if (aType === 'Object') {
@@ -45,7 +53,13 @@ function equals(a, b) {
       return false;
     }
 
-    return every(key => equals(a[key], b[key]), true, aKeys);
+    for (let i = 0, l = aKeys.length; i < l; i += 1) {
+      if (!equals(a[aKeys[i]], b[aKeys[i]])) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   return a === b;
