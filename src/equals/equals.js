@@ -4,10 +4,15 @@ const keys = require('../keys/keys');
 const type = require('../type/type');
 
 function equals(a, b) {
-  const aIsPrimitive = isPrimitive(a);
-  const bIsPrimitive = isPrimitive(b);
   const aType = type(a);
   const bType = type(b);
+
+  if (aType !== bType) {
+    return false;
+  }
+
+  const aIsPrimitive = isPrimitive(a);
+  const bIsPrimitive = isPrimitive(b);
 
   if (aIsPrimitive || bIsPrimitive) {
     if (aType === 'Number' && bType === 'Number') {
@@ -17,19 +22,12 @@ function equals(a, b) {
     return a === b;
   }
 
-  if (aType !== bType) {
-    return false;
-  }
-
   if (aType === 'Array') {
-    const aLength = a.length;
-    const bLength = b.length;
-
-    if (aLength !== bLength) {
+    if (a.length !== b.length) {
       return false;
     }
 
-    for (let i = 0; i < aLength; i += 1) {
+    for (let i = 0; i < a.length; i += 1) {
       if (!equals(a[i], b[i])) {
         return false;
       }
