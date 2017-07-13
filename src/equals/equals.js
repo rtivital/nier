@@ -15,7 +15,7 @@ function equals(a, b) {
   const bIsPrimitive = isPrimitive(b);
 
   if (aIsPrimitive || bIsPrimitive) {
-    if (aType === 'Number' && bType === 'Number') {
+    if (aType === 'Number') {
       return isNaN(a) ? isNaN(b) : a === b;
     }
 
