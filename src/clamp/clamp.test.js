@@ -1,16 +1,13 @@
 const test = require('tape-catch');
 const clamp = require('./clamp');
+const isCurried = require('../../testUtils/isCurried');
 
 test('clamp', (t) => {
+  isCurried(t, clamp(1, 3));
+
   t.throws(
     () => clamp(5, 1, 10),
     'throws if provided boundaries are incorrect'
-  );
-
-  t.equals(
-    typeof clamp(1, 3),
-    'function',
-    'is curried'
   );
 
   t.equals(
