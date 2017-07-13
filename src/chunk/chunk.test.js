@@ -1,7 +1,10 @@
 const test = require('tape-catch');
 const chunk = require('./chunk');
+const isCurried = require('../../testUtils/isCurried');
 
 test('chunk', (t) => {
+  isCurried(t, chunk(2));
+
   t.throws(
     () => chunk(2, null),
     'throws if provided chunk data is not array like type'
