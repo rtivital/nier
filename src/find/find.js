@@ -1,10 +1,10 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function find(findFn, data) {
-  for (let i = 0, length = data.length; i < length; i += 1) {
+function find(callback, data) {
+  for (let i = 0, l = data.length; i < l; i += 1) {
     const currentItem = data[i];
 
-    if (findFn(currentItem, i)) {
+    if (callback(currentItem)) {
       return currentItem;
     }
   }
@@ -12,4 +12,4 @@ function find(findFn, data) {
   return undefined;
 }
 
-module.exports = iterator(find, 'find');
+module.exports = curry(find);
