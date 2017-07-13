@@ -1,10 +1,10 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function findLastIndex(findLastIndexFn, data) {
+function findLastIndex(callback, data) {
   for (let i = data.length; i >= 0; i -= 1) {
     const currentItem = data[i];
 
-    if (findLastIndexFn(currentItem, i)) {
+    if (callback(currentItem)) {
       return i;
     }
   }
@@ -12,4 +12,4 @@ function findLastIndex(findLastIndexFn, data) {
   return -1;
 }
 
-module.exports = iterator(findLastIndex, 'findLastIndex');
+module.exports = curry(findLastIndex);
