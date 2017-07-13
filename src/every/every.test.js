@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const every = require('./every');
 const isCurried = require('../../testUtils/isCurried');
 
-test.only('every', (t) => {
+test('every', (t) => {
   isCurried(t, every(() => true));
 
   t.false(
@@ -16,8 +16,8 @@ test.only('every', (t) => {
   );
 
   t.true(
-    every((val, index, data) => val + index === data.length, [3, 2, 1]),
-    'provides index and data to callback'
+    every((val, index, data) => index === undefined && data === undefined, [3, 2, 1]),
+    'does not provide index and data to callback'
   );
 
   t.end();
