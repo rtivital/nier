@@ -2,29 +2,22 @@ const test = require('tape-catch');
 const every = require('./every');
 const isCurried = require('../../testUtils/isCurried');
 
-const is2 = value => value === 2;
-const is2Index = (value, index) => index === 2;
-const everyIs2 = every(is2);
-
-test('every', (t) => {
+test.only('every', (t) => {
   isCurried(t, every(() => true));
 
-  t.equals(
-    every(is2, [2, 2, 3]),
-    [2, 2, 3].every(is2),
-    'works as regular every method'
+  t.false(
+    every(val => val === 2, [2, 2, 3]),
+    'returns false if any item did not pass'
   );
 
-  t.equals(
-    everyIs2([2, 2, 2]),
-    [2, 2, 2].every(is2),
-    'supports curring'
+  t.true(
+    every(val => val === 2, [2, 2, 2]),
+    'returns true if all items passed the check'
   );
 
-  t.equals(
-    every(is2Index, [2, 2, 3]),
-    [2, 2, 3].every(is2Index),
-    'provides index'
+  t.true(
+    every((val, index, data) => val + index === data.length, [3, 2, 1]),
+    'provides index and data to callback'
   );
 
   t.end();
