@@ -1,10 +1,10 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function filter(filterFn, data) {
+function filter(callback, data) {
   const result = [];
 
-  for (let i = 0, length = data.length; i < length; i += 1) {
-    if (filterFn(data[i], i)) {
+  for (let i = 0, l = data.length; i < l; i += 1) {
+    if (callback(data[i], i)) {
       result.push(data[i]);
     }
   }
@@ -12,4 +12,4 @@ function filter(filterFn, data) {
   return result;
 }
 
-module.exports = iterator(filter, 'filter');
+module.exports = curry(filter);
