@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const append = require('./append');
+const isCurried = require('../../testUtils/isCurried');
 
 test('append', (t) => {
-  t.equals(
-    typeof append('nier'),
-    'function',
-    'is curried'
-  );
+  isCurried(t, append('nier'));
 
   t.throws(
     () => append('nier', null),
