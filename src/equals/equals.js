@@ -33,7 +33,7 @@ function equals(a, b) {
       const aKeys = keys(a).sort();
       const bKeys = keys(b).sort();
 
-      if ((aKeys.length !== bKeys.length) || !equals(aKeys, bKeys)) {
+      if (!equals(aKeys, bKeys)) {
         return false;
       }
 
