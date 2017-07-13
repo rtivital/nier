@@ -1,10 +1,11 @@
 const test = require('tape');
 const equals = require('./equals');
+const isCurried = require('../../testUtils/isCurried');
 
 const testFunction = f => f;
 
 test('equals', (t) => {
-  t.equals(typeof equals('nier'), 'function', 'is curried');
+  isCurried(t, equals('nier'));
 
   t.true(equals('nier', 'nier'), 'detects equal strings');
   t.false(equals('hello', 'nier'), 'detects unequal strings');
