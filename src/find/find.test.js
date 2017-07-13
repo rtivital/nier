@@ -1,9 +1,10 @@
 const test = require('tape-catch');
 const find = require('./find');
-const isCurried = require('../../testUtils/isCurried');
+const testUtils = require('../../testUtils');
 
 test('find', (t) => {
-  isCurried(t, find(val => val === 2));
+  testUtils.isCurried(t, find(val => val === 2));
+  testUtils.noIndex(t, { fn: find, data: [1, 2, 3], result: 1 });
 
   t.equals(
     find(val => val > 2, [1, 2, 3, 4, 5]),
