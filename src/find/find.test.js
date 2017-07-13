@@ -1,25 +1,20 @@
 const test = require('tape-catch');
 const find = require('./find');
-
-const find2 = find(value => value === 2);
+const isCurried = require('../../testUtils/isCurried');
 
 test('find', (t) => {
+  isCurried(t, find(val => val === 2));
+
   t.equals(
-    typeof find2,
-    'function',
-    'is curried'
+    find(val => val > 2, [1, 2, 3, 4, 5]),
+    3,
+    'finds first maching value'
   );
 
   t.equals(
-    find2([1, 2, 3]),
-    2,
-    'finds value'
-  );
-
-  t.equals(
-    find2([1, 1, 1]),
+    find(val => val > 2, [1, 1, 1]),
     undefined,
-    'returns undefined if value was not found'
+    'returns undefined if none of the values mached'
   );
 
   t.end();
