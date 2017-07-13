@@ -1,7 +1,7 @@
 const curry = require('../curry/curry');
 
 function findLast(callback, data) {
-  for (let i = data.length; i > -1; i -= 1) {
+  for (let i = data.length - 1; i > -1; i -= 1) {
     const currentItem = data[i];
 
     if (callback(currentItem)) {
