@@ -6,11 +6,11 @@ const type = require('../type/type');
 function equals(a, b) {
   const aIsPrimitive = isPrimitive(a);
   const bIsPrimitive = isPrimitive(b);
-  const typeOfA = typeof a;
-  const typeOfB = typeof b;
+  const aType = type(a);
+  const bType = type(b);
 
   if (aIsPrimitive || bIsPrimitive) {
-    if (typeOfA === 'number' && typeOfB === 'number') {
+    if (aType === 'Number' && bType === 'Number') {
       return isNaN(a) ? isNaN(b) : a === b;
     }
 
@@ -20,9 +20,6 @@ function equals(a, b) {
   if ((aIsPrimitive && !bIsPrimitive) || (!aIsPrimitive && bIsPrimitive)) {
     return false;
   }
-
-  const aType = type(a);
-  const bType = type(b);
 
   if (aType !== bType) {
     return false;
