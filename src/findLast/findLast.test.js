@@ -1,25 +1,20 @@
 const test = require('tape-catch');
 const findLast = require('./findLast');
+const isCurried = require('../../testUtils/isCurried');
 
-const findLastEven = findLast(value => value % 2 === 0);
+test('findLast', (t) => {
+  isCurried(t, findLast(val => val > 2));
 
-test('find', (t) => {
   t.equals(
-    typeof findLastEven,
-    'function',
-    'is curried'
+    findLast(val => val > 2, [1, 2, 3, 4, 5]),
+    5,
+    'finds last matching element'
   );
 
   t.equals(
-    findLastEven([2, 4, 6, 500]),
-    500,
-    'finds last value'
-  );
-
-  t.equals(
-    findLastEven([1, 1, 1]),
+    findLast(val => val > 2, [1, 1, 1]),
     undefined,
-    'returns undefined if value was not found'
+    'returns undefined if there is no matching elements in the array'
   );
 
   t.end();
