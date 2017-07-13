@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const concat = require('./concat');
+const isCurried = require('../../testUtils/isCurried');
 
 test('concat', (t) => {
-  t.equals(
-    typeof concat([1, 2, 3]),
-    'function',
-    'is curried'
-  );
+  isCurried(t, concat([1, 2, 3]));
 
   t.throws(
     () => concat(1, 2),
