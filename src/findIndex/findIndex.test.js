@@ -1,20 +1,15 @@
 const test = require('tape-catch');
 const findIndex = require('./findIndex');
-const isCurried = require('../../testUtils/isCurried');
+const testUtils = require('../../testUtils');
 
 test('findIndex', (t) => {
-  isCurried(t, findIndex(val => val > 2));
+  testUtils.isCurried(t, findIndex(val => val > 2));
+  testUtils.noIndex(t, { fn: findIndex, data: [1, 2, 3], result: 0 });
 
   t.equals(
     findIndex(val => val > 2, [0, 1, 2, 3, 4]),
     3,
     'returns first matching index'
-  );
-
-  t.equals(
-    findIndex(val => val > 2, [4, 1, 2, 3, 4]),
-    0,
-    'returns first index that mached'
   );
 
   t.equals(
