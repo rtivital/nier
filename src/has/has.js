@@ -3,11 +3,7 @@ const curry = require('../curry/curry');
 const isString = require('../isString/isString');
 
 function has(path, object) {
-  if (object == null) {
-    return false;
-  }
-
-  if (!isValidPath(path)) {
+  if (object == null || !isValidPath(path)) {
     return false;
   }
 
@@ -15,7 +11,6 @@ function has(path, object) {
     return Object.prototype.hasOwnProperty.call(object, path);
   }
 
-  // assume that path is an array
   const pathToTest = path[0];
 
   if (path.length > 1) {
