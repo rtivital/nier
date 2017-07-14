@@ -1,27 +1,19 @@
 const test = require('tape-catch');
 const some = require('./some');
-
-const is2 = value => value === 2;
-const is2Index = (value, index) => index === 2;
-const someIs2 = some(is2);
+const testUtils = require('../../testUtils');
 
 test('some', (t) => {
-  t.equals(
-    some(is2, [1, 2, 3]),
-    [1, 2, 3].some(is2),
-    'works as regular some method'
+  testUtils.isCurried(t, some(val => val > 2));
+  testUtils.noIndex(t, { fn: some, data: [1, 2, 3], result: true });
+
+  t.true(
+    some(val => val > 2, [1, 2, 3]),
+    'returns true if callback matched at least one item'
   );
 
-  t.equals(
-    someIs2([1, 2, 3]),
-    [1, 2, 3].some(is2),
-    'supports curring'
-  );
-
-  t.equals(
-    some(is2Index, true, [1, 2, 3]),
-    [1, 2, 3].some(is2Index),
-    'provides index value if it is required'
+  t.false(
+    some(val => val > 2, [1, 2, 2]),
+    'returns false if callback did not match any items'
   );
 
   t.end();

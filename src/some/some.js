@@ -1,8 +1,8 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function some(someFn, data) {
+function some(callback, data) {
   for (let i = 0, length = data.length; i < length; i += 1) {
-    if (someFn(data[i], i)) {
+    if (callback(data[i])) {
       return true;
     }
   }
@@ -10,4 +10,4 @@ function some(someFn, data) {
   return false;
 }
 
-module.exports = iterator(some, 'some');
+module.exports = curry(some);
