@@ -8,6 +8,7 @@ module.exports = {
     filename: 'index.js',
     publicPath: '/',
     libraryTarget: 'umd',
+    library: 'N',
   },
 
   module: {
