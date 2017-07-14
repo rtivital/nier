@@ -5,7 +5,7 @@ function update(index, value, array) {
   const { length } = array;
   const indexToUpdate = index < 0 ? length + index : index;
 
-  if (!has(`${indexToUpdate}`, array)) {
+  if (!has(indexToUpdate, array)) {
     return array;
   }
 
