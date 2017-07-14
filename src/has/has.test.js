@@ -16,5 +16,8 @@ test('has', (t) => {
   t.true(has(['hello', 'nier'], { hello: { nier: 1 } }), 'returns true if valid array path was found in object');
   t.false(has(['hello', 'nier'], { hello: 1 }), 'return false if valid array path was not found in object');
 
+  t.true(has(2, [1, 2, 3]), 'returns true if path was found in array');
+  t.false(has(500, [1, 2]), 'returns false if path was not found in array');
+
   t.end();
 });

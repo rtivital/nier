@@ -1,13 +1,14 @@
 const isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
-const isString = require('../isString/isString');
 
 function has(path, object) {
   if (object == null || !isValidPath(path)) {
     return false;
   }
 
-  if (isString(path)) {
+  const pathType = typeof path;
+
+  if (pathType === 'string' || pathType === 'number') {
     return Object.prototype.hasOwnProperty.call(object, path);
   }
 
