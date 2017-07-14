@@ -1,10 +1,8 @@
-function isValidStringPath(path) {
-  return path.length > 0;
-}
-
 module.exports = function isValidPath(path) {
-  if (typeof path === 'string') {
-    return isValidStringPath(path);
+  const pathType = typeof path;
+
+  if (pathType === 'string' || pathType === 'number') {
+    return true;
   }
 
   if (Array.isArray(path)) {
@@ -15,11 +13,9 @@ module.exports = function isValidPath(path) {
     }
 
     for (let i = 0; i < length; i += 1) {
-      if (typeof path[i] !== 'string') {
-        return false;
-      }
+      const elementType = typeof path[i];
 
-      if (!isValidStringPath(path[i])) {
+      if (elementType !== 'string' && elementType !== 'number') {
         return false;
       }
     }
