@@ -21,7 +21,7 @@ module.exports = {
   isNumber: require('./isNumber/isNumber'),
   isString: require('./isString/isString'),
   keys: require('./keys/keys'),
-  lowerCase: require('./lowerCase/lowerCase'),
+  toLowerCase: require('./toLowerCase/toLowerCase'),
   max: require('./max/max'),
   map: require('./map/map'),
   min: require('./min/min'),

@@ -1,12 +1,12 @@
 const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
-function lowerCase(str) {
+function toLowerCase(str) {
   if (!isString(str)) {
-    throw new Error('N.lowerCase received argument that is not string');
+    throw new Error('N.toLowerCase received argument that is not string');
   }
 
   return str.toLowerCase();
 }
 
-module.exports = curry(lowerCase);
+module.exports = curry(toLowerCase);

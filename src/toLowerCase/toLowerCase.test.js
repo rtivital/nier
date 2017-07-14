@@ -1,23 +1,23 @@
 const test = require('tape-catch');
-const lowerCase = require('./lowerCase');
+const toLowerCase = require('./toLowerCase');
 const testUtils = require('../../testUtils');
 
-test('lowerCase', (t) => {
-  testUtils.isCurried(t, lowerCase());
+test('toLowerCase', (t) => {
+  testUtils.isCurried(t, toLowerCase());
 
   t.throws(
-    () => lowerCase(1),
+    () => toLowerCase(1),
     'throws error if receives non string param'
   );
 
   t.equals(
-    lowerCase('HeLlO'),
+    toLowerCase('HeLlO'),
     'hello',
-    'converts all charachters to lowerCase'
+    'converts all charachters to toLowerCase'
   );
 
   t.equals(
-    lowerCase('hello'),
+    toLowerCase('hello'),
     'hello',
     'does not change lowercased string'
   );
