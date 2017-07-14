@@ -19,5 +19,11 @@ test('has', (t) => {
   t.true(has(2, [1, 2, 3]), 'returns true if path was found in array');
   t.false(has(500, [1, 2]), 'returns false if path was not found in array');
 
+  t.true(has([0, 'hello', 'nier'], [{ hello: { nier: true } }]), 'returns true if value is found in object nested in array');
+  t.false(has([0, 'hello', 'nier'], [{ hello: { } }]), 'returns false if value is not found in object nested in array');
+
+  t.true(has(['hello', 'nier', 0], { hello: { nier: [1, 2] } }), 'returns true if value is found in array nested in object');
+  t.false(has(['hello', 'nier', 0], { hello: { nier: false } }), 'returns false if value is not found in array nested in object');
+
   t.end();
 });
