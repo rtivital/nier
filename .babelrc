@@ -1,6 +1,3 @@
 {
-  "presets": [["es2015", { "modules": false }]],
-  "plugins": [
-    "babel-plugin-external-helpers"
-  ]
+  "presets": [["es2015", { "modules": false }]]
 }
