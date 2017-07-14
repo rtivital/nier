@@ -1,6 +1,7 @@
 const keys = require('../keys/keys');
+const curry = require('../curry/curry');
 
-module.exports = function values(object) {
+function values(object) {
   const objectKeys = keys(object);
   const result = [];
 
@@ -9,4 +10,6 @@ module.exports = function values(object) {
   }
 
   return result;
-};
+}
+
+module.exports = curry(values);

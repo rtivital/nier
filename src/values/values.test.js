@@ -1,7 +1,10 @@
 const test = require('tape-catch');
 const values = require('./values');
+const testUtils = require('../../testUtils');
 
 test('values', (t) => {
+  testUtils.isCurried(t, values());
+
   t.deepEquals(
     values({ a: 1, b: 2, c: 3 }),
     [1, 2, 3],
