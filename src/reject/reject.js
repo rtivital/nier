@@ -1,10 +1,10 @@
-const iterator = require('../iterator/iterator');
+const curry = require('../curry/curry');
 
-function reject(rejectFn, data) {
+function reject(callback, data) {
   const result = [];
 
   for (let i = 0, length = data.length; i < length; i += 1) {
-    if (!rejectFn(data[i], i)) {
+    if (!callback(data[i])) {
       result.push(data[i]);
     }
   }
@@ -12,4 +12,4 @@ function reject(rejectFn, data) {
   return result;
 }
 
-module.exports = iterator(reject, 'reject');
+module.exports = curry(reject);

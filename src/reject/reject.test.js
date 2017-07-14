@@ -1,29 +1,15 @@
 const test = require('tape-catch');
 const reject = require('./reject');
-const complement = require('../complement/complement');
-
-const isEven = value => value % 2 === 0;
-const indexGreaterThanZero = (value, index) => index > 0;
-const rejectEven = reject(isEven);
-const rejectByIndex = reject(indexGreaterThanZero, true);
+const testUtils = require('../../testUtils');
 
 test('reject', (t) => {
-  t.equals(
-    typeof rejectEven,
-    'function',
-    'reject called with callback returns function'
-  );
+  testUtils.isCurried(t, reject(val => val > 2));
+  testUtils.noIndex(t, { fn: reject, data: [1, 2, 3], result: [] });
 
   t.deepEquals(
-    rejectEven([1, 2, 3]),
-    [1, 2, 3].filter(complement(isEven)),
-    'rejecting works as regular reject method'
-  );
-
-  t.deepEquals(
-    rejectByIndex([1, 2, 3]),
-    [1, 2, 3].filter(complement(indexGreaterThanZero)),
-    'reject function provides index when required'
+    reject(val => val > 2, [1, 2, 3, 4]),
+    [1, 2],
+    'filters array'
   );
 
   t.end();
