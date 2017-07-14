@@ -1,9 +1,10 @@
 const test = require('tape-catch');
 const findLastIndex = require('./findLastIndex');
-const isCurried = require('../../testUtils/isCurried');
+const testUtils = require('../../testUtils');
 
 test('findLastIndex', (t) => {
-  isCurried(t, findLastIndex(val => val > 2));
+  testUtils.isCurried(t, findLastIndex(val => val > 2));
+  testUtils.noIndex(t, { fn: findLastIndex, data: [0, 1, 2, 2], result: 3 });
 
   t.equals(
     findLastIndex(val => val > 2, [0, 1, 2, 3, 2]),
@@ -15,12 +16,6 @@ test('findLastIndex', (t) => {
     findLastIndex(val => val > 2, [0, 1, 0, 1]),
     -1,
     'returns -1 there is no matching elements'
-  );
-
-  t.equals(
-    findLastIndex((item, index, data) => index === undefined && data === undefined, [0, 1, 2, 2]),
-    3,
-    'does not provide index and data to callback'
   );
 
   t.end();
