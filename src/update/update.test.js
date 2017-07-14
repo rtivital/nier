@@ -1,8 +1,9 @@
 const test = require('tape-catch');
 const update = require('./update');
+const testUtils = require('../../testUtils');
 
 test('update', (t) => {
-  t.equals(typeof update(1), 'function', 'is curried');
+  testUtils.isCurried(t, update(1));
 
   t.deepEquals(
     update(1, 'hello', ['you', 'hi', 'there']),

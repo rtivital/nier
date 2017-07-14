@@ -1,5 +1,6 @@
 const test = require('tape-catch');
 const unset = require('./unset');
+const testUtils = require('../../testUtils');
 
 const testObject = {
   testing: {
@@ -19,11 +20,7 @@ const unsetFeel = unset(['testing', 'makes', 'you', 'feel']);
 const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 
 test('unset', (t) => {
-  t.equals(
-    typeof unsetFeel,
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, unset('hello'));
 
   t.deepEquals(
     unsetTesting(testObject),

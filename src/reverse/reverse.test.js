@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const reverse = require('./reverse');
+const testUtils = require('../../testUtils');
 
 test('reverse', (t) => {
-  t.equals(
-    typeof reverse(),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, reverse());
 
   t.throws(
     () => reverse(1),

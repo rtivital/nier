@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const slice = require('./slice');
+const testUtils = require('../../testUtils');
 
 test('slice', (t) => {
-  t.equals(
-    typeof slice(0, 2),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, slice(0, 2));
 
   t.throws(
     () => slice(0, 2, {}),

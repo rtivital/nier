@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const keys = require('./keys');
+const testUtils = require('../../testUtils');
 
 test('keys', (t) => {
-  t.equals(
-    typeof keys(),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, keys);
 
   t.deepEquals(
     keys({ a: 1, b: 2 }),

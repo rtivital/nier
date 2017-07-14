@@ -1,5 +1,6 @@
 const test = require('tape-catch');
 const set = require('./set');
+const testUtils = require('../../testUtils');
 
 const whoIsAwesome = {
   who: 'you',
@@ -17,7 +18,7 @@ const doubleExclamation = set(['signs', 'exclamation'], '!!');
 const setComma = set(['signs', 'comma'], ',');
 
 test('set', (t) => {
-  t.equals(typeof setWho, 'function', 'is curried');
+  testUtils.isCurried(t, set('who'));
 
   t.deepEquals(
     setWho('they', whoIsAwesome),

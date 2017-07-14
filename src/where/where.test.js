@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const where = require('./where');
+const testUtils = require('../../testUtils');
 
 test('where', (t) => {
-  t.equals(
-    typeof where({}),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, where({}));
 
   t.true(
     where({})({ a: 1 }),

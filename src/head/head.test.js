@@ -1,12 +1,9 @@
 const test = require('tape-catch');
 const head = require('./head');
+const testUtils = require('../../testUtils');
 
 test('head', (t) => {
-  t.equals(
-    typeof head(),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, head());
 
   t.equals(
     head([1, 2, 3]),

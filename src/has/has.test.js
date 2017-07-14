@@ -1,8 +1,9 @@
 const test = require('tape-catch');
 const has = require('./has');
+const testUtils = require('../../testUtils');
 
 test('has', (t) => {
-  t.equals(typeof has('nier'), 'function', 'is curried');
+  testUtils.isCurried(t, has('nier'));
 
   t.false(has([], { a: 1 }), 'returns false if path is an empty array');
   t.false(has('', { a: 1 }), 'returns false if path is an empty string');

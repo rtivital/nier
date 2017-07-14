@@ -1,5 +1,6 @@
 const test = require('tape-catch');
 const normalize = require('./normalize');
+const testUtils = require('../../testUtils');
 
 const frameworks = [
   { name: 'Angular', version: 2 },
@@ -20,11 +21,7 @@ const normalizedFrameworks = {
 };
 
 test('normalize', (t) => {
-  t.equals(
-    typeof normalize('name'),
-    'function',
-    'is curried'
-  );
+  testUtils.isCurried(t, normalize('name'));
 
   t.deepEquals(
     normalize('name', frameworks),
