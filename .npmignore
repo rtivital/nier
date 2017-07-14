@@ -1,0 +1,4 @@
+node_modules
+scripts
+testUtils
+*.test.js
