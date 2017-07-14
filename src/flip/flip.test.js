@@ -8,7 +8,7 @@ const concat3 = (str1, str2, str3) => `${str1} ${str2} ${str3}`;
 
 test('flip', (t) => {
   t.throws(
-    () => flip(),
+    () => flip(1),
     'trows error if provided argument is not a function'
   );
 
