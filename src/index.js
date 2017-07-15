@@ -47,4 +47,5 @@ module.exports = {
   values: require('./values/values'),
   where: require('./where/where'),
   whereEq: require('./whereEq/whereEq'),
+  without: require('./without/without'),
 };
