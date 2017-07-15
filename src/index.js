@@ -17,6 +17,7 @@ module.exports = {
   flip: require('./flip/flip'),
   has: require('./has/has'),
   head: require('./head/head'),
+  includes: require('./includes/includes'),
   isFunction: require('./isFunction/isFunction'),
   isNumber: require('./isNumber/isNumber'),
   isString: require('./isString/isString'),
