@@ -1,6 +1,7 @@
 {
   "extends": "airbnb-base",
   "rules": {
+    "import/no-extraneous-dependencies": 0,
     "global-require": 0,
     "max-len": [2, { "code": 120, "ignoreStrings": true, "ignoreComments": true }],
     "comma-dangle": ["error", {
