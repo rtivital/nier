@@ -1,31 +1,21 @@
 const test = require('tape-catch');
+const testUtils = require('../../testUtils');
 const curry = require('./curry');
 
-const sum = (...args) => args.reduce((acc, item) => item + acc, 0);
-const curriedSum = curry(sum, 2);
-const curriedSumWithZeroArity = curry(sum);
-const concat = (str1, str2) => `${str1} ${str2}`;
-const curriedConcat = curry(concat);
+test.only('curry', (t) => {
+  testUtils.isCurried(t, curry());
+  testUtils.isCurried(t, curry((a, b) => a + b)(1), 'creates curried function');
+  testUtils.isCurried(t, curry((...args) => args.reduce((acc, item) => acc + item, 0)), 'curries functions with zero arity');
 
-test('curry', (t) => {
-  t.throws(() => curry(), 'curry throws error if called without arguments');
-
-  t.equals(
-    curriedSum(1)(2),
-    sum(1, 2),
-    'curries function with specificified arity'
+  t.true(
+    curry((a, b) => a + b).length === 2,
+    'saves arity of passed function'
   );
 
   t.equals(
-    curriedConcat('hello')('there'),
-    concat('hello', 'there'),
-    'curries function based on its arity'
-  );
-
-  t.equals(
-    curriedSumWithZeroArity(1, 2, 3),
-    sum(1, 2, 3),
-    'curries zero arity function with single call'
+    curry((a, b, ...args) => a + b + args.reduce((acc, item) => acc + item, 0))(1)(2, 3, 4),
+    10,
+    'enables passing endless amount of arguments to the last call'
   );
 
   t.end();

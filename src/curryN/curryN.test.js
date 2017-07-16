@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const curryN = require('./curryN');
 
-test.only('curryN', (t) => {
+test('curryN', (t) => {
   testUtils.isCurried(t, curryN(2));
   testUtils.isCurried(t, curryN(2, (a, b) => a + b), 'produces curried function');
   testUtils.isCurried(t, curryN(2, (a, b) => a + b)(1), 'produces curried function');
