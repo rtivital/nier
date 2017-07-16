@@ -1,4 +1,4 @@
-const curry = require('../curry/curry');
+const curryN = require('../curryN/curryN');
 const isFunction = require('../isFunction/isFunction');
 
 
@@ -24,4 +24,4 @@ function call(fn, ...args) {
   return fn(...args);
 }
 
-module.exports = curry(call, 2);
+module.exports = curryN(2, call);
