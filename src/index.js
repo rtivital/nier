@@ -19,7 +19,6 @@ module.exports = {
   head: require('./head/head'),
   includes: require('./includes/includes'),
   isFunction: require('./isFunction/isFunction'),
-  isNumber: require('./isNumber/isNumber'),
   isString: require('./isString/isString'),
   keys: require('./keys/keys'),
   max: require('./max/max'),
