@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const chalk = require('chalk');
 const getSrcContent = require('../utils/getSrcContent');
 const N = require('../../src');
