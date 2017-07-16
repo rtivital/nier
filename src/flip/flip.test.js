@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const flip = require('./flip');
 const testUtils = require('../../testUtils');
 
-test('flip', (t) => {
+test.only('flip', (t) => {
   testUtils.isCurried(t, flip());
 
   t.throws(
@@ -32,6 +32,12 @@ test('flip', (t) => {
     flip((str1, str2, str3) => `${str1} ${str2} ${str3}`)('nier!', 'there', 'Hello,'),
     'Hello, there nier!',
     'flips function with three arguments'
+  );
+
+  t.equals(
+    flip(((a, b) => a + b)).length,
+    2,
+    'saves function arity'
   );
 
   t.end();
