@@ -3,16 +3,16 @@ const arity = require('./arity');
 
 const sum = (...args) => args.reduce((acc, item) => acc + item, 0);
 
-test('_internal/arity', (t) => {
+test.only('_internal/arity', (t) => {
   t.equals(
-    arity(2, sum).length,
-    2,
+    arity(1, sum).length,
+    1,
     'provides arity to function'
   );
 
   t.equals(
-    arity(53, sum).length,
-    53,
+    arity(2, sum).length,
+    2,
     'provides arity to function'
   );
 
