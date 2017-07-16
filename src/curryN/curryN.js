@@ -1,7 +1,7 @@
-const _curryN = require('../_internal/curryN/curryN');
+const CurryN = require('../_internal/curryN/curryN');
 
 function curryN(length, fn) {
-  return _curryN(length, [], fn);
+  return CurryN(length, [], fn);
 }
 
-module.exports = _curryN(2, [], curryN);
+module.exports = CurryN(2, [], curryN);
