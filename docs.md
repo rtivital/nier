@@ -13,7 +13,6 @@
 * reduce
 * set
 * setWith
-* slice
 * unnest
 * unset
 * update
@@ -52,3 +51,4 @@
 * findLast
 * findIndex
 * findLastIndex
+* slice
