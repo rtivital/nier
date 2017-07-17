@@ -14,6 +14,7 @@ const curry = require('../curry/curry');
  *
  * @example
  * N.find((val) => val > 2, [1, 2, 3, 4]); // -> 3
+ * N.find((val) => val > 2, [0, 1, 2]); // -> undefined
  * N.find(N.has('id'), [{ name: 1 }, { name: 2, id: 1 }, { name: 3, id: 2 }]); // -> { name: 2, id: 1 }
  */
 function find(callback, list) {
