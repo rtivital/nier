@@ -1,6 +1,5 @@
 ## Todo
 * equals
-* findIndex
 * findLastIndex
 * flip
 * includes
@@ -52,3 +51,4 @@
 * type
 * find
 * findLast
+* findIndex

@@ -13,6 +13,7 @@ const curry = require('../curry/curry');
  *
  * @example
  * N.findLast((val) => val > 2, [1, 2, 3, 4]); // -> 4
+ * N.findLast((val) => val > 2, [0, 1, 2]); // -> undefined
  * N.findLast(N.has('id'), [{ name: 1 }, { name: 2, id: 1 }, { name: 3, id: 2 }]); // -> { name: 3, id: 2 }
  */
 function findLast(callback, data) {
