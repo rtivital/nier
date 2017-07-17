@@ -1,5 +1,4 @@
 ## Todo
-* flip
 * includes
 * isFunction (?)
 * isString (?)
@@ -52,3 +51,4 @@
 * equals
 * update
 * normalize
+* flip
