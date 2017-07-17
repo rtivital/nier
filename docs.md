@@ -8,9 +8,7 @@
 * normalize
 * partial
 * partialRight
-* path
 * reduce
-* setWith
 * update
 * where
 * whereEq
@@ -52,3 +50,5 @@
 * unnest
 * keys
 * values
+* setWith
+* path

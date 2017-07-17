@@ -2,6 +2,21 @@ const has = require('../has/has');
 const curry = require('../curry/curry');
 const isString = require('../isString/isString');
 
+
+/**
+ * Returns value at provided object path or undefined if path does not exist
+ *
+ * @since v1.0.0
+ *
+ * @param {Array|string} pathTo path to retrieve
+ * @param {Object} object
+ * @return {*}
+ *
+ * @example
+ * N.path('a', { a: 1, b: 2 }); // -> 1
+ * N.path(['a', 'b'], { a: { b: 1 }, c: 3 }); // -> 1
+ * N.path(['a', 'b', 'c'], { a: 1 }); // -> undefined
+ */
 function path(pathTo, object) {
   if (!has(pathTo, object)) {
     return undefined;
@@ -11,7 +26,6 @@ function path(pathTo, object) {
     return object[pathTo];
   }
 
-  // assume that path is an array
   let acc = object[pathTo[0]];
   for (let i = 1, l = pathTo.length; i < l; i += 1) {
     acc = acc[pathTo[i]];
