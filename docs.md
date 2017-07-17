@@ -14,7 +14,6 @@
 * partial
 * partialRight
 * path
-* prepend
 * reduce
 * set
 * setWith
@@ -52,3 +51,4 @@
 * toUpperCase
 * upperFirst
 * has
+* prepend
