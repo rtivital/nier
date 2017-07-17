@@ -6,17 +6,17 @@ const curry = require('../curry/curry');
  *
  * @since v1.0.0
  *
- * @param {Function} callback description
+ * @param {Function} callback predicate
  * @param {Array} list array to filter
  * @return {Array} filtered list
  *
  * @see reject
  *
  * @example
- * N.filter((item) => item > 2)([1, 2, 3, 4]); // -> 3, 4
+ * N.filter((item) => item > 2)([1, 2, 3, 4]); // -> [3, 4]
  * N.filter(
- *   N.has('id'), [{ id: 1, name: 'Nier' },
- *   { name: 'Hello' }, { name: null }]
+ *   N.has('id'),
+ *   [{ id: 1, name: 'Nier' }, { name: 'Hello' }, { name: null }]
  * ); // -> [{ id: 1, name: 'Nier' }]
  */
 function filter(callback, list) {
