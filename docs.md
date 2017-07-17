@@ -12,7 +12,6 @@
 * reduce
 * setWith
 * update
-* values
 * where
 * whereEq
 * without
@@ -52,3 +51,4 @@
 * unset
 * unnest
 * keys
+* values
