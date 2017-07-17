@@ -9,6 +9,8 @@ const curryN = require('../curryN/curryN');
  * @param {Function} fn function to curry
  * @return {Function} curried function
  *
+ * @see curryN
+ * 
  * @example
  * const sum = N.curry((a, b, c) => a + b + c);
  * sum(1, 2, 3); // 6
