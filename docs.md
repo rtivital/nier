@@ -18,7 +18,6 @@
 * set
 * setWith
 * slice
-* type
 * unnest
 * unset
 * update
@@ -52,3 +51,4 @@
 * upperFirst
 * has
 * prepend
+* type
