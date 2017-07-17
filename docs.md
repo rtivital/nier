@@ -5,7 +5,6 @@
 * findLast
 * findLastIndex
 * flip
-* has
 * includes
 * isFunction (?)
 * isString (?)
@@ -52,3 +51,4 @@
 * toLowerCase
 * toUpperCase
 * upperFirst
+* has
