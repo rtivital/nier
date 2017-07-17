@@ -9,6 +9,25 @@ function removeProp(path, object) {
   return newObject;
 }
 
+/**
+ * Creates shallow copy of object and deletes value at provided path if it exists.
+ * Creates shallow copies for all nested object referenced in path if path exists.
+ *
+ * @since v1.0.0
+ *
+ * @param {Array|string} path path to property that should be removed
+ * @param {*} value
+ * @param {Object} object
+ * @return {Object} shallow copy of object without value in path
+ *
+ * @see unset, setWith
+ *
+ * @example
+ * N.unset('prop', { a: 1, prop: 2 }); // -> { a: 1 }
+ * N.unset('prop', { prop: 1 }); // -> {}
+ * N.unset(['nested', 'prop'], 'value', { a: 1, nested: { prop: 'value' } }); // -> { a: 1, nested: {} }
+ * N.unset('nested', 'value', { a: 1, nested: { prop: 'value' } }); // -> { a: 1 }
+ */
 function unset(path, object) {
   if (!has(path, object)) {
     return object;
