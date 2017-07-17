@@ -1,7 +1,7 @@
 const curry = require('../curry/curry');
 
 /**
- * Returns true if all elements match the predicate, false otherwise
+ * Returns true if all elements match the predicate, false otherwise.
  *
  * @since v1.0.0
  *
