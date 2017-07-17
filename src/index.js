@@ -7,6 +7,7 @@ module.exports = {
   compose: require('./compose/compose'),
   concat: require('./concat/concat'),
   curry: require('./curry/curry'),
+  curryN: require('./curryN/curryN'),
   equals: require('./equals/equals'),
   every: require('./every/every'),
   filter: require('./filter/filter'),
