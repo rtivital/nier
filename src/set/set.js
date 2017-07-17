@@ -20,7 +20,7 @@ const isString = require('../isString/isString');
  * @example
  * N.set('prop', 'value', { a: 1 }); // -> { a: 1, prop: 'value' }
  * N.set('prop', 'value', { prop: 1 }); // -> { prop: 'value' }
- * N.set(['nested', 'prop'], 'value', { a: 1 }); // -> { a: 1, prop: { nested: 'value' } }
+ * N.set(['nested', 'prop'], 'value', { a: 1 }); // -> { a: 1, nested: { prop: 'value' } }
  * N.set(['nested', 'prop'], 'value', { nested: { prop: 1 } }); // -> { nested: { prop: 'value' } }
  */
 function set(path, value, object) {

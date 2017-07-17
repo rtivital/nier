@@ -12,8 +12,6 @@
 * path
 * reduce
 * setWith
-* unnest
-* unset
 * update
 * values
 * where
@@ -52,3 +50,5 @@
 * findLastIndex
 * slice
 * set
+* unset
+* unnest
