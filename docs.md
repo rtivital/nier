@@ -4,11 +4,9 @@
 * isFunction (?)
 * isString (?)
 * map
-* normalize
 * partial
 * partialRight
 * reduce
-* update
 * where
 * whereEq
 * without
@@ -52,3 +50,5 @@
 * setWith
 * path
 * equals
+* update
+* normalize
