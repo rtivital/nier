@@ -7,7 +7,7 @@ const curry = require('../curry/curry');
  *
  * @param {Function} callback predicate
  * @param {Array} list
- * @return {*} first element that mached predicate
+ * @return {*} last element that mached predicate
  *
  * @see find, findIndex, findLastIndex
  *
