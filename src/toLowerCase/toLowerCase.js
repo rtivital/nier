@@ -5,8 +5,12 @@ const curry = require('../curry/curry');
 /**
  * Convers all string characters to lower case.
  *
+ * @since v1.0.0
+ *
  * @param {string} str
  * @return {string}
+ *
+ * @see toUpperCase, upperFirst
  *
  * @example
  * N.toLowerCase('Hello!'); // -> 'hello!'
