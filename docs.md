@@ -1,6 +1,5 @@
 ## Todo
 * equals
-* find
 * findIndex
 * findLast
 * findLastIndex
@@ -52,3 +51,4 @@
 * has
 * prepend
 * type
+* find
