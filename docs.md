@@ -11,7 +11,6 @@
 * partialRight
 * path
 * reduce
-* set
 * setWith
 * unnest
 * unset
@@ -52,3 +51,4 @@
 * findIndex
 * findLastIndex
 * slice
+* set
