@@ -1,6 +1,21 @@
 const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
+/**
+ * Convers all string characters to upper case.
+ *
+ * @since v1.0.0
+ *
+ * @param {string} str
+ * @return {string}
+ *
+ * @see toLowerCase, upperFirst
+ *
+ * @example
+ * N.toUpperCase('Hello!'); // -> 'Hello!'
+ * N.toUpperCase('HELLO!'); // -> 'Hello!'
+ * N.toUpperCase('hello!'); // -> 'Hello!'
+ */
 function toUpperCase(str) {
   if (!isString(str)) {
     throw new Error('N.toUpperCase received argument that is not string');
