@@ -1,17 +1,33 @@
 const curry = require('../curry/curry');
 
-function unnest(array) {
-  if (!Array.isArray(array)) {
+
+/**
+ * Removes one level of nesting from the list
+ *
+ * @since v1.0.0
+ *
+ * @param {Array} list data to unnest
+ * @return {Array} unnested list
+ *
+ * @see flatten
+ *
+ * @example
+ * N.unnest([[1, 2], [3], [4]]); // -> [1, 2, 3, 4]
+ * N.unnest([1, [2], [3], [[4]]]); // -> [1, 2, 3, [4]]
+ * N.unnest([1, 2, 3, 4]); // -> [1, 2, 3, 4]
+ */
+function unnest(list) {
+  if (!Array.isArray(list)) {
     throw new Error('N.unnest recieved data that is not an array');
   }
 
   const result = [];
 
-  for (let i = 0, l = array.length; i < l; i += 1) {
-    if (Array.isArray(array[i])) {
-      result.push(...array[i]);
+  for (let i = 0, l = list.length; i < l; i += 1) {
+    if (Array.isArray(list[i])) {
+      result.push(...list[i]);
     } else {
-      result.push(array[i]);
+      result.push(list[i]);
     }
   }
 
