@@ -4,7 +4,6 @@
 * includes
 * isFunction (?)
 * isString (?)
-* keys
 * map
 * normalize
 * partial
@@ -52,3 +51,4 @@
 * set
 * unset
 * unnest
+* keys
