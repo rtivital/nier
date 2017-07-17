@@ -1,9 +1,22 @@
 const reverse = require('../reverse/reverse');
 const pipe = require('../pipe/pipe');
 
+
+/**
+ * Performs right-to-left function composition. The rightmost function may have any arity; the remaining functions must be unary.
+ *
+ * @since v1.0.0
+ *
+ * @param {...Function} fns functions to compose
+ * @return {Function} composed function
+ *
+ * @example
+ * N.compose(val => val + 1, val => val * 2)(1); // -> 1 * 2 -> 2 + 1 -> 3
+ * N.compose(N.trim, N.upperFirst)('  hello!'); // N.trim('  hello!') -> N.upperFirst('hello!') -> 'Hello!'
+ */
 module.exports = function compose(...fns) {
   if (fns.length === 0) {
-    throw new Error('compose requires at least one function argument');
+    throw new Error('N.compose requires at least one function argument');
   }
 
   return pipe(...reverse(fns));
