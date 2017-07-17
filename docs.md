@@ -20,13 +20,10 @@
 * set
 * setWith
 * slice
-* toLowerCase
-* toUpperCase
 * type
 * unnest
 * unset
 * update
-* upperFirst
 * values
 * where
 * whereEq
@@ -52,3 +49,6 @@
 * reject
 * reverse
 * some
+* toLowerCase
+* toUpperCase
+* upperFirst
