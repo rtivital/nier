@@ -1,5 +1,4 @@
 ## Todo
-* equals
 * flip
 * includes
 * isFunction (?)
@@ -52,3 +51,4 @@
 * values
 * setWith
 * path
+* equals
