@@ -3,7 +3,7 @@ const pipe = require('../pipe/pipe');
 
 
 /**
- * Performs right-to-left function composition. The rightmost function may have any arity; the remaining functions must be unary.
+ * Performs last-to-first function composition. The last function may have any arity, the remaining functions must be unary.
  *
  * @since v1.0.0
  *
