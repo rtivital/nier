@@ -6,6 +6,10 @@ const N = require('../../src');
 
 const exportedModules = N.keys(N);
 const title = chalk.blue.bold('allexports:');
+const getMissingMessages = N.pipe(
+  N.map(module => `${title} Missing module: ${chalk.red.bold(module)}`),
+  N.join('\n')
+);
 
 getSrcContent().then((modules) => {
   const missingModules = N.filter(module => !N.includes(module, exportedModules), modules);
@@ -18,11 +22,6 @@ getSrcContent().then((modules) => {
     process.exit(0);
   }
 
-  const messages = N.map(
-    module => `${title} Missing module: ${chalk.red.bold(module)}`,
-    missingModules
-  );
-
-  console.log(messages.join('\n'));
+  console.log(getMissingMessages(missingModules));
   process.exit(1);
 });
