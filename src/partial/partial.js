@@ -2,7 +2,7 @@ const curry = require('../curry/curry');
 
 
 /**
- * Binds function to provided argument list.
+ * Binds function to specified argument list.
  *
  * @since v1.0.0
  *
@@ -14,6 +14,7 @@ const curry = require('../curry/curry');
  *
  * @example
  * N.partial((a, b) => a + b, [1])(2); // -> 3
+ * N.partial(greet, name) => `${greet} ${name}`, ['hello'])('nier'); // -> 'hello nier'
  */
 function partial(fn, predefined) {
   if (typeof fn !== 'function') {

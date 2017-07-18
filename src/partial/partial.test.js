@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const partial = require('./partial');
 
-test.only('partial', (t) => {
+test('partial', (t) => {
   testUtils.isCurried(t, partial(f => f));
 
   t.throws(() => partial(1, [2, 3]), 'throws an error if function is not provided');
