@@ -1,9 +1,12 @@
-const isFunction = require('../isFunction/isFunction');
+const curry = require('../curry/curry');
 
-module.exports = function partial(fn, ...predefined) {
-  if (!isFunction(fn)) {
-    throw new Error('partial received first argument that is not a function');
+
+function partial(fn, predefined) {
+  if (typeof fn !== 'function') {
+    throw new Error('N.partial did not receive function');
   }
 
   return (...args) => fn(...predefined, ...args);
-};
+}
+
+module.exports = curry(partial);
