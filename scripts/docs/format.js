@@ -1,20 +1,8 @@
 const N = require('../../src');
 
-const extractSince = N.pipe(
+const extractString = param => N.pipe(
   N.path('tags'),
-  N.find(N.whereEq({ type: 'since' })),
-  N.path('string')
-);
-
-const extractCategory = N.pipe(
-  N.path('tags'),
-  N.find(N.whereEq({ type: 'category' })),
-  N.path('string')
-);
-
-const extractExamples = N.pipe(
-  N.path('tags'),
-  N.find(N.whereEq({ type: 'example' })),
+  N.find(N.whereEq({ type: param })),
   N.path('string')
 );
 
@@ -30,9 +18,9 @@ const extractParams = N.pipe(
 module.exports = function format(docItem) {
   return {
     name: extractName(docItem),
-    since: extractSince(docItem),
-    category: extractCategory(docItem),
-    examples: extractExamples(docItem),
+    since: extractString('since')(docItem),
+    category: extractString('category')(docItem),
+    examples: extractString('example')(docItem),
     description: extractDescription(docItem),
     params: extractParams(docItem),
   };
