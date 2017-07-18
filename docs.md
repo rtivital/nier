@@ -1,10 +1,8 @@
 ## Todo
 * isFunction (?)
 * isString (?)
-* map
 * partial
 * partialRight
-* reduce
 
 ## Done
 * append
@@ -52,3 +50,5 @@
 * whereEq
 * includes
 * without
+* map
+* reduce
