@@ -5,7 +5,6 @@
 * partial
 * partialRight
 * reduce
-* without
 
 ## Done
 * append
@@ -52,3 +51,4 @@
 * where
 * whereEq
 * includes
+* without
