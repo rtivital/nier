@@ -1,5 +1,4 @@
 ## Todo
-* includes
 * isFunction (?)
 * isString (?)
 * map
@@ -52,3 +51,4 @@
 * flip
 * where
 * whereEq
+* includes
