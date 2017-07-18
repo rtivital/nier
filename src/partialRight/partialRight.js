@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Binds function to specified argument list.
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn function that should be binded
  * @param {Array} predefined list of arguments that function should be binded to

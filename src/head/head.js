@@ -6,6 +6,7 @@ const curry = require('../curry/curry');
  * Returns first item of array like collection
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Array} collection
  * @return {any} first item of collection

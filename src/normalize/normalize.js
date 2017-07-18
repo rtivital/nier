@@ -7,6 +7,7 @@ const has = require('../has/has');
  * Turns array of objects into normalized object structure based on provided property.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {string} prop property that will be used to create object keys
  * @param {Array} list array of objects

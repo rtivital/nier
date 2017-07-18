@@ -6,6 +6,7 @@ const curry = require('../curry/curry');
  * Returns true if an object or an array has the provided path, false otherwise
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array|string} path path to tests
  * @param {Array|Object} object

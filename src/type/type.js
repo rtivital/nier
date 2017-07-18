@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Returns single word description of the value type
  *
  * @since v1.0.0
+ * @category Language
  *
  * @param  {*} value
  * @return {string}

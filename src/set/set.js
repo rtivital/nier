@@ -8,6 +8,7 @@ const has = require('../has/has');
  * Creates shallow copies for all nested object paths.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array|string} path path to property, where value should be set
  * @param {*} value

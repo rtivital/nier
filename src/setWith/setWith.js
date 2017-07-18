@@ -11,6 +11,7 @@ const path = require('../path/path');
  * If object does not have value at provided path callback will receive undefined.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array|string} pathToSet path to property, where value should be set
  * @param {Function} callback

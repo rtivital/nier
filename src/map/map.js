@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Creates a new array with the results of calling a provided function on every element in the calling array.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {fn} callback function that will be called on each element
  * @param {Array} data

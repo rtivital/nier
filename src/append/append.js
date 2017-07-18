@@ -9,6 +9,7 @@ const curry = require('../curry/curry');
  * data structure.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {*} value element to add at the end of array
  * @param {Array} data array to add element to

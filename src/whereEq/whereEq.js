@@ -9,6 +9,7 @@ const keys = require('../keys/keys');
  * Each of spec object property can contain any data type and will be compared to spec with `N.equals`.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Object} spec
  * @param {Object} data

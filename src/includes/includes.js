@@ -7,6 +7,7 @@ const some = require('../some/some');
  * Returns true if provided value is equal to at least one element of the array.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {*} value
  * @param {Array} list

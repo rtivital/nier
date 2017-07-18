@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Clamps number within provided min and max borders
  *
  * @since v1.0.0
+ * @category Number
  *
  * @param {number} min lower border
  * @param {number} max upper border

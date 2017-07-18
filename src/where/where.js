@@ -8,6 +8,7 @@ const keys = require('../keys/keys');
  * Each of spec object property must be a function, otherwise where will return false.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Object} spec
  * @param {Object} data

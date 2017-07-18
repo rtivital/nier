@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Returns true if any element match the predicate, false otherwise.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Function} callback predicate, will be called with each item
  * @param {Array} list

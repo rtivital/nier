@@ -14,6 +14,7 @@ function removeProp(path, object) {
  * Creates shallow copies for all nested object referenced in path if path exists.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array|string} path path to property that should be removed
  * @param {*} value

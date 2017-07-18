@@ -5,6 +5,7 @@ const curryN = require('../curryN/curryN');
  * Calls provided function (first argument) with given values (all other arguments).
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn function to call
  * @param {...*} args list of arguments to call function with

@@ -7,6 +7,7 @@ const curry = require('../curry/curry');
  * Takes function and returs function that acts the same as received, but accepts arguments in reversed order.
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn
  * @return {Function}

@@ -7,6 +7,7 @@ const curry = require('../curry/curry');
  * Note that prepend will create only a shallow copy of provided data structure.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {*} value element to add at the begining of array
  * @param {Array} data array to add element to

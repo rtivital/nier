@@ -7,6 +7,7 @@ const curry = require('../curry/curry');
  * Concatenates two array or string values into one
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Array|string} a fitst value to concat
  * @param {Array|string} b second value to concat

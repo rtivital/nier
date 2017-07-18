@@ -9,6 +9,7 @@ const curry = require('../curry/curry');
  * If array can't be split evenly, the final chunk will contain the remaining elements.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {number} size size of each chunk
  * @param {Array} value value to process

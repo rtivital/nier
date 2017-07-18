@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Creates new function that returns the negated value of provided function
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn function to negate
  * @return {boolean} negated result of calling fn

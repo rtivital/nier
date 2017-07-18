@@ -8,6 +8,7 @@ const has = require('../has/has');
  * Note that update will only create shallow copy of the array.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {number} index position to update
  * @param {*} value value to set at position

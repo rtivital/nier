@@ -6,6 +6,7 @@ const curry = require('../curry/curry');
  * Returns new collection with reversed order.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Array|string} collection data to reverse
  * @return {Array|string}

@@ -7,6 +7,7 @@ const curry = require('../curry/curry');
  * Returns shallow copy of collection part selected from the `begin` (inclusive) to `end` (exclusive).
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {number} begin start index
  * @param {number} end slice end

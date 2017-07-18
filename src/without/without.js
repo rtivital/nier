@@ -6,6 +6,7 @@ const includes = require('../includes/includes');
  * Returns new array without values specified in the first argument
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Array} remove
  * @param {Array} list

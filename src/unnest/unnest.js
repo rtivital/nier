@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Removes one level of nesting from the list
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Array} list data to unnest
  * @return {Array} unnested list

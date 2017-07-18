@@ -5,6 +5,7 @@ const curryN = require('../curryN/curryN');
  * Returns curried equivalent of provided function.
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn function to curry
  * @return {Function} curried function

@@ -5,6 +5,7 @@ const CurryN = require('../_internal/curryN/curryN');
  * Returns curried equivalent of provided function, with the specified arity.
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {Function} fn function to curry
  * @return {Function} curried function

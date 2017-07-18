@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Returns the min of its two arguments.
  *
  * @since v1.0.0
+ * @category Number
  *
  * @param {*} a
  * @param {*} b

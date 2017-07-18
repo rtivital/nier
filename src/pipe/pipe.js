@@ -7,6 +7,7 @@ const head = require('../head/head');
  * Performs first-to-last function composition. The first function may have any arity, the remaining functions must be unary.
  *
  * @since v1.0.0
+ * @category Function
  *
  * @param {...Function} fns functions to compose
  * @return {Function} composed function

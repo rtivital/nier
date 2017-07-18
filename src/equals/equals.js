@@ -7,6 +7,7 @@ const type = require('../type/type');
  * Returns true if two passed values are equal.
  *
  * @since v1.0.0
+ * @category Language
  *
  * @param {*} a
  * @param {*} b

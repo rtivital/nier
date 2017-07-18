@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Convers all string characters to lower case.
  *
  * @since v1.0.0
+ * @category String
  *
  * @param {string} str
  * @return {string}

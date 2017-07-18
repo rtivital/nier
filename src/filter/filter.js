@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Removes item from list if it does not match the predicate.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Function} callback predicate
  * @param {Array} list array to filter

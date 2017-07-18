@@ -6,6 +6,7 @@ const curry = require('../curry/curry');
  * Returns value at provided object path or undefined if path does not exist
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array|string} pathTo path to retrieve
  * @param {Object} object

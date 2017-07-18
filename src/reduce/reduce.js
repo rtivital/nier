@@ -5,6 +5,7 @@ const curry = require('../curry/curry');
  * Applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value.
  *
  * @since v1.0.0
+ * @category Array
  *
  * @param {Function} callback function that will be called with each item
  * @param {*} initialValue initial value that will be used as accumulator
