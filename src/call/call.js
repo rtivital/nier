@@ -1,5 +1,4 @@
 const curryN = require('../curryN/curryN');
-const isFunction = require('../isFunction/isFunction');
 
 
 /**
@@ -17,7 +16,7 @@ const isFunction = require('../isFunction/isFunction');
  * N.call(N.has('nier'), { nier: 'hello' }); // -> same as N.has('nier', { nier: 'hello' })
  */
 function call(fn, ...args) {
-  if (!isFunction(fn)) {
+  if (typeof fn !== 'function') {
     throw new Error('N.call received first argument which type is not function');
   }
 

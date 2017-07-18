@@ -1,5 +1,4 @@
 const arity = require('../_internal/arity/arity');
-const isFunction = require('../isFunction/isFunction');
 const reverse = require('../reverse/reverse');
 const curry = require('../curry/curry');
 
@@ -17,7 +16,7 @@ const curry = require('../curry/curry');
  * N.flip((a, b, c) => `${a}${b}${c}`)('f', 'g', 'h'); // -> 'hgf'
  */
 function flip(fn) {
-  if (!isFunction(fn)) {
+  if (typeof fn !== 'function') {
     throw new Error('N.flip received argument that is not function');
   }
 

@@ -1,4 +1,3 @@
-const isFunction = require('../isFunction/isFunction');
 const curry = require('../curry/curry');
 
 
@@ -18,7 +17,7 @@ const curry = require('../curry/curry');
  * notString(1000); // -> true
  */
 function complement(fn) {
-  if (!isFunction(fn)) {
+  if (typeof fn !== 'function') {
     throw new Error('complement received argument that is not function');
   }
 
