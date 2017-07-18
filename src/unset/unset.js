@@ -1,5 +1,4 @@
 const curry = require('../curry/curry');
-const isString = require('../isString/isString');
 const has = require('../has/has');
 const set = require('../set/set');
 
@@ -33,7 +32,7 @@ function unset(path, object) {
     return object;
   }
 
-  if (isString(path)) {
+  if (typeof path === 'string') {
     return removeProp(path, object);
   }
 

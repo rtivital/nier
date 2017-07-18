@@ -1,6 +1,5 @@
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
-const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
 
@@ -15,7 +14,7 @@ const curry = require('../curry/curry');
  *
  * @example
  * N.concat([1, 2, 3], [4, 5]); // -> [1, 2, 3, 4, 5]
- * N.concat('Hello, ', 'nier!'); // -> 'Hello, nier!' 
+ * N.concat('Hello, ', 'nier!'); // -> 'Hello, nier!'
  */
 function concat(a, b) {
   if (!isArrayLike(a) || !isArrayLike(b)) {
@@ -26,7 +25,7 @@ function concat(a, b) {
   const bClone = cloneArrayLike(b);
   const concated = aClone.concat(bClone);
 
-  return isString(a) && isString(b) ? concated.join('') : concated;
+  return typeof a === 'string' && typeof b === 'string' ? concated.join('') : concated;
 }
 
 module.exports = curry(concat);

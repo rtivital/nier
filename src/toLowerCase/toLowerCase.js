@@ -1,4 +1,3 @@
-const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
 
@@ -18,7 +17,7 @@ const curry = require('../curry/curry');
  * N.toLowerCase('hello!'); // -> 'hello!'
  */
 function toLowerCase(str) {
-  if (!isString(str)) {
+  if (typeof str !== 'string') {
     throw new Error('N.toLowerCase received argument that is not string');
   }
 

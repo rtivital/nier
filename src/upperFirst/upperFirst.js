@@ -1,4 +1,3 @@
-const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
 /**
@@ -17,7 +16,7 @@ const curry = require('../curry/curry');
  * N.upperFirst('hELLO!'); // -> 'HELLO!'
  */
 function upperFirst(str) {
-  if (!isString(str)) {
+  if (typeof str !== 'string') {
     throw new Error('N.upperFirst received argument that is not string');
   }
 

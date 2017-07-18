@@ -1,6 +1,5 @@
 const has = require('../has/has');
 const curry = require('../curry/curry');
-const isString = require('../isString/isString');
 
 
 /**
@@ -22,7 +21,7 @@ function path(pathTo, object) {
     return undefined;
   }
 
-  if (isString(pathTo)) {
+  if (typeof pathTo === 'string') {
     return object[pathTo];
   }
 

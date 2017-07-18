@@ -1,5 +1,4 @@
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
-const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
 
@@ -26,7 +25,7 @@ function reverse(collection) {
     result[i] = collection[l - i - 1];
   }
 
-  return isString(collection) ? result.join('') : result;
+  return typeof collection === 'string' ? result.join('') : result;
 }
 
 module.exports = curry(reverse);

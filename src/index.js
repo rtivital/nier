@@ -19,7 +19,6 @@ module.exports = {
   has: require('./has/has'),
   head: require('./head/head'),
   includes: require('./includes/includes'),
-  isString: require('./isString/isString'),
   keys: require('./keys/keys'),
   map: require('./map/map'),
   max: require('./max/max'),

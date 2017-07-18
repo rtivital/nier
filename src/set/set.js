@@ -1,7 +1,6 @@
 const isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 const has = require('../has/has');
-const isString = require('../isString/isString');
 
 
 /**
@@ -28,7 +27,7 @@ function set(path, value, object) {
     return object;
   }
 
-  if (isString(path)) {
+  if (typeof path === 'string') {
     return Object.assign({}, object, { [path]: value });
   }
 

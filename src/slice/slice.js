@@ -1,6 +1,5 @@
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
-const isString = require('../isString/isString');
 const curry = require('../curry/curry');
 
 
@@ -28,7 +27,7 @@ function slice(from, to, collection) {
   const arrayCollection = cloneArrayLike(collection);
   const slicedCollection = arrayCollection.slice(from, to);
 
-  return isString(collection) ? slicedCollection.join('') : slicedCollection;
+  return typeof collection === 'string' ? slicedCollection.join('') : slicedCollection;
 }
 
 module.exports = curry(slice);
