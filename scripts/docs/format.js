@@ -12,7 +12,7 @@ const extractName = N.path(['ctx', 'name']);
 const extractParams = N.pipe(
   N.path('tags'),
   N.filter(N.whereEq({ type: 'param' })),
-  N.map(item => ({ name: item.name, description: item.description, type: item.typesDescription }))
+  N.map(N.pick(['name', 'description', 'typesDescription']))
 );
 
 module.exports = function format(docItem) {
