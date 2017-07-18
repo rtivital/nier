@@ -19,6 +19,7 @@ module.exports = {
   has: require('./has/has'),
   head: require('./head/head'),
   includes: require('./includes/includes'),
+  join: require('./join/join'),
   keys: require('./keys/keys'),
   map: require('./map/map'),
   max: require('./max/max'),
