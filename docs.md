@@ -1,8 +1,6 @@
 ## Todo
 * isFunction (?)
 * isString (?)
-* partial
-* partialRight
 
 ## Done
 * append
@@ -52,3 +50,5 @@
 * without
 * map
 * reduce
+* partial
+* partialRight

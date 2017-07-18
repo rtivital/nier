@@ -16,12 +16,12 @@ const curry = require('../curry/curry');
  * N.partialRight((a, b) => a / b, [3])(6); // -> 2
  * N.partial(greet, name) => `${greet} ${name}`, ['nier'])('hello'); // -> 'hello nier'
  */
-function partial(fn, predefined) {
+function partialRight(fn, predefined) {
   if (typeof fn !== 'function') {
     throw new Error('N.partialRight did not receive function');
   }
 
-  return (...args) => fn(...predefined, ...args);
+  return (...args) => fn(...args, ...predefined);
 }
 
-module.exports = curry(partial);
+module.exports = curry(partialRight);
