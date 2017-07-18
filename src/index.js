@@ -29,6 +29,7 @@ module.exports = {
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
   path: require('./path/path'),
+  pick: require('./pick/pick'), // no-tests, no-docs
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
   reduce: require('./reduce/reduce'),
