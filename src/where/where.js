@@ -16,10 +16,10 @@ const keys = require('../keys/keys');
  * @see whereEq
  *
  * @example
- * const spec = N.where({ a: (val) => val === 1, b: (val) => val === 2 });
- * spec({ a: 1, b: 2 }); // -> true
- * spec({ a: 1, b: 3 }); // -> false
- * spec({ a: 1 }); // -> false
+ * const spec = N.where({ a: (val) => val > 1, b: (val) => val > 2 });
+ * spec({ a: 1, b: 2 }); // -> false
+ * spec({ a: 2, b: 3 }); // -> true
+ * spec({ a: 4 }); // -> false
  */
 function where(spec, data) {
   const specKeys = keys(spec);
