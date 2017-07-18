@@ -1,5 +1,6 @@
 const curry = require('../curry/curry');
 
+
 /**
  * Returns last element that matches the predicate. If list does not contain such element returns undefined.
  *

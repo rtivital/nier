@@ -2,6 +2,7 @@ const reduce = require('../reduce/reduce');
 const slice = require('../slice/slice');
 const head = require('../head/head');
 
+
 /**
  * Performs first-to-last function composition. The first function may have any arity, the remaining functions must be unary.
  *

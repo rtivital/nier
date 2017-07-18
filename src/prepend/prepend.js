@@ -1,5 +1,6 @@
 const curry = require('../curry/curry');
 
+
 /**
  * Creates new array containing the contents of the given array or array like structure,
  * with the give value at the front, folowed by the content of the array.

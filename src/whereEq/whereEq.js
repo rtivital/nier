@@ -3,6 +3,7 @@ const every = require('../every/every');
 const equals = require('../equals/equals');
 const keys = require('../keys/keys');
 
+
 /**
  * Takes a spec object and a test object, returs true if test object fully satisfies spec.
  * Each of spec object property can contain any data type and will be compared to spec with `N.equals`.

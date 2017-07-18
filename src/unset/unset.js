@@ -8,6 +8,7 @@ function removeProp(path, object) {
   return newObject;
 }
 
+
 /**
  * Creates shallow copy of object and deletes value at provided path if it exists.
  * Creates shallow copies for all nested object referenced in path if path exists.

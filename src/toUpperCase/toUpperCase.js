@@ -1,5 +1,6 @@
 const curry = require('../curry/curry');
 
+
 /**
  * Convers all string characters to upper case.
  *

@@ -3,6 +3,7 @@ const curry = require('../curry/curry');
 const has = require('../has/has');
 const path = require('../path/path');
 
+
 /**
  * Works exactly like set function but instead of accepting actual value,
  * setWith accept callback that will receive current value of the object at path,

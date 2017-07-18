@@ -1,5 +1,6 @@
 const CurryN = require('../_internal/curryN/curryN');
 
+
 /**
  * Returns curried equivalent of provided function, with the specified arity.
  *

@@ -2,6 +2,7 @@ const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
+
 /**
  * Creates new array containing the contents of the given array or array like structure,
  * folowed by the given value. Note that append will create only a shallow copy of provided

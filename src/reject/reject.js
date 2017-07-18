@@ -1,5 +1,6 @@
 const curry = require('../curry/curry');
 
+
 /**
  * Removes item from list if it matches the predicate.
  *
