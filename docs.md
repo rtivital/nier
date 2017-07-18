@@ -6,7 +6,6 @@
 * partial
 * partialRight
 * reduce
-* where
 * whereEq
 * without
 
@@ -52,3 +51,4 @@
 * update
 * normalize
 * flip
+* where
