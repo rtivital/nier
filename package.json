@@ -26,7 +26,7 @@
   "bundlesize": [
     {
       "path": "./dist/index.js",
-      "threshold": "15 Kb"
+      "threshold": "8 Kb"
     }
   ],
   "homepage": "https://github.com/rtivital/nier#readme",
