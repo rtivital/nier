@@ -14,7 +14,9 @@ const parseComments = N.pipe(
   N.map(format)
 );
 
-getSrcContent()
+fs
+  .ensureDir('./docs')
+  .then(() => getSrcContent())
   .then(files => Promise.all(readSrcFiles(files)))
   .then(files => fs.writeJson('./docs/data.json', parseComments(files)))
   .catch((err) => {

@@ -7,7 +7,7 @@
     "test": "tape 'src/**/*.test.js' | tap-spec",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "docs": "node scripts/docs",
+    "docs": "node scripts/generateDocs",
     "exports": "node scripts/allexports",
     "size": "npm run build && bundlesize",
     "build": "webpack"
