@@ -18,7 +18,8 @@ fs
   .ensureDir('./docs')
   .then(() => getSrcContent())
   .then(files => Promise.all(readSrcFiles(files)))
-  .then(files => fs.writeJson('./docs/data.json', parseComments(files)))
+  .then(files => fs.writeJson('./docs/docs.json', parseComments(files)))
+  .then(() => console.log(chalk.green.bold`✔ Docs generated\n`))
   .catch((err) => {
     console.log(`${chalk.red.bold('docs generation error:')} ${err.message}\n`);
     process.exit(1);
