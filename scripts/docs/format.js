@@ -19,6 +19,7 @@ module.exports = function format(docItem) {
   return {
     name: extractName(docItem),
     since: extractString('since')(docItem),
+    see: extractString('see')(docItem),
     category: extractString('category')(docItem),
     examples: extractString('example')(docItem),
     description: extractDescription(docItem),
