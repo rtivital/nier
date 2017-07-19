@@ -26,10 +26,11 @@ module.exports = {
   min: require('./min/min'),
   none: require('./none/none'),
   normalize: require('./normalize/normalize'),
+  omit: require('./omit/omit'),
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
   path: require('./path/path'),
-  pick: require('./pick/pick'), // no-tests, no-docs
+  pick: require('./pick/pick'),
   pipe: require('./pipe/pipe'),
   prepend: require('./prepend/prepend'),
   reduce: require('./reduce/reduce'),
