@@ -50,6 +50,6 @@ module.exports = {
   values: require('./values/values'),
   where: require('./where/where'),
   whereEq: require('./whereEq/whereEq'),
-  withIndex: require('./withIndex/withIndex'), // does not work with reverse iterators
+  withIndex: require('./withIndex/withIndex'),
   without: require('./without/without'),
 };
