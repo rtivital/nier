@@ -1,21 +1,19 @@
 const curry = require('../curry/curry');
 const curryN = require('../curryN/curryN');
 
-// module.exports = _curry1(function addIndex(fn) {
-//   return curryN(fn.length, function() {
-//     var idx = 0;
-//     var origFn = arguments[0];
-//     var list = arguments[arguments.length - 1];
-//     var args = Array.prototype.slice.call(arguments, 0);
-//     args[0] = function() {
-//       var result = origFn.apply(this, _concat(arguments, [idx, list]));
-//       idx += 1;
-//       return result;
-//     };
-//     return fn.apply(this, args);
-//   });
-// });
-
+/**
+ * Creates new list iterator function with adding index and array arguments to the existing one.
+ *
+ * @since v1.0.0
+ * @category Function
+ *
+ * @param {Function} fn
+ * @return {Function}
+ *
+ * @example
+ * N.withIndex(map)((item, index) => item + index, [10, 20, 30]); // -> [10, 21, 32]
+ * N.withIndex(map)((_, __, array) => array, [10, 20, 30]); // -> [[10, 20, 30], [10, 20, 30], [10, 20, 30]]
+ */
 function withIndex(fn) {
   return curryN(fn.length, (...args) => {
     let index = 0;
