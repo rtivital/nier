@@ -22,7 +22,7 @@ function withIndex(fn) {
   return curryN(fn.length, (...args) => {
     const callback = args[0];
     const array = args[args.length - 1];
-    let index = isReversed ? array.length : 0;
+    let index = isReversed ? array.length - 1 : 0;
 
     const withIndexFn = (...withIndexFnArgs) => {
       const result = callback(...withIndexFnArgs, index, array);
