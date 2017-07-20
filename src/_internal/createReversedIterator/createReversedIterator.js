@@ -3,6 +3,13 @@ const SIGNATURES = require('../signatures');
 
 module.exports = function createReversedIterator(iterator) {
   const reversedIterator = curry(iterator);
-  reversedIterator[SIGNATURES.reversedIterator] = true;
+
+  Object.defineProperty(reversedIterator, SIGNATURES.reversedIterator, {
+    value: true,
+    configurable: false,
+    enumerable: false,
+    writable: false,
+  });
+
   return reversedIterator;
 };
