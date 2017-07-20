@@ -3,6 +3,7 @@ const testUtils = require('../../testUtils');
 const withIndex = require('./withIndex');
 const map = require('../map/map');
 const reduce = require('../reduce/reduce');
+const findLast = require('../findLast/findLast');
 
 test('withIndex', (t) => {
   testUtils.isCurried(t, withIndex);
@@ -34,6 +35,12 @@ test('withIndex', (t) => {
       2: [1, 2, 3],
     },
     'provides array to three arguments iterator function'
+  );
+
+  t.equals(
+    withIndex(findLast)((_, index, data) => data[index] > 5, [6, 7, 8, 10, 1, 5]),
+    9,
+    'provides reversed index to reversed iterator function'
   );
 
   t.end();
