@@ -17,7 +17,7 @@ getSrcContent().then((modules) => {
 
   if (missingModules.length === 0) {
     console.log(
-      `${title} No missing modules`
+      `${title} No missing modules\n`
     );
 
     process.exit(0);
