@@ -9,8 +9,8 @@ test('withIndex', (t) => {
   testUtils.isCurried(t, withIndex(map)(val => val * 2), 'produces curriediterator function');
 
   t.deepEquals(
-    withIndex(map)((_, index) => index + 1, [10, 20, 30]),
-    [1, 2, 3],
+    withIndex(map)((item, index) => index + item, [10, 20, 30]),
+    [10, 21, 32],
     'provides index to two arguments iterator function'
   );
 
@@ -21,8 +21,8 @@ test('withIndex', (t) => {
   );
 
   t.equals(
-    withIndex(reduce)((acc, _, index) => acc + index, 0, [1, 2, 3]),
-    3,
+    withIndex(reduce)((acc, item, index) => acc + index + item, 0, [0, 1, 2]),
+    6,
     'provides index to three arguments iterator function'
   );
 
