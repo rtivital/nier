@@ -30,4 +30,7 @@ function findLast(callback, data) {
   return undefined;
 }
 
+const curriedFindLast = curry(findLast);
+curriedFindLast['@@nier/reversedIterator'] = false;
+
 module.exports = curry(findLast);
