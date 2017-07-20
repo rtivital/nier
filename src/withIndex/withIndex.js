@@ -1,3 +1,4 @@
+const isReversedIterator = require('../_internal/isReversedIterator/isReversedIterator');
 const curry = require('../curry/curry');
 const curryN = require('../curryN/curryN');
 
@@ -15,7 +16,7 @@ const curryN = require('../curryN/curryN');
  * N.withIndex(map)((_, __, array) => array, [10, 20, 30]); // -> [[10, 20, 30], [10, 20, 30], [10, 20, 30]]
  */
 function withIndex(fn) {
-  const isReversed = !!fn['@@nier/reversedIterator'];
+  const isReversed = isReversedIterator(fn);
 
   return curryN(fn.length, (...args) => {
     const callback = args[0];
