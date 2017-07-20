@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const omit = require('./omit');
 
-test.only('omit', (t) => {
+test('omit', (t) => {
   testUtils.isCurried(t, omit(['a', 'b']));
 
   t.deepEquals(
