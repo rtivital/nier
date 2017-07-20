@@ -5,7 +5,7 @@ const includes = require('../includes/includes');
 
 function omit(remove, object) {
   return reduce((acc, key) => {
-    if (!includes(object[key], remove)) {
+    if (!includes(key, remove)) {
       acc[key] = object[key];
     }
 
