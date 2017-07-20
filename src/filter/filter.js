@@ -11,7 +11,7 @@ const curry = require('../curry/curry');
  * @param {Array} list array to filter
  * @return {Array} filtered list
  *
- * @see reject
+ * @see reject, withIndex
  *
  * @example
  * N.filter((item) => item > 2)([1, 2, 3, 4]); // -> [3, 4]

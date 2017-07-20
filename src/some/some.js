@@ -11,7 +11,7 @@ const curry = require('../curry/curry');
  * @param {Array} list
  * @return {boolean}
  *
- * @see some, every
+ * @see some, every, withIndex
  * @alias any
  *
  * @example

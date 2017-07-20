@@ -12,7 +12,7 @@ const curry = require('../curry/curry');
  * @param {Array} data
  * @return {*}
  *
- * @see normalize
+ * @see normalize, withIndex
  *
  * @example
  * N.reduce((acc, item) => acc + item, 10, [1, 2, 3]); // -> 16

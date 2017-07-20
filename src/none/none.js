@@ -11,7 +11,7 @@ const curry = require('../curry/curry');
  * @param {Array} list
  * @return {boolean}
  *
- * @see some, every
+ * @see some, every, withIndex
  *
  * @example
  * N.none((number) => number > 2, [1, 2, 3]); // -> false

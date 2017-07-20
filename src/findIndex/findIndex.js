@@ -11,7 +11,7 @@ const curry = require('../curry/curry');
  * @param {Array} list
  * @return {*} first element that mached predicate
  *
- * @see find, findLast, findLastIndex
+ * @see find, findLast, findLastIndex, withIndex
  *
  * @example
  * N.findIndex((val) => val > 2, [1, 2, 3, 4]); // -> 2

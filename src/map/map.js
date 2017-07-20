@@ -11,6 +11,8 @@ const curry = require('../curry/curry');
  * @param {Array} data
  * @return {Array}
  *
+ * @see withIndex
+ *
  * @example
  * N.map((val) => val * 2, [1, 2, 3]); // -> [2, 4, 6]
  * N.map((name) => `Hello, ${name}!`, ['nier', 'you']); // -> ['Hello, nier!', 'Hello, you!']

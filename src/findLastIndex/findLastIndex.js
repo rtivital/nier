@@ -11,7 +11,7 @@ const createReversedIterator = require('../_internal/createReversedIterator/crea
  * @param {Array} list
  * @return {*} last element that mached predicate
  *
- * @see find, findLast, findLastIndex
+ * @see find, findLast, findLastIndex, withIndex
  *
  * @example
  * N.findLastIndex((val) => val > 2, [1, 2, 3, 4]); // -> 3
