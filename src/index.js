@@ -1,4 +1,5 @@
 module.exports = {
+  version: '1.0.0',
   append: require('./append/append'),
   call: require('./call/call'),
   chunk: require('./chunk/chunk'),

@@ -4,7 +4,7 @@ const SIGNATURES = require('../signatures');
 
 const assigned = assignSignature('reversedIterator', true, {});
 
-test.only('_internal/assignSignature', (t) => {
+test('_internal/assignSignature', (t) => {
   t.true(
     assigned[SIGNATURES.reversedIterator],
     'assigns signature'
