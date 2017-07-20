@@ -1,5 +1,4 @@
-const curry = require('../curry/curry');
-
+const createReversedIterator = require('../_internal/createReversedIterator/createReversedIterator');
 
 /**
  * Returns last element that matches the predicate. If list does not contain such element returns undefined.
@@ -30,7 +29,4 @@ function findLast(callback, data) {
   return undefined;
 }
 
-const curriedFindLast = curry(findLast);
-curriedFindLast['@@nier/reversedIterator'] = true;
-
-module.exports = curriedFindLast;
+module.exports = createReversedIterator(findLast);
