@@ -1,4 +1,4 @@
-const curry = require('../curry/curry');
+const createReversedIterator = require('../_internal/createReversedIterator/createReversedIterator');
 
 
 /**
@@ -30,4 +30,4 @@ function findLastIndex(callback, data) {
   return -1;
 }
 
-module.exports = curry(findLastIndex);
+module.exports = createReversedIterator(findLastIndex);
