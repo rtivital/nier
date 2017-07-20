@@ -2,10 +2,10 @@ const test = require('tape-catch');
 const findLast = require('./findLast');
 const testUtils = require('../../testUtils');
 
-test('findLast', (t) => {
+test.only('findLast', (t) => {
   testUtils.isCurried(t, findLast(val => val > 2));
   testUtils.noIndex(t, { fn: findLast, data: [0, 1, 2], result: 2 });
-  testUtils.withIndex(t, { fn: findLast, data: [1, 2, 3], indexResult: 2, dataResult: 3 });
+  testUtils.withIndex(t, { fn: findLast, data: [1, 2, 3], indexResult: 3, dataResult: 3 });
 
   t.equals(
     findLast(val => val > 2, [1, 2, 3, 4, 5, 2]),
