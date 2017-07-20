@@ -11,6 +11,8 @@ const curry = require('../curry/curry');
  * @param {*} element element that should be used as each item in the array
  * @return {Array}
  *
+ * @see fillWith
+ *
  * @example
  * N.fill(3, 'hello'); // -> ['hello', 'hello', 'hello']
  * N.fill(2, { a: 1 }); // -> [{ a: 1 }, { a: 1 }]
