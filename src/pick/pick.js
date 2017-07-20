@@ -12,6 +12,8 @@ const has = require('../has/has');
  * @param {Object} object
  * @return {Object}
  *
+ * @see omit
+ *
  * @example
  * N.pick(['a', 'b'], { a: 1, b: 2, c: 3 }); // -> { a: 1, b: 2 }
  * N.pick(['a', 'b', 'd'], { a: 1, b: 2, c: 3 }); // -> { a: 1, b: 2 }
