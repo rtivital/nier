@@ -11,6 +11,8 @@ const curry = require('../curry/curry');
  * @param {Array} collection
  * @return {any} first item of collection
  *
+ * @alias first
+ *
  * @example
  * N.head([1, 2, 3]); // -> 1
  * N.head('nier'); // -> 'n'
