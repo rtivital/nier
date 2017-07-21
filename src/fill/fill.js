@@ -3,7 +3,10 @@ const curry = require('../curry/curry');
 
 
 /**
- * Creates new array with provided length and fills it with provided value
+ * Creates new array with provided length and fills it with provided value.
+ * Note that if you provide object as an element that should fill the array,
+ * it won't be cloned and each item in the array will only have a reference to
+ * the initial object.
  *
  * @since v1.0.0
  * @category Array
