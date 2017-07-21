@@ -11,6 +11,8 @@ module.exports = {
   curryN: require('./curryN/curryN'),
   equals: require('./equals/equals'),
   every: require('./every/every'),
+  fill: require('./fill/fill'),
+  fillWith: require('./fillWith/fillWith'),
   filter: require('./filter/filter'),
   find: require('./find/find'),
   findIndex: require('./findIndex/findIndex'),
