@@ -1,3 +1,5 @@
+const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -20,8 +22,12 @@ const curry = require('../curry/curry');
  * N.prepend('who loves you?')(['nier']); // ['who loves you?', 'nier']
  * N.prepend(['nier'], ['hello']); // [['nier'], 'hello']
  */
-function prepend(element, array) {
-  return [element, ...array];
+function prepend(value, data) {
+  if (!isArrayLike(data)) {
+    throw new Error('N.append received data that is not array or array like data structure');
+  }
+
+  return [value, ...cloneArrayLike(data)];
 }
 
 module.exports = curry(prepend);
