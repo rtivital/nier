@@ -15,10 +15,21 @@ const curry = require('../curry/curry');
  * @see fill
  *
  * @example
+ * N.fillWith(3, (index) => index); // -> [0, 1, 2]
  * N.fillWith(3, (index) => `hello-${index}`); // -> ['hello-0', 'hello-1', 'hello-2']
  * N.fillWith(2, (index) => ({ a: 'hello', b: index })); // -> [{ a: 'hello', b: 0 }, { a: 'hello', b: 1 }]
  */
 function fillWith(length, callback) {
+  if (typeof length !== 'number') {
+    throw new Error(
+      `N.fillWith is not able to use ${typeof length} as array length, number should be provided`
+    );
+  }
+
+  if (typeof callback !== 'function') {
+    throw new Error(`N.fillWith is not able to use ${typeof callback} as a callback, function should be provided`);
+  }
+
   const array = [];
 
   for (let i = 0; i < length; i += 1) {
