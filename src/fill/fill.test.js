@@ -7,7 +7,7 @@ test('fill', (t) => {
 
   t.throws(
     () => fill(null, 'hello'),
-    'throws if provided value is not a valid number'
+    'throws if provided length is not a valid number'
   );
 
   t.deepEquals(
