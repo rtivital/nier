@@ -26,6 +26,7 @@ module.exports = {
   keys: require('./keys/keys'),
   map: require('./map/map'),
   max: require('./max/max'),
+  merge: require('./merge/merge'),
   min: require('./min/min'),
   none: require('./none/none'),
   normalize: require('./normalize/normalize'),
