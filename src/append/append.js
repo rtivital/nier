@@ -24,7 +24,7 @@ const curry = require('../curry/curry');
  */
 function append(value, data) {
   if (!isArrayLike(data)) {
-    throw new Error('N.append received data that is not array or array like structure');
+    throw new Error('N.append received data that is not array or array like data structure');
   }
 
   const result = cloneArrayLike(data);
