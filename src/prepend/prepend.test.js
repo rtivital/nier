@@ -16,5 +16,11 @@ test('prepend', (t) => {
     'prepends value to array'
   );
 
+  t.deepEquals(
+    prepend('nier', { 0: 'hello', 1: 'world', length: 2 }),
+    ['nier', 'hello', 'world'],
+    'transforms array like value to array and prepends value'
+  );
+
   t.end();
 });

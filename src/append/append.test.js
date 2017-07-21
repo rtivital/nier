@@ -1,9 +1,9 @@
 const test = require('tape-catch');
+const testUtils = require('../../testUtils');
 const append = require('./append');
-const isCurried = require('../../testUtils/isCurried');
 
 test('append', (t) => {
-  isCurried(t, append('nier'));
+  testUtils.isCurried(t, append('nier'));
 
   t.throws(
     () => append('nier', null),
