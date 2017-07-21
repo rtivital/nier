@@ -1,4 +1,3 @@
-const isNumber = require('../_internal/isNumber/isNumber');
 const curry = require('../curry/curry');
 
 
@@ -22,8 +21,10 @@ const curry = require('../curry/curry');
  * N.fill(2, { a: 1 }); // -> [{ a: 1 }, { a: 1 }]
  */
 function fill(length, element) {
-  if (!isNumber(length)) {
-    throw new Error(`N.fill is not able to work with ${typeof length} type values`);
+  if (typeof length !== 'number') {
+    throw new Error(
+      `N.fill is not able to use ${typeof length} as array length, number should be provided`
+    );
   }
 
   const array = [];
