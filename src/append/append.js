@@ -5,8 +5,8 @@ const curry = require('../curry/curry');
 
 /**
  * Creates new array containing the contents of the given array or array like structure,
- * folowed by the given value. Note that append will create only a shallow copy of provided
- * data structure.
+ * folowed by the given value. Note that all array like data structures (e.g. strings, arguments)
+ * will be automaticly transformed to array.
  *
  * @since v1.0.0
  * @category Array
