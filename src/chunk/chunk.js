@@ -15,6 +15,8 @@ const curry = require('../curry/curry');
  * @param {Array} value value to process
  * @return {Array} array of chunks
  *
+ * @alias splitAt
+ *
  * @example
  * N.chunk([1, 2, 3, 4, 5], 2); // -> [[1, 2], [3, 4], [5]]
  * N.chunk([1, 2], 3); // -> [[1, 2]]
