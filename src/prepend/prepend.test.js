@@ -1,26 +1,19 @@
 const test = require('tape-catch');
+const testUtils = require('../../testUtils');
 const prepend = require('./prepend');
 
-const prependValue = prepend('value');
-const original = ['hello', 'world'];
-
 test('prepend', (t) => {
-  t.equals(
-    typeof prependValue,
-    'function',
-    'produces curried function'
+  testUtils.isCurried(t, prepend('value'));
+
+  t.throws(
+    () => prepend('value', null),
+    'throws if receives data structure that is not array or array like'
   );
 
   t.deepEquals(
-    prependValue(original),
-    ['value', ...original],
+    prepend('value', ['hello']),
+    ['value', 'hello'],
     'prepends value to array'
-  );
-
-  t.deepEquals(
-    original,
-    ['hello', 'world'],
-    'does not mutate original array'
   );
 
   t.end();
