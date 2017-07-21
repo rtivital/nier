@@ -18,14 +18,14 @@ const curry = require('../curry/curry');
  * N.fillWith(3, (index) => `hello-${index}`); // -> ['hello-0', 'hello-1', 'hello-2']
  * N.fillWith(2, (index) => ({ a: 'hello', b: index })); // -> [{ a: 'hello', b: 0 }, { a: 'hello', b: 1 }]
  */
-function fill(length, element) {
+function fillWith(length, callback) {
   const array = [];
 
   for (let i = 0; i < length; i += 1) {
-    array.push(element);
+    array.push(callback(i));
   }
 
   return array;
 }
 
-module.exports = curry(fill);
+module.exports = curry(fillWith);
