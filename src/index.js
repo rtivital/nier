@@ -46,6 +46,7 @@ module.exports = {
   toLowerCase: require('./toLowerCase/toLowerCase'),
   toUpperCase: require('./toUpperCase/toUpperCase'),
   type: require('./type/type'),
+  uniq: require('./uniq/uniq'),
   unnest: require('./unnest/unnest'),
   unset: require('./unset/unset'),
   update: require('./update/update'),
