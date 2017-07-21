@@ -39,7 +39,7 @@ test('withIndex', (t) => {
 
   t.equals(
     withIndex(findLast)((_, index, data) => data[index] > 5, [6, 7, 8, 10, 1, 5]),
-    9,
+    10,
     'provides reversed index to reversed iterator function'
   );
 
