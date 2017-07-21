@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const uniq = require('./uniq');
 
-test.only('uniq', (t) => {
+test('uniq', (t) => {
   testUtils.isCurried(t, uniq());
 
   t.deepEquals(
