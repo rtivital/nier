@@ -13,8 +13,8 @@
     "version": "node scripts/version",
     "size": "npm run build && bundlesize",
     "clean": "rimraf dist",
-    "build": "webpack",
-    "prepublish": "npm run build"
+    "build": "npm run clean && webpack",
+    "prepublish": "npm run test:all && npm run build"
   },
   "repository": {
     "type": "git",
