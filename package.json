@@ -12,7 +12,8 @@
     "exports": "node scripts/allexports",
     "version": "node scripts/version",
     "size": "npm run build && bundlesize",
-    "build": "webpack"
+    "build": "webpack",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
