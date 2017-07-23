@@ -16,7 +16,7 @@ const head = require('../head/head');
  * N.pipe(val => val + 1, val => val * 2)(1); // -> 1 + 1 -> 2 * 2 -> 4
  * N.pipe(N.trim, N.upperFirst)('hello!  '); // N.upperFirst('hello!  ') -> N.trim('Hello!  ') -> 'Hello!'
  */
-module.exports = function pipe(...fns) {
+function pipe(...fns) {
   if (fns.length === 0) {
     throw new Error('pipe requires at least one function argument');
   }
@@ -29,4 +29,6 @@ module.exports = function pipe(...fns) {
     firstFunction(...args),
     tailFunctions
   );
-};
+}
+
+module.exports = pipe;
