@@ -7,6 +7,7 @@ const has = require('../has/has');
  * If key is missing in object it will be ignored.
  *
  * @since v1.0.0
+ * @category Object
  *
  * @param {Array} keys list of keys that should be included in new object
  * @param {Object} object
