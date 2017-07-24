@@ -1,6 +1,6 @@
 /* eslint-disable no-new-func */
 
-module.exports = function arity(length, fn) {
+function arity(length, fn) {
   const params = [];
 
   for (let i = 0; i < length; i += 1) {
@@ -13,4 +13,6 @@ module.exports = function arity(length, fn) {
   );
 
   return arityFn(fn);
-};
+}
+
+module.exports = arity;
