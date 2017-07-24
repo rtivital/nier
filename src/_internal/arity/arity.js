@@ -8,7 +8,7 @@
  * Although produced function length is fixed it can accept any amount of arguments.
  *
  * @since v1.0.0
- * @category Function
+ * @category Internal
  *
  * @param {number} length
  * @param {Function} fn
