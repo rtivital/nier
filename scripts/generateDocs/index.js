@@ -11,18 +11,18 @@ const formatDocItem = require('./formatDocItem');
 const settings = N.merge({ output: './public', fileName: 'docs.json' }, argv);
 
 const readSrcFiles = N.map(file => fs.readFile(`./src/${file}/${file}.js`));
-const formatDocs = N.map(formatDocItem);
-const parseComments = N.pipe(
+const formatDocs = N.pipe(
   N.map(file => dox.parseComments(file.toString('utf8'))),
   N.unnest,
-  formatDocs
+  N.map(formatDocItem),
+  docs => ({ version: N.version, docs })
 );
 
 fs
   .ensureDir(settings.output)
   .then(() => getSrcContent())
   .then(files => Promise.all(readSrcFiles(files)))
-  .then(files => fs.writeJson(`${settings.output}/${settings.fileName}`, parseComments(files)))
+  .then(files => fs.writeJson(`${settings.output}/${settings.fileName}`, formatDocs(files)))
   .then(() => {
     console.log(chalk.green.bold`✔ Docs generated\n`);
     process.exit(0);
