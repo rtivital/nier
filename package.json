@@ -8,7 +8,7 @@
     "test:all": "npm run test && npm run lint && npm run exports && npm run size && npm run version",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "docs": "node scripts/generateDocs",
+    "docs": "node scripts/generateDocs --output ./dist --fileName hello.json",
     "exports": "node scripts/allexports",
     "version": "node scripts/version",
     "size": "npm run build && bundlesize",
@@ -49,6 +49,7 @@
     "tap-spec": "^4.1.1",
     "tape": "^4.7.0",
     "tape-catch": "^1.0.6",
-    "webpack": "^3.3.0"
+    "webpack": "^3.3.0",
+    "yargs": "^8.0.2"
   }
 }
