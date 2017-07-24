@@ -1,10 +1,5 @@
 const N = require('../../src');
-
-const extractString = param => N.pipe(
-  N.path('tags'),
-  N.find(N.whereEq({ type: param })),
-  N.path('string')
-);
+const extractTagContent = require('./extractTagContent');
 
 const extractDescription = N.path(['description', 'full']);
 const extractName = N.path(['ctx', 'name']);
@@ -18,10 +13,10 @@ const extractParams = N.pipe(
 module.exports = function format(docItem) {
   return {
     name: extractName(docItem),
-    since: extractString('since')(docItem),
-    see: extractString('see')(docItem),
-    category: extractString('category')(docItem),
-    examples: extractString('example')(docItem),
+    since: extractTagContent('since')(docItem),
+    see: extractTagContent('see')(docItem),
+    category: extractTagContent('category')(docItem),
+    examples: extractTagContent('example')(docItem),
     description: extractDescription(docItem),
     params: extractParams(docItem),
   };

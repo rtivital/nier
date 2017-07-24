@@ -11,10 +11,11 @@ const formatDocItem = require('./formatDocItem');
 const settings = N.merge({ output: './public', fileName: 'docs.json' }, argv);
 
 const readSrcFiles = N.map(file => fs.readFile(`./src/${file}/${file}.js`));
+const formatDocs = N.map(formatDocItem);
 const parseComments = N.pipe(
   N.map(file => dox.parseComments(file.toString('utf8'))),
   N.unnest,
-  N.map(formatDocItem)
+  formatDocs
 );
 
 fs
