@@ -5,13 +5,13 @@ const dox = require('dox');
 const chalk = require('chalk');
 const getSrcContent = require('../utils/getSrcContent');
 const N = require('../../src');
-const format = require('./format');
+const formatDocItem = require('./formatDocItem');
 
 const readSrcFiles = N.map(file => fs.readFile(`./src/${file}/${file}.js`));
 const parseComments = N.pipe(
   N.map(file => dox.parseComments(file.toString('utf8'))),
   N.unnest,
-  N.map(format)
+  N.map(formatDocItem)
 );
 
 fs
