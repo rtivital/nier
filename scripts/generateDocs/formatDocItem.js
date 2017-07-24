@@ -6,6 +6,7 @@ module.exports = function format(docItem) {
     name: N.path(['ctx', 'name'], docItem),
     since: extractTagContent('since')(docItem),
     see: extractTagContent('see')(docItem),
+    alias: extractTagContent('alias')(docItem),
     category: extractTagContent('category')(docItem),
     examples: extractTagContent('example')(docItem),
     description: N.path(['description', 'full'], docItem),
