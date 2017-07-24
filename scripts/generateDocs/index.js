@@ -19,7 +19,10 @@ fs
   .then(() => getSrcContent())
   .then(files => Promise.all(readSrcFiles(files)))
   .then(files => fs.writeJson('./public/docs.json', parseComments(files)))
-  .then(() => console.log(chalk.green.bold`✔ Docs generated\n`))
+  .then(() => {
+    console.log(chalk.green.bold`✔ Docs generated\n`);
+    process.exit(0);
+  })
   .catch((err) => {
     console.log(`${chalk.red.bold('docs generation error:')} ${err.message}\n`);
     process.exit(1);
