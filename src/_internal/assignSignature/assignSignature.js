@@ -1,6 +1,6 @@
 const SIGNATURES = require('../signatures');
 
-module.exports = function assignSignature(signature, value, object) {
+function assignSignature(signature, value, object) {
   Object.defineProperty(object, SIGNATURES[signature], {
     value,
     configurable: false,
@@ -9,4 +9,6 @@ module.exports = function assignSignature(signature, value, object) {
   });
 
   return object;
-};
+}
+
+module.exports = assignSignature;
