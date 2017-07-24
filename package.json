@@ -8,7 +8,7 @@
     "test:all": "npm run test && npm run lint && npm run exports && npm run size && npm run version",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "docs": "node scripts/generateDocs --output ./dist --fileName hello.json",
+    "docs": "node scripts/generateDocs --output ./public --fileName docs.json",
     "exports": "node scripts/allexports",
     "version": "node scripts/version",
     "size": "npm run build && bundlesize",
