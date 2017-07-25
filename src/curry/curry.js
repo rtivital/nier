@@ -20,6 +20,10 @@ const curryN = require('../curryN/curryN');
  * sum(1)()(2)()(3); // 6
  */
 function curry(fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('N.curry received value that can not be curried');
+  }
+
   return curryN(fn.length, fn);
 }
 

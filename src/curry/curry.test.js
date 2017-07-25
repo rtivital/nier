@@ -3,7 +3,7 @@ const testUtils = require('../../testUtils');
 const curry = require('./curry');
 
 test('curry', (t) => {
-  testUtils.isCurried(t, curry());
+  testUtils.isCurried(t, curry);
   testUtils.isCurried(t, curry((a, b) => a + b)(1), 'creates curried function');
 
   t.true(
