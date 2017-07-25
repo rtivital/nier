@@ -1,3 +1,6 @@
 module.exports = function isCurried(t, value, message = 'is curried') {
-  t.equals(typeof value, 'function', message);
+  t.true(
+    typeof value === 'function' && typeof value() === 'function' && typeof value()()() === 'function',
+    message
+  );
 };
