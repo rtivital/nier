@@ -22,11 +22,11 @@ const arity = require('../arity/arity');
  * curried('hello', ' there'); // -> 'hello there'
  */
 function curryN(receivedArgs, acc, fn) {
-  const callsRemain = receivedArgs || fn.length;
+  return arity(receivedArgs, (...args) => {
+    const callsRemain = receivedArgs - args.length;
 
-  return arity(callsRemain, (...args) => {
-    if (callsRemain - args.length > 0) {
-      return curryN(callsRemain - args.length, acc.concat(args), fn);
+    if (callsRemain > 0) {
+      return curryN(callsRemain, acc.concat(args), fn);
     }
 
     return fn(...acc, ...args);
