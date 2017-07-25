@@ -9,7 +9,7 @@
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
     "test": "tape 'src/**/*.test.js' | tap-spec",
-    "test:exports": "node scripts/allexports",
+    "test:exports": "node scripts/exports",
     "test:version": "node scripts/version",
     "test:size": "npm run build && bundlesize",
     "test:all": "npm run test && npm run lint && npm run test:exports && npm run test:size && npm run test:version",
