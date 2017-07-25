@@ -14,5 +14,17 @@ test('_internal/curryN', (t) => {
     'provides arity to function created with curried function call'
   );
 
+  t.equals(
+    curryN(2, [], (...args) => args[0] + args[1])()()()(1)()()(2),
+    3,
+    'enables endless function calling until arguments are received'
+  );
+
+  t.equals(
+    curryN(2, [], (...args) => args[0] + args[1])(1, 2),
+    3,
+    'produced function works as expected with single call'
+  );
+
   t.end();
 });

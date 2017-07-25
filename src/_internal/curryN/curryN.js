@@ -4,8 +4,8 @@ function curryN(receivedArgs = 0, acc = [], fn) {
   const callsRemain = receivedArgs || fn.length;
 
   return arity(callsRemain, (...args) => {
-    if (args.length < callsRemain - acc.length) {
-      return curryN(callsRemain - 1, acc.concat(args), fn);
+    if (callsRemain - args.length > 0) {
+      return curryN(callsRemain - args.length, acc.concat(args), fn);
     }
 
     return fn(...acc, ...args);
