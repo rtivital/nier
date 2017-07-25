@@ -6,6 +6,11 @@ test('curry', (t) => {
   testUtils.isCurried(t, curry);
   testUtils.isCurried(t, curry((a, b) => a + b)(1), 'creates curried function');
 
+  t.throws(
+    () => curry(1),
+    'throws if receives value that can not be curried'
+  );
+
   t.true(
     typeof curry((...args) => args.reduce((acc, item) => acc + item, 0)) === 'function',
     'curries functions with zero arity'
