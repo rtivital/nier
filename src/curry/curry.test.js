@@ -5,7 +5,11 @@ const curry = require('./curry');
 test('curry', (t) => {
   testUtils.isCurried(t, curry());
   testUtils.isCurried(t, curry((a, b) => a + b)(1), 'creates curried function');
-  testUtils.isCurried(t, curry((...args) => args.reduce((acc, item) => acc + item, 0)), 'curries functions with zero arity');
+
+  t.true(
+    typeof curry((...args) => args.reduce((acc, item) => acc + item, 0)) === 'function',
+    'curries functions with zero arity'
+  );
 
   t.true(
     curry((a, b) => a + b).length === 2,
