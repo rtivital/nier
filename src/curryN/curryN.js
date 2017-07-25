@@ -1,4 +1,5 @@
 const CurryN = require('../_internal/curryN/curryN');
+const isInteger = require('../_internal/isInteger/isInteger');
 
 
 /**
@@ -20,6 +21,14 @@ const CurryN = require('../_internal/curryN/curryN');
  * sum(1)()(2)()(3); // 6
  */
 function curryN(length, fn) {
+  if (typeof fn !== 'function') {
+    throw new Error('N.curryN received value that can not be curried');
+  }
+
+  if (!isInteger(length)) {
+    throw new Error('N.curryN received length value that is not an integer');
+  }
+
   return CurryN(length, [], fn);
 }
 
