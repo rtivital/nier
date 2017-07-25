@@ -2,6 +2,8 @@ const curry = require('../../curry/curry');
 const assignSignature = require('../assignSignature/assignSignature');
 
 /**
+ * Internal – this function is not available in public api.
+ *
  * Returns curried iterator with reversedIterator signature (used is withIndex function).
  *
  * @since v1.0.0

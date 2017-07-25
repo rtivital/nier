@@ -1,6 +1,8 @@
 const SIGNATURES = require('../signatures');
 
 /**
+ * Internal – this function is not available in public api.
+ *
  * Creates private nier property on any object. Created property can not be changed or deleted.
  *
  * @since v1.0.0

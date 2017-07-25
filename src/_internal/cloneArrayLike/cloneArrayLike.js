@@ -1,5 +1,6 @@
-
 /**
+ * Internal – this function is not available in public api.
+ *
  * Returns new array created from array or array like data structure.
  *
  * @since v1.0.0

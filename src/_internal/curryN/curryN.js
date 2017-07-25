@@ -2,6 +2,8 @@ const arity = require('../arity/arity');
 
 
 /**
+ * Internal – this function is not available in public api.
+ *
  * Creates currried function with provided length.
  *
  * @since v1.0.0

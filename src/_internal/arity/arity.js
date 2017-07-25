@@ -2,7 +2,7 @@
 
 
 /**
- * Internal – this function is not available at public api.
+ * Internal – this function is not available in public api.
  *
  * Creates new function with provided length value.
  * Although produced function length is fixed it can accept any amount of arguments.
