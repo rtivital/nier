@@ -1,9 +1,9 @@
 const test = require('tape-catch');
 const clamp = require('./clamp');
-const isCurried = require('../../testUtils/isCurried');
+const testUtils = require('../../testUtils');
 
 test('clamp', (t) => {
-  isCurried(t, clamp(1, 3));
+  testUtils.isCurried(t, clamp(1, 3));
 
   t.throws(
     () => clamp(5, 1, 10),

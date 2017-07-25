@@ -1,9 +1,9 @@
 const test = require('tape-catch');
 const complement = require('./complement');
-const isCurried = require('../../testUtils/isCurried');
+const testUtils = require('../../testUtils');
 
 test('complement', (t) => {
-  isCurried(t, complement());
+  testUtils.isCurried(t, complement());
 
   t.throws(
     () => complement(1),
