@@ -19,7 +19,7 @@ const curry = require('../curry/curry');
  */
 function clamp(min, max, value) {
   if (min > max) {
-    throw new Error('min must not be greater than max in clamp');
+    throw new Error('N.clamp: min must not be greater than max');
   }
 
   return Math.max(Math.min(value, max), min);
