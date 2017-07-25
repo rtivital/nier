@@ -1,5 +1,12 @@
 const N = require('../../src');
-const extractTagContent = require('./extractTagContent');
+
+function extractTagContent(tag) {
+  return N.pipe(
+    N.path('tags'),
+    N.find(N.whereEq({ type: tag })),
+    N.path('string')
+  );
+}
 
 module.exports = function format(docItem) {
   return {
