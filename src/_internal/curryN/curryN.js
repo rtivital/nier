@@ -1,6 +1,6 @@
 const arity = require('../arity/arity');
 
-function curryN(receivedArgs = 0, acc = [], fn) {
+function curryN(receivedArgs, acc, fn) {
   const callsRemain = receivedArgs || fn.length;
 
   return arity(callsRemain, (...args) => {
