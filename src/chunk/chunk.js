@@ -1,6 +1,6 @@
-const toInteger = require('../_internal/toInteger/toInteger');
 const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const isInteger = require('../_internal/isInteger/isInteger');
 const curry = require('../curry/curry');
 
 
@@ -27,11 +27,14 @@ function chunk(size, value) {
     throw new Error('N.chunk in not able to split values that are not array or array like');
   }
 
-  const parsedSize = toInteger(size);
+  if (!isInteger(size)) {
+    throw new Error('N.chunk is not able to use non integer values as chunk size');
+  }
+
   const safeClone = cloneArrayLike(value);
   const result = [];
 
-  for (let i = 0, l = safeClone.length; i < l; i += parsedSize) {
+  for (let i = 0, l = safeClone.length; i < l; i += size) {
     result.push(safeClone.slice(i, i + size));
   }
 
