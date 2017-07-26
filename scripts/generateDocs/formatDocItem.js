@@ -16,7 +16,7 @@ module.exports = function format(docItem) {
     alias: extractTagContent('alias')(docItem),
     category: extractTagContent('category')(docItem),
     examples: extractTagContent('example')(docItem),
-    description: N.path(['description', 'full'], docItem),
+    description: N.path(['description', 'full'], docItem).replace(/<(?:.|\n)*?>/gm, ''),
     params: N.pipe(
       N.path('tags'),
       N.filter(N.whereEq({ type: 'param' })),
