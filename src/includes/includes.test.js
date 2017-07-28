@@ -15,5 +15,15 @@ test('includes', (t) => {
     'returns false if value is not included in the array'
   );
 
+  t.true(
+    includes('hello', 'hello, nier!'),
+    'returs true if substring is included in string'
+  );
+
+  t.false(
+    includes('not included', 'hello, nier!'),
+    'returns false if substring is not included in string'
+  );
+
   t.end();
 });
