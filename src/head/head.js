@@ -9,7 +9,7 @@ const curry = require('../curry/curry');
  * @category Array
  *
  * @param {Array} collection
- * @return {any} first item of collection
+ * @return {*} first item of collection
  *
  * @alias first
  *
