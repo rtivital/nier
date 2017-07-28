@@ -5,6 +5,11 @@ const includes = require('./includes');
 test('includes', (t) => {
   testUtils.isCurried(t, includes(5));
 
+  t.throws(
+    () => includes(1, null),
+    'throws if receives uncompatable value'
+  );
+
   t.true(
     includes(1, [0, 1, 2]),
     'returns true if value is included in the array'
