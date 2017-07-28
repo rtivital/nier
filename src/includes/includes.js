@@ -26,7 +26,7 @@ function includes(value, list) {
   }
 
   if (!Array.isArray(list)) {
-    return false;
+    throw new Error('N.includes received value that is not string or array type');
   }
 
   return some(equals(value), list);
