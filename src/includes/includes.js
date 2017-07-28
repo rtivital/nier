@@ -21,6 +21,10 @@ const some = require('../some/some');
  * N.includes({ a: 1 }, [{ a: 1 }, { a: 2 }, { a: 3 }]); // -> true
  */
 function includes(value, list) {
+  if (typeof list === 'string') {
+    return list.indexOf(value) >= 0;
+  }
+
   if (!Array.isArray(list)) {
     return false;
   }
