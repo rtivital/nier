@@ -1,4 +1,3 @@
-// const arity = require('../_internal/arity/arity');
 const reverse = require('../reverse/reverse');
 const curry = require('../curry/curry');
 const curryN = require('../curryN/curryN');
@@ -19,7 +18,7 @@ const curryN = require('../curryN/curryN');
  */
 function flip(fn) {
   if (typeof fn !== 'function') {
-    throw new Error('N.flip received argument that is not function');
+    throw new Error('N.flip is not able to work with non funciton values');
   }
 
   return curryN(fn.length, (...args) => fn(...reverse(args)));
