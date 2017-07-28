@@ -1,3 +1,4 @@
+const Highlight = require('highlight.js');
 const N = require('../../src');
 
 function extractTagContent(tag) {
@@ -8,6 +9,11 @@ function extractTagContent(tag) {
   );
 }
 
+function extractExamples(docItem) {
+  const examples = extractTagContent('example')(docItem);
+  return Highlight.highlight('js', examples).value;
+}
+
 module.exports = function format(docItem) {
   return {
     name: N.path(['ctx', 'name'], docItem),
@@ -15,7 +21,7 @@ module.exports = function format(docItem) {
     see: extractTagContent('see')(docItem),
     alias: extractTagContent('alias')(docItem),
     category: extractTagContent('category')(docItem),
-    examples: extractTagContent('example')(docItem),
+    examples: extractExamples(docItem),
     description: N.path(['description', 'full'], docItem).replace(/<(?:.|\n)*?>/gm, ''),
     params: N.pipe(
       N.path('tags'),
