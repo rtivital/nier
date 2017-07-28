@@ -4,13 +4,13 @@ const some = require('../some/some');
 
 
 /**
- * Returns true if provided value is equal to at least one element of the array.
+ * Returns true if provided value is contained in array or string.
  *
  * @since v1.0.0
  * @category Array
  *
  * @param {*} value
- * @param {Array} list
+ * @param {Array|string} list
  * @return {boolean}
  *
  * @see some, every
@@ -19,6 +19,8 @@ const some = require('../some/some');
  * @example
  * N.includes(1, [1, 2, 3]); // -> true
  * N.includes({ a: 1 }, [{ a: 1 }, { a: 2 }, { a: 3 }]); // -> true
+ * N.includes('Hello', 'Hello, nier!'); // -> true
+ * N.includes('i am not included', 'not here'); // -> false
  */
 function includes(value, list) {
   if (typeof list === 'string') {
