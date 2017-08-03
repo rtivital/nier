@@ -15,6 +15,8 @@ const has = require('../has/has');
  * @param {Array} array
  * @return {Array} shallow array copy
  *
+ * @see updateWith
+ *
  * @example
  * N.update(0, 'hello', ['hi', 'nier']); // -> ['hello', 'nier']
  * N.update(5, 'hello', ['hi', 'nier']); // -> ['hi', 'nier']
