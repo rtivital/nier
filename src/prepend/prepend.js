@@ -1,6 +1,6 @@
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
-const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
+const concat = require('../concat/concat');
 
 
 /**
@@ -27,7 +27,7 @@ function prepend(value, data) {
     throw new Error('N.prepend received data that is not array or array like data structure');
   }
 
-  return [value, ...cloneArrayLike(data)];
+  return concat([value], data);
 }
 
 module.exports = curry(prepend);
