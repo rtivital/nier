@@ -21,6 +21,10 @@ const has = require('../has/has');
  * N.update(-1, 'nier', ['hi', 'there', 'you']); // -> ['hi', 'there', 'nier']
  */
 function update(index, value, array) {
+  if (!Array.isArray(array)) {
+    throw new Error('N.update received data structure that is not an array');
+  }
+
   const { length } = array;
   const indexToUpdate = index < 0 ? length + index : index;
 
