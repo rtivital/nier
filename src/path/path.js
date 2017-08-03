@@ -22,7 +22,9 @@ function path(pathTo, object) {
     return undefined;
   }
 
-  if (typeof pathTo === 'string') {
+  const pathToType = typeof pathTo;
+
+  if (pathToType === 'string' || pathToType === 'number') {
     return object[pathTo];
   }
 
