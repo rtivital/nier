@@ -10,7 +10,10 @@ function updateWith(index, callback, array) {
     throw new Error('N.updateWith received data structure that is not an array');
   }
 
-  return update(index, callback(array[index]), array);
+  const { length } = array;
+  const indexToUpdate = index < 0 ? length + index : index;
+
+  return update(index, callback(array[indexToUpdate]), array);
 }
 
 module.exports = curry(updateWith);
