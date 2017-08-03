@@ -36,13 +36,19 @@ test('pluck', (t) => {
   t.deepEquals(
     pluck(['a', 'b'], [{ a: { b: 1 } }, { a: { c: 2 } }, { a: { b: 3 } }]),
     [1, undefined, 3],
-    'adds undefined to array where path is not present'
+    'adds undefined to array where path is not present in object'
   );
 
   t.deepEquals(
     pluck(0, [[1, 'a'], [2, 'b'], [3, 'c']]),
     [1, 2, 3],
     'extracts path from nested arrays'
+  );
+
+  t.deepEquals(
+    pluck(1, [[1, 1], [2], [3, 3]]),
+    [1, undefined, 3],
+    'adds undefined to array where path is not present in array'
   );
 
   t.deepEquals(

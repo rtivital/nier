@@ -26,6 +26,7 @@ const path = require('../path/path');
  * N.pluck(['a', 'b'], [{ a: { b: 1 } }, { a: { nothingToGetHere: 2 } }, { a: { b: 3 } }]); // -> [1, undefined, 3]
  *
  * N.pluck(0, [[1, 'a'], [2, 'b'], [3, 'c']]); // -> [1, 2, 3]
+ * N.pluck(1, [[1, 1], [2], [3, 3]]); // -> [1, undefined, 3]
  * N.pluck(['a', 0], [{ a: [1, 'a'] }, { a: [2, 'b'] }, { a: [3, 'c'] }]); // -> [1, 2, 3]
  */
 function pluck(propPath, list) {
