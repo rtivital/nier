@@ -37,6 +37,7 @@ module.exports = {
   path: require('./path/path'),
   pick: require('./pick/pick'),
   pipe: require('./pipe/pipe'),
+  pluck: require('./pluck/pluck'),
   prepend: require('./prepend/prepend'),
   reduce: require('./reduce/reduce'),
   reject: require('./reject/reject'),
