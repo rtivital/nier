@@ -1,6 +1,6 @@
 const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
-const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
+const concat = require('../concat/concat');
 
 
 /**
@@ -27,10 +27,7 @@ function append(value, data) {
     throw new Error('N.append received data that is not array or array like data structure');
   }
 
-  const result = cloneArrayLike(data);
-  result[data.length] = value;
-
-  return result;
+  return concat(data, [value]);
 }
 
 module.exports = curry(append);
