@@ -5,6 +5,11 @@ const testUtils = require('../../testUtils');
 test('update', (t) => {
   testUtils.isCurried(t, update(1));
 
+  t.throws(
+    () => update(1, 'hello', 'nier'),
+    'throws if receives non array like value'
+  );
+
   t.deepEquals(
     update(1, 'hello', ['you', 'hi', 'there']),
     ['you', 'hello', 'there'],
