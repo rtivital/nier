@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const pluck = require('./pluck');
 
-test('pluck', (t) => {
+test.only('pluck', (t) => {
   testUtils.isCurried(t, pluck);
 
   t.throws(
@@ -43,6 +43,12 @@ test('pluck', (t) => {
     pluck(0, [[1, 'a'], [2, 'b'], [3, 'c']]),
     [1, 2, 3],
     'extracts path from nested arrays'
+  );
+
+  t.deepEquals(
+    pluck(['a', 0], [{ a: [1, 'a'] }, { a: [2, 'b'] }, { a: [3, 'c'] }]),
+    [1, 2, 3],
+    'extracts path from nested arrays in objects'
   );
 
   t.end();
