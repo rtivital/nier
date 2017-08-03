@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const pluck = require('./pluck');
 
-test.only('pluck', (t) => {
+test('pluck', (t) => {
   testUtils.isCurried(t, pluck);
 
   t.throws(
