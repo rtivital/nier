@@ -18,6 +18,7 @@ module.exports = {
   findIndex: require('./findIndex/findIndex'),
   findLast: require('./findLast/findLast'),
   findLastIndex: require('./findLastIndex/findLastIndex'),
+  flatten: require('./flatten/flatten'),
   flip: require('./flip/flip'),
   has: require('./has/has'),
   head: require('./head/head'),
