@@ -53,6 +53,7 @@ module.exports = {
   unnest: require('./unnest/unnest'),
   unset: require('./unset/unset'),
   update: require('./update/update'),
+  updateWith: require('./updateWith/updateWith'),
   upperFirst: require('./upperFirst/upperFirst'),
   values: require('./values/values'),
   where: require('./where/where'),
