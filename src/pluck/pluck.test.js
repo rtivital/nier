@@ -5,6 +5,11 @@ const pluck = require('./pluck');
 test.only('pluck', (t) => {
   testUtils.isCurried(t, pluck);
 
+  t.throws(
+    () => pluck('a', {}),
+    'throws if receives non array value'
+  );
+
   t.deepEquals(
     pluck('a', [{ a: 1 }, { a: 2 }, { a: 3 }]),
     [1, 2, 3],
