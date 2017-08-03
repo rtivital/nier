@@ -7,7 +7,7 @@ const path = require('../path/path');
 /**
  * Creates new array by extracting the same named property from all objects (or arrays) in the provided array.
  * Note that if supplied path is not found in object, undefined will be added to the result array.
- * Equivalent to `N.map(N.path())`.
+ * Equivalent to `N.map(N.path(path), array)`.
  *
  * @since v1.0.0
  * @category Array
