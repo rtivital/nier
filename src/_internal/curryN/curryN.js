@@ -1,4 +1,6 @@
+const isPlaceholder = require('../isPlaceholder/isPlaceholder');
 const arity = require('../arity/arity');
+const amount = require('../../amount/amount');
 
 
 /**
