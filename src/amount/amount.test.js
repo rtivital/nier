@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const amount = require('./amount');
 
-test.only('amount', (t) => {
+test('amount', (t) => {
   testUtils.isCurried(t, amount(f => f));
   testUtils.noIndex(t, { fn: amount, data: [1, 2, 3], result: 3 });
   testUtils.withIndex(t, { fn: amount, data: [1, 2], indexResult: 1, dataResult: 2 });
