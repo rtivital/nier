@@ -17,6 +17,14 @@ const includes = require('../includes/includes');
  * N.without([{ a: 1 }, { b: 2 }], [{ a : 1 }, { b: 2 }, { c: 3 }, { d: 4 }]); // -> [{ c: 3 }, { d: 4 }]
  */
 function without(remove, list) {
+  if (!Array.isArray(remove)) {
+    throw new Error('N.without expected first argument to be an array');
+  }
+
+  if (!Array.isArray(list)) {
+    throw new Error('N.without expected second argument to be an array');
+  }
+
   const result = [];
 
   for (let i = 0, l = list.length; i < l; i += 1) {
