@@ -1,0 +1,28 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "react/no-danger": 0,
+    "import/no-extraneous-dependencies": 0,
+    "arrow-parens": 0,
+    "global-require": 0,
+    "spaced-comment": 0,
+    "comma-dangle": ["error", {
+        "arrays": "always-multiline",
+        "objects": "always-multiline",
+        "imports": "always-multiline",
+        "exports": "always-multiline",
+        "functions": "ignore",
+    }]
+  },
+
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  }
+}
