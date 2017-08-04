@@ -5,6 +5,16 @@ const without = require('./without');
 test('without', (t) => {
   testUtils.isCurried(t, without([5]));
 
+  t.throws(
+    () => without(null, [1, 2]),
+    'throws if receives first argument that is not an array'
+  );
+
+  t.throws(
+    () => without([1, 2], null),
+    'throws if receives second argument that is not an array'
+  );
+
   t.deepEquals(
     without([1, 2], [1, 2, 3, 4]),
     [3, 4],
