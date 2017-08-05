@@ -11,14 +11,14 @@ const production = process.env.NODE_ENV === 'production';
 
 const stylesLoaders = [
   'css-loader',
-  'postcss-loader',
+  { loader: 'postcss-loader', options: { config: { path: path.join(__dirname, 'postcss-config.js') } } },
   'sass-loader',
   {
     loader: 'sass-resources-loader',
     options: {
       resources: [
-        './src/styles/variables.scss',
-        './src/styles/mixins.scss',
+        path.join(__dirname, 'src/styles/variables.scss'),
+        path.join(__dirname, 'src/styles/mixins.scss'),
       ],
     },
   },
@@ -46,10 +46,10 @@ const loaders = [
 ];
 
 const pluginsBase = [
-  new HtmlWebpackPlugin({ template: 'template.ejs' }),
+  new HtmlWebpackPlugin({ template: path.join(__dirname, 'template.ejs') }),
 
   new FaviconsWebpackPlugin({
-    logo: './favicon.png',
+    logo: path.join(__dirname, 'favicon.png'),
     background: SETTINGS.THEME_COLOR,
     icons: SETTINGS.FAVICONS,
   }),
@@ -90,12 +90,12 @@ module.exports = {
   devtool: production ? 'cheap-module-source-map' : 'eval',
 
   entry: production
-    ? './src/index'
+    ? path.join(__dirname, 'src/index')
     : [
       'react-hot-loader/patch',
       `webpack-dev-server/client?http://localhost:${SETTINGS.PORT}`,
       'webpack/hot/only-dev-server',
-      './src/index',
+      path.join(__dirname, 'src/index'),
     ],
 
   output: {
