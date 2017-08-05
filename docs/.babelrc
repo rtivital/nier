@@ -1,0 +1,20 @@
+{
+  "presets": ["react", "es2015", "stage-0"],
+  "plugins": [
+    "transform-decorators-legacy",
+
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "node_modules": "../node_modules"
+      }
+    }]
+  ],
+
+  "env": {
+    "production": {
+      "presets": ["react-optimize"],
+      "plugins": ["transform-runtime"]
+    }
+  }
+}
