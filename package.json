@@ -14,6 +14,8 @@
     "test:size": "npm run build && bundlesize",
     "test:all": "npm run test && npm run lint && npm run test:exports && npm run test:size && npm run test:version",
     "docs": "node scripts/generateDocs --output ./public --fileName docs.json",
+    "docs:start": "node scripts/docs/start",
+    "docs:build": "webpack --config ./docs/webpack.config --progress",
     "prepublish": "npm run test:all && npm run build"
   },
   "repository": {
