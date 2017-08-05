@@ -22,5 +22,5 @@ module.exports = {
   THEME_COLOR: '#ffeeee',
 
   // path where all project files should be put after building
-  PUBLIC_PATH: path.join(__dirname, 'public'),
+  PUBLIC_PATH: path.join(__dirname, '../public'),
 };
