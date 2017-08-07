@@ -1,6 +1,18 @@
 const isPlaceholder = require('../isPlaceholder/isPlaceholder');
 const arity = require('../arity/arity');
 
+function placeholderAmount(args) {
+  let amount = 0;
+
+  for (let i = 0, l = args.length; i < l; i += 1) {
+    if (isPlaceholder(args[i])) {
+      amount += 1;
+    }
+  }
+
+  return amount;
+}
+
 
 /**
  * Internal – this function is not available in public api.
@@ -24,7 +36,7 @@ const arity = require('../arity/arity');
  */
 function curryN(receivedArgs, acc, fn) {
   return arity(receivedArgs, (...args) => {
-    const callsRemain = receivedArgs - (args.length - args.filter(isPlaceholder).length);
+    const callsRemain = receivedArgs - (args.length - placeholderAmount(args));
 
     if (callsRemain > 0) {
       return curryN(callsRemain, acc.concat(args), fn);
