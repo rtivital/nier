@@ -1,6 +1,5 @@
-// const isPlaceholder = require('../isPlaceholder/isPlaceholder');
+const isPlaceholder = require('../isPlaceholder/isPlaceholder');
 const arity = require('../arity/arity');
-// const amount = require('../../amount/amount');
 
 
 /**
@@ -25,7 +24,7 @@ const arity = require('../arity/arity');
  */
 function curryN(receivedArgs, acc, fn) {
   return arity(receivedArgs, (...args) => {
-    const callsRemain = receivedArgs - args.length;
+    const callsRemain = receivedArgs - (args.length - args.filter(isPlaceholder).length);
 
     if (callsRemain > 0) {
       return curryN(callsRemain, acc.concat(args), fn);
