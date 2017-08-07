@@ -1,5 +1,6 @@
 const test = require('tape-catch');
 const curryN = require('./curryN');
+const __ = require('../../__/__');
 
 test('_internal/curryN', (t) => {
   t.equals(
@@ -24,6 +25,18 @@ test('_internal/curryN', (t) => {
     curryN(2, [], (...args) => args[0] + args[1])(1, 2),
     3,
     'produced function works as expected with single call'
+  );
+
+  t.equals(
+    curryN(2, [], (...args) => args[0] + args[1])(__, __).length,
+    2,
+    'saves arity with placeholders'
+  );
+
+  t.equals(
+    curryN(2, [], (...args) => args[0] + args[1])(__, 1, __).length,
+    1,
+    'produced right arity with placeholder arguments'
   );
 
   t.end();
