@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "scripts": {
     "start": "npm run docs:start",
+    "deploy": "npm run docs:deploy",
     "clean": "rimraf dist",
     "build": "npm run clean && webpack",
     "lint": "eslint src",
