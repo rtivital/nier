@@ -1,4 +1,4 @@
-const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 const concat = require('../concat/concat');
 
@@ -23,7 +23,7 @@ const concat = require('../concat/concat');
  * N.append(['nier'], ['hello']); // ['hello', ['nier']]
  */
 function append(value, data) {
-  if (!isArrayLike(data)) {
+  if (!_isArrayLike(data)) {
     throw new Error('N.append received data that is not array or array like data structure');
   }
 

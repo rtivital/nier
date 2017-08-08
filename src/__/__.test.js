@@ -1,10 +1,10 @@
 const test = require('tape-catch');
 const __ = require('./__');
-const SIGNATURES = require('../_internal/signatures');
+const _SIGNATURES = require('../_internal/signatures');
 
 test('__', (t) => {
   t.true(
-    __[SIGNATURES.placeholder],
+    __[_SIGNATURES.placeholder],
     'has hidden placeholder signature'
   );
 

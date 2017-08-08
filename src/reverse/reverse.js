@@ -1,4 +1,4 @@
-const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -16,7 +16,7 @@ const curry = require('../curry/curry');
  * N.reverse('nier'); // -> 'rein'
  */
 function reverse(collection) {
-  if (!isArrayLike(collection)) {
+  if (!_isArrayLike(collection)) {
     throw new Error('N.reverse is not able to work with data that is not array or array like value');
   }
 

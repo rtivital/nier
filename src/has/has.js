@@ -1,4 +1,4 @@
-const isValidPath = require('../_internal/isValidPath/isValidPath');
+const _isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 
 
@@ -26,7 +26,7 @@ const curry = require('../curry/curry');
  * N.has(['a', 2, 'b'], { a: [{ b: 1 }, { c: 2 }], d: 3 }); // -> false
  */
 function has(path, object) {
-  if (object == null || !isValidPath(path)) {
+  if (object == null || !_isValidPath(path)) {
     return false;
   }
 

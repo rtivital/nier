@@ -1,4 +1,4 @@
-const assignSignature = require('../_internal/assignSignature/assignSignature');
+const _assignSignature = require('../_internal/assignSignature/assignSignature');
 
 /**
  * Placeholder
@@ -9,4 +9,4 @@ const assignSignature = require('../_internal/assignSignature/assignSignature');
  */
 const __ = {};
 
-module.exports = assignSignature('placeholder', true, __);
+module.exports = _assignSignature('placeholder', true, __);

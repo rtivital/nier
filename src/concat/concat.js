@@ -1,5 +1,5 @@
-const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
-const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const _cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -18,12 +18,12 @@ const curry = require('../curry/curry');
  * N.concat('Hello, ', 'nier!'); // -> 'Hello, nier!'
  */
 function concat(a, b) {
-  if (!isArrayLike(a) || !isArrayLike(b)) {
+  if (!_isArrayLike(a) || !_isArrayLike(b)) {
     throw new Error('N.concat received values that can not be concated');
   }
 
-  const aClone = cloneArrayLike(a);
-  const bClone = cloneArrayLike(b);
+  const aClone = _cloneArrayLike(a);
+  const bClone = _cloneArrayLike(b);
   const concated = aClone.concat(bClone);
 
   return typeof a === 'string' && typeof b === 'string' ? concated.join('') : concated;

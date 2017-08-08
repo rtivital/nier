@@ -1,4 +1,4 @@
-const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -19,7 +19,7 @@ const curry = require('../curry/curry');
  * N.head({ 0: 'first', 1: 'second', length: 2 }); // -> first
  */
 function head(collection) {
-  if (isArrayLike(collection)) {
+  if (_isArrayLike(collection)) {
     return collection[0];
   }
 

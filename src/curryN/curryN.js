@@ -1,5 +1,5 @@
-const CurryN = require('../_internal/curryN/curryN');
-const isInteger = require('../_internal/isInteger/isInteger');
+const _curryN = require('../_internal/curryN/curryN');
+const _isInteger = require('../_internal/isInteger/isInteger');
 
 
 /**
@@ -25,11 +25,11 @@ function curryN(length, fn) {
     throw new Error('N.curryN received value that can not be curried');
   }
 
-  if (!isInteger(length)) {
+  if (!_isInteger(length)) {
     throw new Error('N.curryN received length value that is not an integer');
   }
 
-  return CurryN(length, [], fn);
+  return _curryN(length, [], fn);
 }
 
-module.exports = CurryN(2, [], curryN);
+module.exports = _curryN(2, [], curryN);

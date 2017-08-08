@@ -1,4 +1,4 @@
-const isValidPath = require('../_internal/isValidPath/isValidPath');
+const _isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 const has = require('../has/has');
 
@@ -24,7 +24,7 @@ const has = require('../has/has');
  * N.set(['nested', 'prop'], 'value', { nested: { prop: 1 } }); // -> { nested: { prop: 'value' } }
  */
 function set(path, value, object) {
-  if (!isValidPath(path)) {
+  if (!_isValidPath(path)) {
     return object;
   }
 

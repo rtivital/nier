@@ -1,4 +1,4 @@
-const isValidPath = require('../_internal/isValidPath/isValidPath');
+const _isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 const map = require('../map/map');
 const path = require('../path/path');
@@ -30,7 +30,7 @@ const path = require('../path/path');
  * N.pluck(['a', 0], [{ a: [1, 'a'] }, { a: [2, 'b'] }, { a: [3, 'c'] }]); // -> [1, 2, 3]
  */
 function pluck(propPath, list) {
-  if (!isValidPath(propPath)) {
+  if (!_isValidPath(propPath)) {
     throw new Error('N.pluck received invalid property path');
   }
 

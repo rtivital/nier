@@ -1,5 +1,5 @@
-const isArrayLike = require('../_internal/isArrayLike/isArrayLike');
-const cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const _cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -21,11 +21,11 @@ const curry = require('../curry/curry');
  *  * N.slice(0, 2, 'nier'); // -> 'ni'
  */
 function slice(from, to, collection) {
-  if (!isArrayLike(collection)) {
+  if (!_isArrayLike(collection)) {
     throw new Error('N.slice received collection that is not array or array like');
   }
 
-  const arrayCollection = cloneArrayLike(collection);
+  const arrayCollection = _cloneArrayLike(collection);
   const slicedCollection = arrayCollection.slice(from, to);
 
   return typeof collection === 'string' ? slicedCollection.join('') : slicedCollection;
