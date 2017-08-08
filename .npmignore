@@ -3,4 +3,5 @@ scripts
 testUtils
 *.test.js
 public
+docs
 .DS_Store
