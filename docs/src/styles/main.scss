@@ -1,8 +1,6 @@
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
 }
 
 *,
@@ -11,9 +9,37 @@ html {
   box-sizing: inherit;
 }
 
+html,
 body {
-  font-size: 1.6em;
-  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-size: $base-font-size;
+  font-family: $font-family;
+  line-height: $base-line-height;
   color: $color-black;
-  font-family: sans-serif;
+}
+
+code {
+  font-family: $font-family-code, monospace !important;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: $color-blue;
+  transition: color 200ms ease;
+
+  &:hover {
+    text-decoration: underline;
+    color: $color-black-blue;
+  }
+}
+
+input,
+textarea {
+  font-family: $font-family;
+  outline: 0;
 }
