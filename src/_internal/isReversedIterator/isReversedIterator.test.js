@@ -1,7 +1,7 @@
 const test = require('tape-catch');
 const isReversedIterator = require('./isReversedIterator');
-const createReversedIterator = require('../createReversedIterator/createReversedIterator');
-const assignSignature = require('../assignSignature/assignSignature');
+const _createReversedIterator = require('../createReversedIterator/createReversedIterator');
+const _assignSignature = require('../assignSignature/assignSignature');
 
 test('_internal/isReversedIterator', (t) => {
   t.false(
@@ -10,12 +10,12 @@ test('_internal/isReversedIterator', (t) => {
   );
 
   t.false(
-    isReversedIterator(assignSignature('reversedIterator', false, f => f)),
+    isReversedIterator(_assignSignature('reversedIterator', false, f => f)),
     'detects function with reversedIterator internal property set to false'
   );
 
   t.true(
-    isReversedIterator(createReversedIterator(f => f)),
+    isReversedIterator(_createReversedIterator(f => f)),
     'detects reversed iterator created with createReversedIterator module'
   );
 

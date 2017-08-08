@@ -1,4 +1,4 @@
-const SIGNATURES = require('../signatures');
+const _SIGNATURES = require('../signatures');
 
 /**
  * Internal – this function is not available in public api.
@@ -19,7 +19,7 @@ const SIGNATURES = require('../signatures');
  * isReversedIterator(findLast); // -> findLast
  */
 function assignSignature(signature, value, object) {
-  Object.defineProperty(object, SIGNATURES[signature], {
+  Object.defineProperty(object, _SIGNATURES[signature], {
     value,
     configurable: false,
     enumerable: false,

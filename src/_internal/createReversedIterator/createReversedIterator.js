@@ -1,5 +1,5 @@
 const curry = require('../../curry/curry');
-const assignSignature = require('../assignSignature/assignSignature');
+const _assignSignature = require('../assignSignature/assignSignature');
 
 /**
  * Internal – this function is not available in public api.
@@ -18,7 +18,7 @@ const assignSignature = require('../assignSignature/assignSignature');
  */
 function createReversedIterator(iterator) {
   const reversedIterator = curry(iterator);
-  return assignSignature('reversedIterator', true, reversedIterator);
+  return _assignSignature('reversedIterator', true, reversedIterator);
 }
 
 module.exports = createReversedIterator;

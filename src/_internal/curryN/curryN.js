@@ -1,11 +1,11 @@
-const isPlaceholder = require('../isPlaceholder/isPlaceholder');
-const arity = require('../arity/arity');
+const _isPlaceholder = require('../isPlaceholder/isPlaceholder');
+const _arity = require('../arity/arity');
 
 function placeholderAmount(args) {
   let amount = 0;
 
   for (let i = 0, l = args.length; i < l; i += 1) {
-    if (isPlaceholder(args[i])) {
+    if (_isPlaceholder(args[i])) {
       amount += 1;
     }
   }
@@ -35,7 +35,7 @@ function placeholderAmount(args) {
  * curried('hello', ' there'); // -> 'hello there'
  */
 function curryN(receivedArgs, acc, fn) {
-  return arity(receivedArgs, (...args) => {
+  return _arity(receivedArgs, (...args) => {
     const callsRemain = receivedArgs - (args.length - placeholderAmount(args));
 
     if (callsRemain > 0) {

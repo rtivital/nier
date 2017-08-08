@@ -1,4 +1,4 @@
-const isValidLength = require('../isValidLength/isValidLength');
+const _isValidLength = require('../isValidLength/isValidLength');
 
 
 /**
@@ -24,7 +24,7 @@ const isValidLength = require('../isValidLength/isValidLength');
  * isArrayLike(null); // -> false
  */
 function isArrayLike(value) {
-  return value != null && isValidLength(value.length) && typeof value !== 'function';
+  return value != null && _isValidLength(value.length) && typeof value !== 'function';
 }
 
 module.exports = isArrayLike;

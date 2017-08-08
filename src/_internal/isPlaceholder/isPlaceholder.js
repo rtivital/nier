@@ -1,4 +1,4 @@
-const SIGNATURES = require('../signatures');
+const _SIGNATURES = require('../signatures');
 
 /**
  * Internal – this function is not available in public api.
@@ -17,7 +17,7 @@ const SIGNATURES = require('../signatures');
  * isPlaceholder(null); // -> false
  */
 function isPlaceholder(value) {
-  return value != null && !!value[SIGNATURES.placeholder];
+  return value != null && !!value[_SIGNATURES.placeholder];
 }
 
 module.exports = isPlaceholder;

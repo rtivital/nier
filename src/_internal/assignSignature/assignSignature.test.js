@@ -1,12 +1,12 @@
 const test = require('tape-catch');
 const assignSignature = require('./assignSignature');
-const SIGNATURES = require('../signatures');
+const _SIGNATURES = require('../signatures');
 
 const assigned = assignSignature('reversedIterator', true, {});
 
 test('_internal/assignSignature', (t) => {
   t.true(
-    assigned[SIGNATURES.reversedIterator],
+    assigned[_SIGNATURES.reversedIterator],
     'assigns signature'
   );
 
@@ -16,11 +16,11 @@ test('_internal/assignSignature', (t) => {
     'assigns signature as not emumerable property'
   );
 
-  assigned[SIGNATURES.reversedIterator] = false;
-  delete assigned[SIGNATURES.reversedIterator];
+  assigned[_SIGNATURES.reversedIterator] = false;
+  delete assigned[_SIGNATURES.reversedIterator];
 
   t.true(
-    assigned[SIGNATURES.reversedIterator],
+    assigned[_SIGNATURES.reversedIterator],
     'disables writing or deliting signature'
   );
 

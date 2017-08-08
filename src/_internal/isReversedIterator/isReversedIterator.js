@@ -1,4 +1,4 @@
-const SIGNATURES = require('../signatures');
+const _SIGNATURES = require('../signatures');
 
 
 /**
@@ -18,7 +18,7 @@ const SIGNATURES = require('../signatures');
  * isReversedIterator(findLast); // -> false
  */
 function isReversedIterator(value) {
-  return value != null && !!value[SIGNATURES.reversedIterator];
+  return value != null && !!value[_SIGNATURES.reversedIterator];
 }
 
 module.exports = isReversedIterator;
