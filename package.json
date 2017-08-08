@@ -15,8 +15,8 @@
     "test:size": "npm run build && bundlesize",
     "test:all": "npm run test && npm run lint && npm run test:exports && npm run test:size && npm run test:version",
     "docs:generate": "node scripts/docs/generate --output ./public --fileName docs.json",
-    "docs:start": "node scripts/docs/start",
-    "docs:build": "webpack --config ./docs/webpack.config --progress",
+    "docs:start": "cross-env NODE_ENV=development node scripts/docs/start",
+    "docs:build": "cross-env NODE_ENV=production webpack --config ./docs/webpack.config --progress",
     "docs:deploy": "npm run docs:generate && npm run docs:build && gh-pages -d public",
     "prepublish": "npm run test:all && npm run build"
   },
