@@ -17,6 +17,7 @@
     "docs:generate": "node scripts/docs/generate --output ./public --fileName docs.json",
     "docs:start": "node scripts/docs/start",
     "docs:build": "webpack --config ./docs/webpack.config --progress",
+    "docs:deploy": "npm run docs:generate && npm run docs:build && gh-pages -d public",
     "prepublish": "npm run test:all && npm run build"
   },
   "repository": {
