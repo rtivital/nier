@@ -6,6 +6,16 @@ const intersection = require('./intersection');
 test('intersection', (t) => {
   testUtils.isCurried(t, intersection([1, 2, 3]));
 
+  t.throws(
+    () => intersection(null, [1, 2, 3]),
+    'throws if first argument has invalid type'
+  );
+
+  t.throws(
+    () => intersection([1, 2, 3], null),
+    'throws if second argument has invalid type'
+  );
+
   t.deepEquals(
     intersection([1, 2, 3], [2, 3, 4]),
     [2, 3],
