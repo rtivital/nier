@@ -1,3 +1,4 @@
+const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 
 
@@ -19,6 +20,10 @@ const curry = require('../curry/curry');
  * N.amount(N.equals({ a: 1 }), [{ a: 1 }, { a: 1 }, { a: 2 }]); // -> 2
  */
 function amount(callback, list) {
+  if (!_isArrayLike(list)) {
+    throw new Error('N.amount received list argument that is not an array or array like data structure');
+  }
+
   let count = 0;
 
   for (let i = 0, l = list.length; i < l; i += 1) {
