@@ -13,7 +13,7 @@ const curry = require('../curry/curry');
  * @example
  * N.negate(() => true)(); // -> false
  * N.negate(() => false)(); // -> true
- * const notString = N.complement(N.is(String));
+ * const notString = N.complement((value) => typeof value === 'string');
  * notString('nier'); // -> false
  * notString(1000); // -> true
  */
