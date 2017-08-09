@@ -29,6 +29,12 @@ test('intersection', (t) => {
   );
 
   t.deepEquals(
+    intersection([1, 1, 2, 2], [1, 1, 2, 2, 3]),
+    [1, 2],
+    'does not include duplicate properties into array'
+  );
+
+  t.deepEquals(
     intersection([1, 2, 3], [4, 5, 6]),
     [],
     'returns empty array if intersection elements were not found'
