@@ -1,5 +1,6 @@
 const curry = require('../curry/curry');
 const includes = require('../includes/includes');
+const uniq = require('../uniq/uniq');
 
 function intersection(a, b) {
   if (!Array.isArray(a)) {
@@ -18,7 +19,7 @@ function intersection(a, b) {
     }
   }
 
-  return result;
+  return uniq(result);
 }
 
 module.exports = curry(intersection);
