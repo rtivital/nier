@@ -6,6 +6,8 @@
     "node": true
   },
   "rules": {
+    "filenames/match-exported": 0,
+    "filenames/no-index": 0,
     "react/no-danger": 0,
     "import/no-extraneous-dependencies": 0,
     "import/no-unresolved": 0,
