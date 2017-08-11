@@ -27,6 +27,7 @@ module.exports = {
   has: require('./has/has'),
   head: require('./head/head'),
   includes: require('./includes/includes'),
+  intersection: require('./intersection/intersection'),
   join: require('./join/join'),
   keys: require('./keys/keys'),
   map: require('./map/map'),
