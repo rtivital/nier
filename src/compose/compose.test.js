@@ -10,40 +10,29 @@ const upperLast = str => `${str.slice(0, str.length - 1)}${str.slice(str.length 
 const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
 const getUndefined = () => undefined;
 
-const composeSingleArgument = compose(
-  divideBy3, // will be called last
-  add1, // will be called second
-  mutiplyBy2 // will be called first
-); // equals to –> (value) => mutiplyBy2(add1(divideBy3(value)))
-
-const composeDoubleArgument = compose(
-  upperLast, // will be called last
-  upperFirst, // will be called second
-  concat // will be called first
-); // equals to –> (value) => divideBy3(add1(mutiplyBy2(value)))
-
-const composeWithFalsyReturn = compose(
-  add1, // will be called first
-  undefinedToZero, // will be called second
-  getUndefined // will be called last
-); // equals to –> () => add1(undefinedToZero(getUndefined()))
-
 test('compose', (t) => {
-  const singleArgumentTest = divideBy3(add1(mutiplyBy2(1)));
-  const doubleArgumentTest = upperFirst(upperLast(concat('hello', 'there')));
-  const falsyReturnTest = add1(undefinedToZero(getUndefined()));
+  t.throws(
+    () => compose(),
+    'throws if no arguments were passed'
+  );
 
-  // compose functions should throw an error if it has not received any arguments
-  t.throws(() => compose(), 'compose throws error if argument is not passed');
+  t.equals(
+    compose(divideBy3, add1, mutiplyBy2)(1),
+    divideBy3(add1(mutiplyBy2(1))),
+    'works with function that accept single argument'
+  );
 
-  // function created with compose should work with functions that accept only one argument
-  t.equals(composeSingleArgument(1), singleArgumentTest, 'compose works with single argument functions');
+  t.equals(
+    compose(upperLast, upperFirst, concat)('hello', 'there'),
+    upperFirst(upperLast(concat('hello', 'there'))),
+    'works with function that accept multiple arguments'
+  );
 
-  // function created with compose should work with functions that accept multiple arguments
-  t.equals(composeDoubleArgument('hello', 'there'), doubleArgumentTest, 'compose works with functions that accept multiple arguments');
-
-  // compose should be able to handle functions that return falsy values
-  t.equals(composeWithFalsyReturn(), falsyReturnTest, 'compose works with function that return falsy values');
+  t.equals(
+    compose(add1, undefinedToZero, getUndefined)(),
+    add1(undefinedToZero(getUndefined())),
+    'works with function that return falsy values'
+  );
 
   t.end();
 });
