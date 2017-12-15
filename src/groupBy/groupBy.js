@@ -4,19 +4,19 @@ const has = require('../has/has');
 
 
 /**
- * Turns array of objects into normalized object structure based on provided property.
+ * Turns array of objects into grouped object structure based on provided property.
  *
  * @since v1.0.0
  * @category Array
  *
  * @param {string} prop property that will be used to create object keys
  * @param {Array} list array of objects
- * @return {Object} normalized object
+ * @return {Object} groupByd object
  *
  * @see reduce
  *
  * @example
- * N.normalize(
+ * N.groupBy(
  *   'id',
  *   [{ id: 1, name: 'name-1' }, { id: 2, name: 'name-2' }, { id: 3, name: 'name-3' }]
  * );
@@ -28,7 +28,7 @@ const has = require('../has/has');
  * //   '3': { id: 2, name: 'name-3' },
  * // }
  */
-function normalize(prop, list) {
+function groupBy(prop, list) {
   return reduce((acc, item) => {
     if (has(prop, item)) {
       acc[item[prop]] = item;
@@ -38,4 +38,4 @@ function normalize(prop, list) {
   }, {}, list);
 }
 
-module.exports = curry(normalize);
+module.exports = curry(groupBy);

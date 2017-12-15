@@ -1,5 +1,5 @@
 const test = require('tape-catch');
-const normalize = require('./normalize');
+const groupBy = require('./groupBy');
 const testUtils = require('../../testUtils');
 
 const frameworks = [
@@ -8,7 +8,7 @@ const frameworks = [
   { noNameFound: 'oops', version: 'latest' },
 ];
 
-const normalizedFrameworks = {
+const groupBydFrameworks = {
   Angular: {
     name: 'Angular',
     version: 2,
@@ -20,13 +20,13 @@ const normalizedFrameworks = {
   },
 };
 
-test('normalize', (t) => {
-  testUtils.isCurried(t, normalize('name'));
+test('groupBy', (t) => {
+  testUtils.isCurried(t, groupBy('name'));
 
   t.deepEquals(
-    normalize('name', frameworks),
-    normalizedFrameworks,
-    'normalizes array of items'
+    groupBy('name', frameworks),
+    groupBydFrameworks,
+    'groupBys array of items'
   );
 
   t.end();

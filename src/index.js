@@ -35,7 +35,7 @@ module.exports = {
   merge: require('./merge/merge'),
   min: require('./min/min'),
   none: require('./none/none'),
-  normalize: require('./normalize/normalize'),
+  groupBy: require('./groupBy/groupBy'),
   omit: require('./omit/omit'),
   partial: require('./partial/partial'),
   partialRight: require('./partialRight/partialRight'),
