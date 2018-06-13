@@ -16,9 +16,10 @@ test('N.type', (t) => {
   t.equals(type({}), 'Object', 'detects object type');
   t.equals(type(f => f), 'Function', 'detects function type');
   t.equals(type(/nier/), 'RegExp', 'detects regexp type');
-  t.equals(type(new Set()), 'Set', 'detects Set');
-  t.equals(type(new Map()), 'Map', 'detects Map');
-  t.equals(type(new Date()), 'Date', 'detects Date');
+  t.equals(type(new Set()), 'Set', 'detects Set type');
+  t.equals(type(new Map()), 'Map', 'detects Map type');
+  t.equals(type(new Date()), 'Date', 'detects Date type');
+  t.equals(type(new Error()), 'Error', 'detects Error type');
 
   t.end();
 });
