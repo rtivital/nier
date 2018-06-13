@@ -18,7 +18,7 @@ const curry = require('../curry/curry');
  */
 function toUpperCase(str) {
   if (typeof str !== 'string') {
-    throw new Error('N.toUpperCase received argument that is not string');
+    throw new Error('N.toUpperCase received a non string argument');
   }
 
   return str.toUpperCase();

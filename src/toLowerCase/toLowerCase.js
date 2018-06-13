@@ -18,7 +18,7 @@ const curry = require('../curry/curry');
  */
 function toLowerCase(str) {
   if (typeof str !== 'string') {
-    throw new Error('N.toLowerCase received argument that is not string');
+    throw new Error('N.toLowerCase received a non string argument');
   }
 
   return str.toLowerCase();
