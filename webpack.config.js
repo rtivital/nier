@@ -12,13 +12,13 @@ module.exports = {
   },
 
   module: {
-    loaders: [{
-      test: /\.js$/,
-      loader: 'babel-loader',
-    }],
+    loaders: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+      },
+    ],
   },
 
-  plugins: [
-    new webpack.optimize.UglifyJsPlugin(),
-  ],
+  plugins: [new webpack.optimize.UglifyJsPlugin()],
 };
