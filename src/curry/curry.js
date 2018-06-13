@@ -20,7 +20,7 @@ const curryN = require('../curryN/curryN');
  */
 function curry(fn) {
   if (typeof fn !== 'function') {
-    throw new Error('N.curry received value that can not be curried');
+    throw new Error('N.curry received a non function argument');
   }
 
   return curryN(fn.length, fn);
