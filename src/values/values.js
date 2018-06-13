@@ -21,6 +21,10 @@ function values(object) {
     throw new Error('N.values received a non object argument');
   }
 
+  if ('values' in Object) {
+    return Object.values(object);
+  }
+
   const objectKeys = keys(object);
   const result = [];
 
