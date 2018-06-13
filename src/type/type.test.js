@@ -18,6 +18,7 @@ test('N.type', (t) => {
   t.equals(type(/nier/), 'RegExp', 'detects regexp type');
   t.equals(type(new Set()), 'Set', 'detects Set');
   t.equals(type(new Map()), 'Map', 'detects Map');
+  t.equals(type(new Date()), 'Date', 'detects Date');
 
   t.end();
 });
