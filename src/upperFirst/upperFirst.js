@@ -18,7 +18,7 @@ const curry = require('../curry/curry');
  */
 function upperFirst(str) {
   if (typeof str !== 'string') {
-    throw new Error('N.upperFirst received argument that is not string');
+    throw new Error('N.upperFirst received a non string argument');
   }
 
   return str.charAt(0).toUpperCase() + str.substring(1);
