@@ -5,8 +5,17 @@ const updateWith = require('./updateWith');
 test('N.updateWith', (t) => {
   testUtils.isCurried(t, updateWith(1, f => f));
 
-  t.throws(() => updateWith(1, null, [1, 2, 3]), 'throws if receives non function callback');
-  t.throws(() => updateWith(1, f => f, null), 'throws if receives non array data structure');
+  t.throws(
+    () => updateWith(1, null, [1, 2, 3]),
+    /N.updateWith received a non function predicate/,
+    'throws if receives non function callback'
+  );
+
+  t.throws(
+    () => updateWith(1, f => f, null),
+    /N.updateWith received a non array value/,
+    'throws if receives non array data structure'
+  );
 
   t.deepEquals(updateWith(0, i => i + 10, [1, 2, 3]), [11, 2, 3], 'updates value at index with callback');
   t.deepEquals(updateWith(-1, i => i + 10, [1, 2, 3]), [1, 2, 13], 'updates value with negative index');

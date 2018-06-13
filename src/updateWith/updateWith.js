@@ -23,11 +23,11 @@ const update = require('../update/update');
  */
 function updateWith(index, predicate, array) {
   if (typeof predicate !== 'function') {
-    throw new Error('N.updateWith received predicate that is not a function');
+    throw new Error('N.updateWith received a non function predicate');
   }
 
   if (!Array.isArray(array)) {
-    throw new Error('N.updateWith received data structure that is not an array');
+    throw new Error('N.updateWith received a non array value');
   }
 
   const { length } = array;
