@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const intersection = require('./intersection');
 
-test('intersection', (t) => {
+test('N.intersection', (t) => {
   testUtils.isCurried(t, intersection([1, 2, 3]));
 
   t.throws(() => intersection(null, [1, 2, 3]), 'throws if first argument has invalid type');

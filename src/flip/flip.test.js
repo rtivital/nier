@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const flip = require('./flip');
 const testUtils = require('../../testUtils');
 
-test('flip', (t) => {
+test('N.flip', (t) => {
   testUtils.isCurried(t, flip());
 
   t.throws(() => flip(1), 'trows error if provided argument is not a function');

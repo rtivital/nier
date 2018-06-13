@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const prepend = require('./prepend');
 
-test('prepend', (t) => {
+test('N.prepend', (t) => {
   testUtils.isCurried(t, prepend('value'));
 
   t.throws(() => prepend('value', null), 'throws if receives data structure that is not array or array like');

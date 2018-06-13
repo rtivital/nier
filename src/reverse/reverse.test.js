@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const reverse = require('./reverse');
 const testUtils = require('../../testUtils');
 
-test('reverse', (t) => {
+test('N.reverse', (t) => {
   testUtils.isCurried(t, reverse());
 
   t.throws(() => reverse(1), 'throws if receives a value that is not array or array like');

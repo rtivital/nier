@@ -1,7 +1,7 @@
 const test = require('tape-catch');
 const isValidPath = require('./isValidPath');
 
-test('_internal/isValidPath', (t) => {
+test('N._internal/isValidPath', (t) => {
   t.true(isValidPath('hello'), 'string path is valid');
   t.true(isValidPath(['hello', 'nier']), 'array of strings path is valid');
   t.true(isValidPath(0), 'number path is valid');

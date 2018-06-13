@@ -19,7 +19,7 @@ const unsetUnexistingKey = unset('hello');
 const unsetFeel = unset(['testing', 'makes', 'you', 'feel']);
 const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 
-test('unset', (t) => {
+test('N.unset', (t) => {
   testUtils.isCurried(t, unset('hello'));
 
   t.deepEquals(unsetTesting(testObject), { nope: true }, 'unsets path with string');

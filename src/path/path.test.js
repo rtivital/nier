@@ -15,7 +15,7 @@ const testOject = {
   notNested: 'i am not so nested',
 };
 
-test('path', (t) => {
+test('N.path', (t) => {
   t.equals(
     path(['here', 'goes', 'a', 'deeply', 'nested'], testOject),
     testOject.here.goes.a.deeply.nested,

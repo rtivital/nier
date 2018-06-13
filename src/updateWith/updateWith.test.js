@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const updateWith = require('./updateWith');
 
-test('updateWith', (t) => {
+test('N.updateWith', (t) => {
   testUtils.isCurried(t, updateWith(1, f => f));
 
   t.throws(() => updateWith(1, null, [1, 2, 3]), 'throws if receives non function callback');

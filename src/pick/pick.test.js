@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const pick = require('./pick');
 
-test('pick', (t) => {
+test('N.pick', (t) => {
   testUtils.isCurried(t, pick([]));
 
   t.deepEquals(pick(['a', 'b'], { a: 1, b: 2, c: 3 }), { a: 1, b: 2 }, 'picks specified properties');

@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const without = require('./without');
 
-test('without', (t) => {
+test('N.without', (t) => {
   testUtils.isCurried(t, without([5]));
 
   t.throws(() => without(null, [1, 2]), 'throws if receives first argument that is not an array');

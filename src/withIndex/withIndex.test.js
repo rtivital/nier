@@ -5,7 +5,7 @@ const map = require('../map/map');
 const reduce = require('../reduce/reduce');
 const findLast = require('../findLast/findLast');
 
-test('withIndex', (t) => {
+test('N.withIndex', (t) => {
   testUtils.isCurried(t, withIndex);
   testUtils.isCurried(t, withIndex(map)(val => val * 2), 'produces curriediterator function');
 

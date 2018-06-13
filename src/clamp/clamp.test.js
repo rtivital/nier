@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const clamp = require('./clamp');
 const testUtils = require('../../testUtils');
 
-test('clamp', (t) => {
+test('N.clamp', (t) => {
   testUtils.isCurried(t, clamp(1, 3));
   t.throws(() => clamp(5, 1, 10), 'throws if provided boundaries are incorrect');
   t.equals(clamp(10, 20, 30), 20, 'clamps value to right side');

@@ -17,7 +17,7 @@ const setNot = set('not');
 const doubleExclamation = set(['signs', 'exclamation'], '!!');
 const setComma = set(['signs', 'comma'], ',');
 
-test('set', (t) => {
+test('N.set', (t) => {
   testUtils.isCurried(t, set('who'));
 
   t.deepEquals(

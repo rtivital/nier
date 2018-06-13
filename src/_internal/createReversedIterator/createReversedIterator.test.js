@@ -3,7 +3,7 @@ const testUtils = require('../../../testUtils');
 const createReversedIterator = require('./createReversedIterator');
 const _SIGNATURES = require('../signatures');
 
-test('_internal/createReversedIterator', (t) => {
+test('N._internal/createReversedIterator', (t) => {
   testUtils.isCurried(t, createReversedIterator((a, b) => a + b)(1), 'produces curried function');
 
   t.true(

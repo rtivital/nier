@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const update = require('./update');
 const testUtils = require('../../testUtils');
 
-test('update', (t) => {
+test('N.update', (t) => {
   testUtils.isCurried(t, update(1));
 
   t.throws(() => update(1, 'hello', 'nier'), 'throws if receives non array like value');

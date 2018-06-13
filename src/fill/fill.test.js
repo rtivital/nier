@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const fill = require('./fill');
 
-test('fill', (t) => {
+test('N.fill', (t) => {
   testUtils.isCurried(t, fill(5));
   t.throws(() => fill(null, 'hello'), 'throws if provided length is not a valid number');
   t.deepEquals(fill(3, 'hello'), ['hello', 'hello', 'hello'], 'fills array with primitive values');

@@ -4,7 +4,7 @@ const _SIGNATURES = require('../signatures');
 
 const assigned = assignSignature('reversedIterator', true, {});
 
-test('_internal/assignSignature', (t) => {
+test('N._internal/assignSignature', (t) => {
   t.true(assigned[_SIGNATURES.reversedIterator], 'assigns signature');
   t.deepEquals(Object.keys(assigned), [], 'assigns signature as not emumerable property');
 

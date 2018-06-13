@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const max = require('./max');
 const testUtils = require('../../testUtils');
 
-test('max', (t) => {
+test('N.max', (t) => {
   testUtils.isCurried(t, max(2));
 
   t.equals(max(1, 2), 2, 'finds max number');

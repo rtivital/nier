@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const slice = require('./slice');
 const testUtils = require('../../testUtils');
 
-test('slice', (t) => {
+test('N.slice', (t) => {
   testUtils.isCurried(t, slice(0, 2));
 
   t.throws(() => slice(0, 2, {}), 'throws if provided value that should be sliced is not array or array like');

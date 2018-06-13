@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const includes = require('./includes');
 
-test('includes', (t) => {
+test('N.includes', (t) => {
   testUtils.isCurried(t, includes(5));
 
   t.throws(() => includes(1, null), 'throws if receives uncompatable value');

@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const some = require('./some');
 const testUtils = require('../../testUtils');
 
-test('some', (t) => {
+test('N.some', (t) => {
   testUtils.isCurried(t, some(val => val > 2));
   testUtils.noIndex(t, { fn: some, data: [1, 2, 3], result: true });
 

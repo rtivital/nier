@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const uniq = require('./uniq');
 
-test('uniq', (t) => {
+test('N.uniq', (t) => {
   testUtils.isCurried(t, uniq());
 
   t.deepEquals(uniq([1, 1, 1, 2, 3]), [1, 2, 3], 'removes duplicate primitives values from array');

@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const every = require('./every');
 const testUtils = require('../../testUtils');
 
-test('every', (t) => {
+test('N.every', (t) => {
   testUtils.isCurried(t, every(() => true));
   testUtils.noIndex(t, { fn: every, data: [1, 2, 3], result: true });
 

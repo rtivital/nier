@@ -4,7 +4,7 @@ const testUtils = require('../../testUtils');
 
 const testFunction = f => f;
 
-test('equals', (t) => {
+test('N.equals', (t) => {
   testUtils.isCurried(t, equals('nier'));
 
   t.true(equals('nier', 'nier'), 'detects equal strings');

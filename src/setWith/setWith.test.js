@@ -9,7 +9,7 @@ const testObject = {
   notDeeply: 'nested',
 };
 
-test('setWith', (t) => {
+test('N.setWith', (t) => {
   t.deepEquals(
     setWith('notDeeply', value => `i am not ${value}`, testObject),
     {

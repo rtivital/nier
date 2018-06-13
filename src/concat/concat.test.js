@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const concat = require('./concat');
 const testUtils = require('../../testUtils');
 
-test('concat', (t) => {
+test('N.concat', (t) => {
   testUtils.isCurried(t, concat([1, 2, 3]));
   t.throws(() => concat(1, 2), 'throws if receives values that can not be concated');
   t.deepEquals(concat([1, 2], [3, 4]), [1, 2, 3, 4], 'concats two arrays');

@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const pluck = require('./pluck');
 
-test('pluck', (t) => {
+test('N.pluck', (t) => {
   testUtils.isCurried(t, pluck);
 
   t.throws(() => pluck('a', {}), 'throws if receives non array value');

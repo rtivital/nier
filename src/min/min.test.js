@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const min = require('./min');
 const testUtils = require('../../testUtils');
 
-test('min', (t) => {
+test('N.min', (t) => {
   testUtils.isCurried(t, min(2));
 
   t.equals(min(1, 2), 1, 'finds min number');

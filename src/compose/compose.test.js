@@ -10,7 +10,7 @@ const upperLast = str => `${str.slice(0, str.length - 1)}${str.slice(str.length 
 const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
 const getUndefined = () => undefined;
 
-test('compose', (t) => {
+test('N.compose', (t) => {
   t.throws(() => compose(), 'throws if no arguments were passed');
 
   t.equals(

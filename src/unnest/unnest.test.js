@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const unnest = require('./unnest');
 const testUtils = require('../../testUtils');
 
-test('unnest', (t) => {
+test('N.unnest', (t) => {
   testUtils.isCurried(t, unnest());
 
   t.throws(() => unnest(1), 'throws an error if received non array value');

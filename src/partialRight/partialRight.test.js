@@ -4,7 +4,7 @@ const partialRight = require('./partialRight');
 
 const concat = (str1, str2) => `${str1} ${str2}`;
 
-test('partialRight', (t) => {
+test('N.partialRight', (t) => {
   testUtils.isCurried(t, partialRight(f => f));
 
   t.throws(() => partialRight(1, [1]), 'throws an error if function is not provided');

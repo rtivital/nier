@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const type = require('./type');
 const testUtils = require('../../testUtils');
 
-test('type', (t) => {
+test('N.type', (t) => {
   testUtils.isCurried(t, type());
 
   t.equals(type(undefined), 'Undefined', 'detects undefined type');

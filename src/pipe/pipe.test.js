@@ -10,7 +10,7 @@ const upperLast = str => `${str.slice(0, str.length - 1)}${str.slice(str.length 
 const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
 const getUndefined = () => undefined;
 
-test('pipe', (t) => {
+test('N.pipe', (t) => {
   t.throws(() => pipe(), 'throws if argument is not passed');
 
   t.equals(

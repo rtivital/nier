@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const fillWith = require('./fillWith');
 
-test('fillWith', (t) => {
+test('N.fillWith', (t) => {
   testUtils.isCurried(t, fillWith(5));
   t.throws(() => fillWith(null, () => 5), 'throws if provided length is not a valid number');
   t.throws(() => fillWith(5, null), 'throws if provided callback is not a function');

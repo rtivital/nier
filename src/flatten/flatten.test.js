@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const flatten = require('./flatten');
 
-test('flatten', (t) => {
+test('N.flatten', (t) => {
   testUtils.isCurried(t, flatten());
 
   t.deepEquals(flatten([1, [2], 3]), [1, 2, 3], 'flattens array with single level of nesting');

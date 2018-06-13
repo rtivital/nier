@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const head = require('./head');
 const testUtils = require('../../testUtils');
 
-test('head', (t) => {
+test('N.head', (t) => {
   testUtils.isCurried(t, head());
 
   t.equals(head([1, 2, 3]), 1, 'returns first element of array');

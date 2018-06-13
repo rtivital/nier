@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const whereEq = require('./whereEq');
 const testUtils = require('../../testUtils');
 
-test('whereEq', (t) => {
+test('N.whereEq', (t) => {
   testUtils.isCurried(t, whereEq({ a: 1 }));
 
   t.true(whereEq({ a: 1 })({ a: 1, b: 2 }), 'returs true if object matches predictate');

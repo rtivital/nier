@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const none = require('./none');
 const testUtils = require('../../testUtils');
 
-test('none', (t) => {
+test('N.none', (t) => {
   testUtils.isCurried(t, none(() => true));
   testUtils.noIndex(t, { fn: none, data: [1, 2, 3], result: false });
   testUtils.withIndex(t, { fn: none, data: [1, 2], indexResult: false, dataResult: false });

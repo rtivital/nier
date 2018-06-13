@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const testUtils = require('../../testUtils');
 const join = require('./join');
 
-test('join', (t) => {
+test('N.join', (t) => {
   testUtils.isCurried(t, join('|'));
 
   t.throws(() => join('|', 0), 'throws id receives non array value');

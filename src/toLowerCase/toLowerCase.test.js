@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const toLowerCase = require('./toLowerCase');
 const testUtils = require('../../testUtils');
 
-test('toLowerCase', (t) => {
+test('N.toLowerCase', (t) => {
   testUtils.isCurried(t, toLowerCase());
 
   t.throws(() => toLowerCase(1), 'throws error if receives non string param');

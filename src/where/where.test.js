@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const where = require('./where');
 const testUtils = require('../../testUtils');
 
-test('where', (t) => {
+test('N.where', (t) => {
   testUtils.isCurried(t, where({}));
 
   t.true(where({})({ a: 1 }), 'returns true if predictates were not passed');

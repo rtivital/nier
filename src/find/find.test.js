@@ -2,7 +2,7 @@ const test = require('tape-catch');
 const find = require('./find');
 const testUtils = require('../../testUtils');
 
-test('find', (t) => {
+test('N.find', (t) => {
   testUtils.isCurried(t, find(val => val === 2));
   testUtils.noIndex(t, { fn: find, data: [1, 2, 3], result: 1 });
   testUtils.withIndex(t, { fn: find, data: [1, 2], indexResult: 2, dataResult: 1 });

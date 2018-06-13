@@ -5,7 +5,7 @@ function getArguments() {
   return arguments; // eslint-disable-line
 }
 
-test('_internal/isArrayLike', (t) => {
+test('N._internal/isArrayLike', (t) => {
   t.true(isArrayLike([1, 2]), 'detects array as array like value');
   t.true(isArrayLike([]), 'detects empty array as array like value');
   t.true(isArrayLike('nier'), 'detects string as array like value');
