@@ -2,17 +2,17 @@ const curry = require('../curry/curry');
 const update = require('../update/update');
 
 /**
- * Creates new copy of the array with the element at index replaced with provided callback function called with item at index.
+ * Creates new copy of the array with the element at index replaced with the result of predicate called with item at index.
  * If array does not have value at provided index, it won't be set and the original array (not the copy) will be returned.
- * Note that updateWith will only create shallow copy of the array.
+ * Note that, N.updateWith will only create shallow copy of the array.
  *
  * @since v1.0.0
  * @category Array
  *
- * @param {number} index position to update
- * @param {Function} callback function result of calling which with value at index will replace value at index
+ * @param {number} index position of element that will be updated
+ * @param {Function} predicate function result of calling which with value at index will be placed at provided index
  * @param {Array} array
- * @return {Array} shallow array copy with replaced value
+ * @return {Array} shallow copy of the array with replaced value
  *
  * @see update
  *
@@ -21,9 +21,9 @@ const update = require('../update/update');
  * N.updateWith(-1, i => i + 10, [1, 2, 3]); // -> [1, 2, 13]
  * N.updateWith(40, i => i + 10, [1, 2, 3]); // -> [1, 2, 3]
  */
-function updateWith(index, callback, array) {
-  if (typeof callback !== 'function') {
-    throw new Error('N.updateWith received callback that is not a function');
+function updateWith(index, predicate, array) {
+  if (typeof predicate !== 'function') {
+    throw new Error('N.updateWith received predicate that is not a function');
   }
 
   if (!Array.isArray(array)) {
@@ -33,7 +33,7 @@ function updateWith(index, callback, array) {
   const { length } = array;
   const indexToUpdate = index < 0 ? length + index : index;
 
-  return update(index, callback(array[indexToUpdate]), array);
+  return update(index, predicate(array[indexToUpdate]), array);
 }
 
 module.exports = curry(updateWith);
