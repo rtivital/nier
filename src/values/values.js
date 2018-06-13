@@ -17,6 +17,10 @@ const curry = require('../curry/curry');
  * N.values({ a: 1, b: 2, c: 3 }); // -> [1, 2, 3]
  */
 function values(object) {
+  if (object == null) {
+    throw new Error('N.values received a non object argument');
+  }
+
   const objectKeys = keys(object);
   const result = [];
 
