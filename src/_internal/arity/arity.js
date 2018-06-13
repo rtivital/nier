@@ -9,7 +9,7 @@
  * @since v1.0.0
  * @category Internal
  *
- * @param {number} length
+ * @param {number} length produced function arity
  * @param {Function} fn
  * @return {Function}
  *
@@ -29,9 +29,10 @@ function arity(length, fn) {
     params.push(`a${i}`);
   }
 
+  const functionName = fn.name || 'arityN';
   const arityFn = new Function(
     'fn',
-    `return function arity${length}(${params.join(',')}){return fn.apply(this, arguments);}`
+    `return function ${functionName}(${params.join(',')}){return fn.apply(this, arguments);}`
   );
 
   return arityFn(fn);
