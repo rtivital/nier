@@ -2,7 +2,6 @@ const curry = require('../curry/curry');
 const every = require('../every/every');
 const keys = require('../keys/keys');
 
-
 /**
  * Takes a spec object and a test object, returs true if test object fully satisfies spec.
  * Each of spec object property must be a function, otherwise where will return false.

@@ -21,13 +21,17 @@ const has = require('../has/has');
  * N.pick([], { a: 1, b: 2, c: 3 }); // -> {}
  */
 function pick(keys, object) {
-  return reduce((acc, key) => {
-    if (has(key, object)) {
-      acc[key] = object[key];
-    }
+  return reduce(
+    (acc, key) => {
+      if (has(key, object)) {
+        acc[key] = object[key];
+      }
 
-    return acc;
-  }, {}, keys);
+      return acc;
+    },
+    {},
+    keys
+  );
 }
 
 module.exports = curry(pick);

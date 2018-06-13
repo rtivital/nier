@@ -2,7 +2,6 @@ const _isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 const has = require('../has/has');
 
-
 /**
  * Creates shallow copy of object and cretes or overrides value at provided path.
  * Creates shallow copies for all nested object paths.

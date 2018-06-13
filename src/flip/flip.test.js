@@ -5,17 +5,8 @@ const testUtils = require('../../testUtils');
 test('flip', (t) => {
   testUtils.isCurried(t, flip());
 
-  t.throws(
-    () => flip(1),
-    'trows error if provided argument is not a function'
-  );
-
-  t.equals(
-    flip(() => 0)(),
-    0,
-    'does not change the behavior of function with no arguments'
-  );
-
+  t.throws(() => flip(1), 'trows error if provided argument is not a function');
+  t.equals(flip(() => 0)(), 0, 'does not change the behavior of function with no arguments');
   t.equals(
     flip(name => `Hello, ${name}!`)('nier'),
     'Hello, nier!',
@@ -34,11 +25,7 @@ test('flip', (t) => {
     'flips function with three arguments'
   );
 
-  t.equals(
-    flip(((a, b) => a + b)).length,
-    2,
-    'saves function arity'
-  );
+  t.equals(flip((a, b) => a + b).length, 2, 'saves function arity');
 
   t.end();
 });

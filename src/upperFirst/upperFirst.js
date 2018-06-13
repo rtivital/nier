@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Convers first character of a string to upper case.
  *

@@ -23,11 +23,7 @@ const groupBydFrameworks = {
 test('groupBy', (t) => {
   testUtils.isCurried(t, groupBy('name'));
 
-  t.deepEquals(
-    groupBy('name', frameworks),
-    groupBydFrameworks,
-    'groupBys array of items'
-  );
+  t.deepEquals(groupBy('name', frameworks), groupBydFrameworks, 'groupBys array of items');
 
   t.end();
 });

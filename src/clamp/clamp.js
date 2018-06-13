@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Clamps number within provided min and max borders
  *

@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Returns index of first element that matches the predicate. If list does not contain such element returns -1.
  *

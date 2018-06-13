@@ -15,11 +15,7 @@ test('partialRight', (t) => {
     'works with functions with two arguments'
   );
 
-  t.equals(
-    partialRight(concat, ['hello', 'world', '!'])(),
-    'hello world',
-    'does not apply extanereous arguments'
-  );
+  t.equals(partialRight(concat, ['hello', 'world', '!'])(), 'hello world', 'does not apply extanereous arguments');
 
   t.end();
 });

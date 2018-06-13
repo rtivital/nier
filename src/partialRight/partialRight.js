@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Binds function to specified argument list.
  *

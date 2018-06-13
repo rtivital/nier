@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Returns the min of its two arguments.
  *

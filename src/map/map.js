@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Creates a new array with the results of calling a provided function on every element in the calling array.
  *

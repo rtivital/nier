@@ -1,7 +1,6 @@
 const _curryN = require('../_internal/curryN/curryN');
 const _isInteger = require('../_internal/isInteger/isInteger');
 
-
 /**
  * Returns curried equivalent of provided function, with the specified arity.
  *

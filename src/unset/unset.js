@@ -8,7 +8,6 @@ function removeProp(path, object) {
   return newObject;
 }
 
-
 /**
  * Creates shallow copy of object and deletes value at provided path if it exists.
  * Creates shallow copies for all nested object referenced in path if path exists.
@@ -45,11 +44,7 @@ function unset(path, object) {
     finalObject = finalObject[path[i]];
   }
 
-  return set(
-    path.slice(0, lastPathIndex),
-    removeProp(path[lastPathIndex], finalObject),
-    object
-  );
+  return set(path.slice(0, lastPathIndex), removeProp(path[lastPathIndex], finalObject), object);
 }
 
 module.exports = curry(unset);

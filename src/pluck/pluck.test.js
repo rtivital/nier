@@ -5,21 +5,11 @@ const pluck = require('./pluck');
 test('pluck', (t) => {
   testUtils.isCurried(t, pluck);
 
-  t.throws(
-    () => pluck('a', {}),
-    'throws if receives non array value'
-  );
+  t.throws(() => pluck('a', {}), 'throws if receives non array value');
 
-  t.throws(
-    () => pluck(null, []),
-    'throws if receives invalid pathgs value'
-  );
+  t.throws(() => pluck(null, []), 'throws if receives invalid pathgs value');
 
-  t.deepEquals(
-    pluck('a', [{ a: 1 }, { a: 2 }, { a: 3 }]),
-    [1, 2, 3],
-    'extracts prop from array of objects'
-  );
+  t.deepEquals(pluck('a', [{ a: 1 }, { a: 2 }, { a: 3 }]), [1, 2, 3], 'extracts prop from array of objects');
 
   t.deepEquals(
     pluck('a', [{ a: 1 }, { b: 2 }, { a: 3 }]),
@@ -39,11 +29,7 @@ test('pluck', (t) => {
     'adds undefined to array where path is not present in object'
   );
 
-  t.deepEquals(
-    pluck(0, [[1, 'a'], [2, 'b'], [3, 'c']]),
-    [1, 2, 3],
-    'extracts path from nested arrays'
-  );
+  t.deepEquals(pluck(0, [[1, 'a'], [2, 'b'], [3, 'c']]), [1, 2, 3], 'extracts path from nested arrays');
 
   t.deepEquals(
     pluck(1, [[1, 1], [2], [3, 3]]),

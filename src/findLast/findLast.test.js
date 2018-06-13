@@ -7,12 +7,7 @@ test('findLast', (t) => {
   testUtils.noIndex(t, { fn: findLast, data: [0, 1, 2], result: 2 });
   testUtils.withIndex(t, { fn: findLast, data: [1, 2, 3], indexResult: 3, dataResult: 3 });
 
-  t.equals(
-    findLast(val => val > 2, [1, 2, 3, 4, 5, 2]),
-    5,
-    'finds last matching element'
-  );
-
+  t.equals(findLast(val => val > 2, [1, 2, 3, 4, 5, 2]), 5, 'finds last matching element');
   t.equals(
     findLast(val => val > 2, [1, 1, 1]),
     undefined,

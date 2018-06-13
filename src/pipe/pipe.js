@@ -2,7 +2,6 @@ const reduce = require('../reduce/reduce');
 const slice = require('../slice/slice');
 const head = require('../head/head');
 
-
 /**
  * Performs first-to-last function composition. The first function may have any arity, the remaining functions must be unary.
  *
@@ -24,11 +23,7 @@ function pipe(...fns) {
   const firstFunction = head(fns);
   const tailFunctions = slice(1, fns.length, fns);
 
-  return (...args) => reduce(
-    (acc, fn) => fn(acc),
-    firstFunction(...args),
-    tailFunctions
-  );
+  return (...args) => reduce((acc, fn) => fn(acc), firstFunction(...args), tailFunctions);
 }
 
 module.exports = pipe;

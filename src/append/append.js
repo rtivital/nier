@@ -2,7 +2,6 @@ const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 const concat = require('../concat/concat');
 
-
 /**
  * Creates new array containing the contents of the given array or array like structure,
  * folowed by the given value. Note that all array like data structures (e.g. strings, arguments)

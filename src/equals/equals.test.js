@@ -43,8 +43,15 @@ test('equals', (t) => {
   t.true(equals([{ a: { b: 1 } }], [{ a: { b: 1 } }]), 'detects deeply equal nested arrays of objects');
   t.false(equals([{ a: { b: 1 } }], [{ a: { b: 2 } }]), 'detects deeply unequal nested arrays of objects');
 
-  t.true(equals({ a: { b: [{ c: 3 }, { d: 1 }] } }, { a: { b: [{ c: 3 }, { d: 1 }] } }), 'detects deeply equal nested object in array');
-  t.false(equals({ a: { b: [{ c: 3 }] } }, { a: { b: [{ c: 4 }, { d: 1 }] } }), 'detects deeply unequal nested object in array');
+  t.true(
+    equals({ a: { b: [{ c: 3 }, { d: 1 }] } }, { a: { b: [{ c: 3 }, { d: 1 }] } }),
+    'detects deeply equal nested object in array'
+  );
+
+  t.false(
+    equals({ a: { b: [{ c: 3 }] } }, { a: { b: [{ c: 4 }, { d: 1 }] } }),
+    'detects deeply unequal nested object in array'
+  );
 
   t.true(equals(testFunction, testFunction), 'detects equal functions');
   t.false(equals(testFunction, f => f), 'detects unequal functions');

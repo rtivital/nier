@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Returns an array containing names of enumerable own properties of the provided object.
  *

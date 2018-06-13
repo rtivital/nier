@@ -3,7 +3,6 @@ const curry = require('../curry/curry');
 const map = require('../map/map');
 const path = require('../path/path');
 
-
 /**
  * Creates new array by extracting the same named property from all objects (or arrays) in the provided array.
  * Note that if supplied path is not found in object, undefined will be added to the result array.

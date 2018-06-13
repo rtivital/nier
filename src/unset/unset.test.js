@@ -22,17 +22,8 @@ const unsetUnexistingPath = unset(['testing', 'is', 'ad']);
 test('unset', (t) => {
   testUtils.isCurried(t, unset('hello'));
 
-  t.deepEquals(
-    unsetTesting(testObject),
-    { nope: true },
-    'unsets path with string'
-  );
-
-  t.deepEquals(
-    unsetUnexistingKey(testObject),
-    testObject,
-    'returns initial object if key was not found in object'
-  );
+  t.deepEquals(unsetTesting(testObject), { nope: true }, 'unsets path with string');
+  t.deepEquals(unsetUnexistingKey(testObject), testObject, 'returns initial object if key was not found in object');
 
   t.deepEquals(
     unsetFeel(testObject),

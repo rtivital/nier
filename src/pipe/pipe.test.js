@@ -11,25 +11,34 @@ const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
 const getUndefined = () => undefined;
 
 test('pipe', (t) => {
-  t.throws(
-    () => pipe(),
-    'throws if argument is not passed'
-  );
+  t.throws(() => pipe(), 'throws if argument is not passed');
 
   t.equals(
-    pipe(mutiplyBy2, add1, divideBy3)(1),
+    pipe(
+      mutiplyBy2,
+      add1,
+      divideBy3
+    )(1),
     divideBy3(add1(mutiplyBy2(1))),
     'works with function that accept single argument'
   );
 
   t.equals(
-    pipe(concat, upperFirst, upperLast)('hello', 'there'),
+    pipe(
+      concat,
+      upperFirst,
+      upperLast
+    )('hello', 'there'),
     upperFirst(upperLast(concat('hello', 'there'))),
     'works with function that accept multiple arguments'
   );
 
   t.equals(
-    pipe(getUndefined, undefinedToZero, add1)(),
+    pipe(
+      getUndefined,
+      undefinedToZero,
+      add1
+    )(),
     add1(undefinedToZero(getUndefined())),
     'works with function that return falsy values'
   );

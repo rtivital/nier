@@ -4,10 +4,7 @@ const _createReversedIterator = require('../createReversedIterator/createReverse
 const _assignSignature = require('../assignSignature/assignSignature');
 
 test('_internal/isReversedIterator', (t) => {
-  t.false(
-    isReversedIterator(f => f),
-    'detects function without reversedIterator internal property'
-  );
+  t.false(isReversedIterator(f => f), 'detects function without reversedIterator internal property');
 
   t.false(
     isReversedIterator(_assignSignature('reversedIterator', false, f => f)),

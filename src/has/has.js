@@ -1,7 +1,6 @@
 const _isValidPath = require('../_internal/isValidPath/isValidPath');
 const curry = require('../curry/curry');
 
-
 /**
  * Returns true if an object or an array has the provided path, false otherwise
  *

@@ -2,7 +2,6 @@ const reverse = require('../reverse/reverse');
 const curry = require('../curry/curry');
 const curryN = require('../curryN/curryN');
 
-
 /**
  * Takes function and returs function that acts the same as received, but accepts arguments in reversed order.
  *

@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Returns the max of its two arguments.
  *

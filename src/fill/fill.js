@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Creates new array with provided length and fills it with provided value.
  * Note that if you provide object as an element that should fill the array,
@@ -22,9 +21,7 @@ const curry = require('../curry/curry');
  */
 function fill(length, element) {
   if (typeof length !== 'number') {
-    throw new Error(
-      `N.fill is not able to use ${typeof length} as array length, number should be provided`
-    );
+    throw new Error(`N.fill is not able to use ${typeof length} as array length, number should be provided`);
   }
 
   const array = [];

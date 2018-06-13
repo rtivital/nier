@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Convers all string characters to lower case.
  *

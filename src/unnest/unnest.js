@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Removes one level of nesting from the list
  *

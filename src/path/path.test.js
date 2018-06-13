@@ -22,23 +22,9 @@ test('path', (t) => {
     'gets deeply nested prop with array path'
   );
 
-  t.equals(
-    path('notNested', testOject),
-    testOject.notNested,
-    'gets not nested prop with string path'
-  );
-
-  t.equals(
-    path('hello', testOject),
-    undefined,
-    'returns undefined if string path was not found'
-  );
-
-  t.equals(
-    path(['hello', 'there'], testOject),
-    undefined,
-    'returns undefined if array path was not found'
-  );
+  t.equals(path('notNested', testOject), testOject.notNested, 'gets not nested prop with string path');
+  t.equals(path('hello', testOject), undefined, 'returns undefined if string path was not found');
+  t.equals(path(['hello', 'there'], testOject), undefined, 'returns undefined if array path was not found');
 
   t.end();
 });

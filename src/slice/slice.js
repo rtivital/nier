@@ -2,7 +2,6 @@ const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const _cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
-
 /**
  * Returns shallow copy of collection part selected from the `begin` (inclusive) to `end` (exclusive).
  *

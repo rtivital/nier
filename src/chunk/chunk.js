@@ -3,7 +3,6 @@ const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const _isInteger = require('../_internal/isInteger/isInteger');
 const curry = require('../curry/curry');
 
-
 /**
  * Creates an array of elements split into groups with provided length value.
  * If array can't be split evenly, the final chunk will contain the remaining elements.

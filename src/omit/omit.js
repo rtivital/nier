@@ -22,13 +22,17 @@ const includes = require('../includes/includes');
  * N.omit([], { a: 1, b: 2, c: 3 }); // -> { a: 1, b: 2, c: 3 }
  */
 function omit(remove, object) {
-  return reduce((acc, key) => {
-    if (!includes(key, remove)) {
-      acc[key] = object[key];
-    }
+  return reduce(
+    (acc, key) => {
+      if (!includes(key, remove)) {
+        acc[key] = object[key];
+      }
 
-    return acc;
-  }, {}, keys(object));
+      return acc;
+    },
+    {},
+    keys(object)
+  );
 }
 
 module.exports = curry(omit);

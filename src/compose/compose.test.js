@@ -11,25 +11,34 @@ const undefinedToZero = value => (typeof value === 'undefined' ? 0 : value);
 const getUndefined = () => undefined;
 
 test('compose', (t) => {
-  t.throws(
-    () => compose(),
-    'throws if no arguments were passed'
-  );
+  t.throws(() => compose(), 'throws if no arguments were passed');
 
   t.equals(
-    compose(divideBy3, add1, mutiplyBy2)(1),
+    compose(
+      divideBy3,
+      add1,
+      mutiplyBy2
+    )(1),
     divideBy3(add1(mutiplyBy2(1))),
     'works with function that accept single argument'
   );
 
   t.equals(
-    compose(upperLast, upperFirst, concat)('hello', 'there'),
+    compose(
+      upperLast,
+      upperFirst,
+      concat
+    )('hello', 'there'),
     upperFirst(upperLast(concat('hello', 'there'))),
     'works with function that accept multiple arguments'
   );
 
   t.equals(
-    compose(add1, undefinedToZero, getUndefined)(),
+    compose(
+      add1,
+      undefinedToZero,
+      getUndefined
+    )(),
     add1(undefinedToZero(getUndefined())),
     'works with function that return falsy values'
   );

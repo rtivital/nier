@@ -1,7 +1,6 @@
 const has = require('../has/has');
 const curry = require('../curry/curry');
 
-
 /**
  * Returns value at provided object path or undefined if path does not exist
  *

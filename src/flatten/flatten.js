@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Recursively removes nesting from array.
  *

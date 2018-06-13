@@ -4,7 +4,6 @@ const uniq = require('../uniq/uniq');
 const reduce = require('../reduce/reduce');
 const has = require('../has/has');
 
-
 /**
  * Creates new object with properties of the first object combined with properties of the second object.
  * If a key exists in both objects, value from the second object will be assigned.
@@ -25,11 +24,15 @@ const has = require('../has/has');
 function merge(a, b) {
   const resultKeys = uniq([...keys(a), ...keys(b)]);
 
-  return reduce((acc, key) => {
-    const value = has(key, b) ? b[key] : a[key];
-    acc[key] = value;
-    return acc;
-  }, {}, resultKeys);
+  return reduce(
+    (acc, key) => {
+      const value = has(key, b) ? b[key] : a[key];
+      acc[key] = value;
+      return acc;
+    },
+    {},
+    resultKeys
+  );
 }
 
 module.exports = curry(merge);

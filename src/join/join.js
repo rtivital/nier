@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Unites all items of the list in a string with separator between items
  *

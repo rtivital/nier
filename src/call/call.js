@@ -1,6 +1,5 @@
 const curryN = require('../curryN/curryN');
 
-
 /**
  * Calls provided function (first argument) with given values (all other arguments).
  *

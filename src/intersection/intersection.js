@@ -2,7 +2,6 @@ const curry = require('../curry/curry');
 const includes = require('../includes/includes');
 const uniq = require('../uniq/uniq');
 
-
 /**
  * Combines two arrays into a new array that contains only elements that are included in both arrays.
  * The result array will not contain duplicates and will preserve items order of first array.

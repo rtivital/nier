@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Creates new function that returns the negated value of provided function
  *

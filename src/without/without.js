@@ -1,7 +1,6 @@
 const curry = require('../curry/curry');
 const includes = require('../includes/includes');
 
-
 /**
  * Returns new array without values specified in the first argument
  *

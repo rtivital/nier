@@ -1,7 +1,6 @@
 const curry = require('../curry/curry');
 const includes = require('../includes/includes');
 
-
 /**
  * Creates new array that contains all the same items from the initial one,
  * but all duplicates are excluded.

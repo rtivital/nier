@@ -1,6 +1,5 @@
 const curryN = require('../curryN/curryN');
 
-
 /**
  * Returns curried equivalent of provided function.
  *

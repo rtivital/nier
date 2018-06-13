@@ -2,7 +2,6 @@ const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const _cloneArrayLike = require('../_internal/cloneArrayLike/cloneArrayLike');
 const curry = require('../curry/curry');
 
-
 /**
  * Concatenates two array or string values into one
  *

@@ -2,7 +2,6 @@ const curry = require('../curry/curry');
 const keys = require('../keys/keys');
 const type = require('../type/type');
 
-
 /**
  * Returns true if two passed values are equal.
  *

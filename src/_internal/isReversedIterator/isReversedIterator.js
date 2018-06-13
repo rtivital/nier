@@ -1,6 +1,5 @@
 const _SIGNATURES = require('../signatures');
 
-
 /**
  * Internal – this function is not available in public api.
  *

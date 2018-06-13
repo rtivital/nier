@@ -1,6 +1,5 @@
 const _isValidLength = require('../isValidLength/isValidLength');
 
-
 /**
  * Internal – this function is not available in public api.
  *

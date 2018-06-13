@@ -2,7 +2,6 @@ const curry = require('../curry/curry');
 const reduce = require('../reduce/reduce');
 const has = require('../has/has');
 
-
 /**
  * Turns array of objects into grouped object structure based on provided property.
  *
@@ -29,13 +28,17 @@ const has = require('../has/has');
  * // }
  */
 function groupBy(prop, list) {
-  return reduce((acc, item) => {
-    if (has(prop, item)) {
-      acc[item[prop]] = item;
-    }
+  return reduce(
+    (acc, item) => {
+      if (has(prop, item)) {
+        acc[item[prop]] = item;
+      }
 
-    return acc;
-  }, {}, list);
+      return acc;
+    },
+    {},
+    list
+  );
 }
 
 module.exports = curry(groupBy);

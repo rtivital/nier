@@ -1,7 +1,6 @@
 const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
 const curry = require('../curry/curry');
 
-
 /**
  * Returns new collection with reversed order.
  *

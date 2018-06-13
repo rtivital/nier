@@ -1,6 +1,5 @@
 const _createReversedIterator = require('../_internal/createReversedIterator/createReversedIterator');
 
-
 /**
  * Returns index of last element that matches the predicate. If list does not contain such element returns -1.
  *

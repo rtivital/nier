@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Returns true if any element match the predicate, false otherwise.
  *

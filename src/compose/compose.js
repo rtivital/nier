@@ -1,7 +1,6 @@
 const reverse = require('../reverse/reverse');
 const pipe = require('../pipe/pipe');
 
-
 /**
  * Performs last-to-first function composition. The last function may have any arity, the remaining functions must be unary.
  *

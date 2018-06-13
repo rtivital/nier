@@ -1,6 +1,5 @@
 const curry = require('../curry/curry');
 
-
 /**
  * Creates new array with provided length and fills it with the rusult of calling
  * provided callback function with item index.
@@ -21,9 +20,7 @@ const curry = require('../curry/curry');
  */
 function fillWith(length, callback) {
   if (typeof length !== 'number') {
-    throw new Error(
-      `N.fillWith is not able to use ${typeof length} as array length, number should be provided`
-    );
+    throw new Error(`N.fillWith is not able to use ${typeof length} as array length, number should be provided`);
   }
 
   if (typeof callback !== 'function') {
