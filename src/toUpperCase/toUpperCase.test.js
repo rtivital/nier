@@ -11,7 +11,9 @@ test('N.toUpperCase', (t) => {
     'throws error if receives non string param'
   );
 
-  t.equals(toUpperCase('hello'), 'HELLO', 'converts all charachters to uppercase');
+  t.equals(toUpperCase('nier'), 'NIER', 'converts all lowercase charachters to upper case');
+  t.equals(toUpperCase('NieR'), 'NIER', 'converts mixed charachters to upper case');
+  t.equals(toUpperCase('NIER'), 'NIER', 'does not change fully uppercased string');
 
   t.end();
 });

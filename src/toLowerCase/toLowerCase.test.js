@@ -11,9 +11,9 @@ test('N.toLowerCase', (t) => {
     'throws error if receives non string param'
   );
 
-  t.equals(toLowerCase('HeLlO'), 'hello', 'converts all charachters to toLowerCase');
-
-  t.equals(toLowerCase('hello'), 'hello', 'does not change lowercased string');
+  t.equals(toLowerCase('NIER'), 'nier', 'converts all uppercase charachters to lower case');
+  t.equals(toLowerCase('NieR'), 'nier', 'converts mixed charachters to lower case');
+  t.equals(toLowerCase('nier'), 'nier', 'does not change lowercased string');
 
   t.end();
 });
