@@ -18,6 +18,8 @@ const curry = require('../curry/curry');
  * N.type([1, 2]); // -> 'Array'
  * N.type(f => f); // -> 'Function'
  * N.type(/a/g); // -> 'RegExp'
+ * N.type(new Set(['nier'])); // -> 'Set'
+ * N.type(new Date()); // -> 'Date'
  */
 function type(value) {
   if (value === null) {
