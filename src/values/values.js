@@ -2,7 +2,7 @@ const keys = require('../keys/keys');
 const curry = require('../curry/curry');
 
 /**
- * Returns an array of enumerable own properties of the provided object.
+ * Returns an array of enumerable own properties of the provided object. Uses Object.values if possible.
  *
  * @since v1.0.0
  * @category Object
@@ -15,6 +15,9 @@ const curry = require('../curry/curry');
  * @example
  * N.values({}); // -> []
  * N.values({ a: 1, b: 2, c: 3 }); // -> [1, 2, 3]
+ *
+ * N.values(null); // throws an error
+ * N.values(undefined); // throws an error
  */
 function values(object) {
   if (object == null) {
