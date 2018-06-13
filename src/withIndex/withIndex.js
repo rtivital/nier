@@ -12,9 +12,9 @@ const curryN = require('../curryN/curryN');
  * @return {Function}
  *
  * @example
- * N.withIndex(map)((item, index) => item + index, [10, 20, 30]); // -> [10, 21, 32]
- * N.withIndex(map)((_, __, array) => array, [10, 20, 30]); // -> [[10, 20, 30], [10, 20, 30], [10, 20, 30]]
- * N.withIndex(findLast)((_, index) => index > 2, [1, 2, 3, 4, 5]); // -> 5
+ * N.withIndex(N.map)((item, index) => item + index, [10, 20, 30]); // -> [10, 21, 32]
+ * N.withIndex(N.map)((item, index, array) => array, [10, 20, 30]); // -> [[10, 20, 30], [10, 20, 30], [10, 20, 30]]
+ * N.withIndex(N.findLast)((item, index) => index > 2, [1, 2, 3, 4, 5]); // -> 5
  */
 function withIndex(fn) {
   const isReversed = _isReversedIterator(fn);

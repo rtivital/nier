@@ -16,7 +16,7 @@ test('withIndex', (t) => {
   );
 
   t.deepEquals(
-    withIndex(map)((_, __, array) => array, [10, 20, 30]),
+    withIndex(map)((item, index, array) => array, [10, 20, 30]),
     [[10, 20, 30], [10, 20, 30], [10, 20, 30]],
     'provides array to two arguments iterator function'
   );
@@ -28,7 +28,14 @@ test('withIndex', (t) => {
   );
 
   t.deepEquals(
-    withIndex(reduce)((acc, _, index, array) => { acc[index] = array; return acc; }, {}, [1, 2, 3]),
+    withIndex(reduce)(
+      (acc, _, index, array) => {
+        acc[index] = array;
+        return acc;
+      },
+      {},
+      [1, 2, 3]
+    ),
     {
       0: [1, 2, 3],
       1: [1, 2, 3],
