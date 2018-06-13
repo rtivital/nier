@@ -1,6 +1,5 @@
 /* eslint-disable no-new-func */
 
-
 /**
  * Internal – this function is not available in public api.
  *
@@ -20,6 +19,10 @@
  * arity(50, (..args) => args.reduce((acc, item) => acc + item)).length; // -> 50
  */
 function arity(length, fn) {
+  if (typeof length !== 'number' || length < 0) {
+    throw new Error('N.arity received invalid length');
+  }
+
   const params = [];
 
   for (let i = 0; i < length; i += 1) {
