@@ -2,7 +2,7 @@ const curry = require('../curry/curry');
 const includes = require('../includes/includes');
 
 /**
- * Returns new array without values specified in the first argument
+ * Returns new array without values specified in the first argument.
  *
  * @since v1.0.0
  * @category Array
@@ -17,11 +17,11 @@ const includes = require('../includes/includes');
  */
 function without(exclude, list) {
   if (!Array.isArray(exclude)) {
-    throw new Error('N.without expected first argument to be an array');
+    throw new Error('N.without received non array first argument');
   }
 
   if (!Array.isArray(list)) {
-    throw new Error('N.without expected second argument to be an array');
+    throw new Error('N.without received non array second argument');
   }
 
   const result = [];
