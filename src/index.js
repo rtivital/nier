@@ -2,7 +2,6 @@
 
 module.exports = {
   version: '1.0.2',
-  amount: require('./amount/amount'),
   append: require('./append/append'),
   call: require('./call/call'),
   chunk: require('./chunk/chunk'),
@@ -10,6 +9,7 @@ module.exports = {
   complement: require('./complement/complement'),
   compose: require('./compose/compose'),
   concat: require('./concat/concat'),
+  countWith: require('./countWith/countWith'),
   curry: require('./curry/curry'),
   curryN: require('./curryN/curryN'),
   equals: require('./equals/equals'),
