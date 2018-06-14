@@ -2,12 +2,9 @@ const test = require('tape-catch');
 const ArgumentError = require('./ArgumentError');
 
 test('N._internal/ArgumentError', (t) => {
-  const argumentError = new ArgumentError({
-    functionName: 'N._internal/ArgumentError',
-    argumentPosition: 1,
-    expectedType: 'String',
-    valueType: 'Number',
-  });
+  const argumentError = new ArgumentError(
+    'N._internal/ArgumentError expected argument at position `1` to have type: `String`, instead got: `Number`'
+  );
 
   t.equals(
     argumentError.message,

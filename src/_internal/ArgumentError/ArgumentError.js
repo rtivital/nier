@@ -12,22 +12,14 @@
  * @param {*} valueType argument value type
  *
  * @example
- * const argumentError = new ArgumentError({
- *   functionName: 'N._internal/ArgumentError',
- *   argumentPosition: 1,
- *   expectedType: 'String',
- *   valueType: 'Number',
- * });
+ * const argumentError = new ArgumentError('N._internal/ArgumentError expected argument at position `1` to have type: `String`, instead got: `Number`');
  *
  * argumentError.message; // -> 'N._internal/ArgumentError expected argument at position `1` to have type: `String`, instead got: `Number`'
  * argumentError.toString(); // -> 'ArgumentError: N._internal/ArgumentError expected argument at position `1` to have type: `String`, instead got: `Number`'
  */
 class ArgumentError extends Error {
-  constructor({ functionName, argumentPosition, expectedType, valueType }) {
-    const message = `${functionName} expected argument at position \`${argumentPosition}\` to have type: \`${expectedType}\`, instead got: \`${valueType}\``;
-
-    super(message);
-
+  constructor(message) {
+    super();
     this.message = message;
     this.name = 'ArgumentError';
   }
