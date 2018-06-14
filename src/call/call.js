@@ -1,3 +1,4 @@
+const validateArgumentType = require('../_internal/validateArgumentType/validateArgumentType');
 const curryN = require('../curryN/curryN');
 
 /**
@@ -16,10 +17,7 @@ const curryN = require('../curryN/curryN');
  * N.call(N.has('nier'), { nier: 'hello' }); // -> same as N.has('nier', { nier: 'hello' })
  */
 function call(fn, ...args) {
-  if (typeof fn !== 'function') {
-    throw new Error('N.call received first argument which type is not function');
-  }
-
+  validateArgumentType('N.call', 1, 'Function', fn);
   return fn(...args);
 }
 
