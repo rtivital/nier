@@ -5,9 +5,7 @@ function validateArgumentType(functionName, argumentPosition, expectedType, valu
   const valueType = type(value);
 
   if (type(value) !== expectedType) {
-    throw new ArgumentError(
-      `${functionName} expected argument at position \`${argumentPosition}\` to have type: \`${expectedType}\`, instead got: \`${valueType}\``
-    );
+    throw new ArgumentError({ functionName, argumentPosition, expectedType, valueType });
   }
 }
 
