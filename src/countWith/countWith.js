@@ -7,25 +7,25 @@ const curry = require('../curry/curry');
  * @since v1.0.0
  * @category Array
  *
- * @param {Function} callback predicate, will be called with each item
- * @param {Array} list
+ * @param {Function} predicate function that will be called with each item
+ * @param {Array} array
  * @return {boolean}
  *
  * @see withIndex
  *
  * @example
- * N.amount((number) => number > 2, [1, 2, 3]); // -> 1
- * N.amount((number) => number === 2, [2, 1, 2, 3, 2]); // -> 3
- * N.amount(N.equals({ a: 1 }), [{ a: 1 }, { a: 1 }, { a: 2 }]); // -> 2
+ * N.countWith(number => number > 2, [1, 2, 3]); // -> 1
+ * N.countWith(number => number === 2, [2, 1, 2, 3, 2]); // -> 3
+ * N.countWith(N.equals({ a: 1 }), [{ a: 1 }, { a: 1 }, { a: 2 }]); // -> 2
  */
-function amount(callback, list) {
-  validateArgumentType('N.amount', 1, 'Function', callback);
-  validateArgumentType('N.amount', 2, 'Array', list);
+function countWith(predicate, array) {
+  validateArgumentType('N.countWith', 1, 'Function', predicate);
+  validateArgumentType('N.countWith', 2, 'Array', array);
 
   let count = 0;
 
-  for (let i = 0, l = list.length; i < l; i += 1) {
-    if (callback(list[i])) {
+  for (let i = 0, l = array.length; i < l; i += 1) {
+    if (predicate(array[i])) {
       count += 1;
     }
   }
@@ -33,4 +33,4 @@ function amount(callback, list) {
   return count;
 }
 
-module.exports = curry(amount);
+module.exports = curry(countWith);
