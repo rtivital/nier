@@ -2,8 +2,8 @@
 
 module.exports = {
   version: '1.0.2',
-  append: require('./append/append'),
-  call: require('./call/call'),
+  append: require('./append/append'), // with-argument-validation +
+  call: require('./call/call'), // with-argument-validation +
   chunk: require('./chunk/chunk'),
   clamp: require('./clamp/clamp'),
   complement: require('./complement/complement'),
