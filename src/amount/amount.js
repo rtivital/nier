@@ -1,4 +1,4 @@
-const _isArrayLike = require('../_internal/isArrayLike/isArrayLike');
+const validateArgumentType = require('../_internal/validateArgumentType/validateArgumentType');
 const curry = require('../curry/curry');
 
 /**
@@ -19,9 +19,8 @@ const curry = require('../curry/curry');
  * N.amount(N.equals({ a: 1 }), [{ a: 1 }, { a: 1 }, { a: 2 }]); // -> 2
  */
 function amount(callback, list) {
-  if (!_isArrayLike(list)) {
-    throw new Error('N.amount received list argument that is not an array or array like data structure');
-  }
+  validateArgumentType('N.amount', 1, 'Function', callback);
+  validateArgumentType('N.amount', 2, 'Array', list);
 
   let count = 0;
 
