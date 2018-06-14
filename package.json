@@ -14,8 +14,7 @@
     "test:exports": "node scripts/exports",
     "test:version": "node scripts/version",
     "test:size": "npm run build && bundlesize",
-    "test:all":
-      "npm run test && npm run lint && npm run test:exports && npm run test:size && npm run test:version",
+    "test:all": "npm run test && npm run lint && npm run test:exports && npm run test:size && npm run test:version",
     "prepublish": "npm run test:all && npm run build"
   },
   "repository": {
@@ -35,7 +34,9 @@
     }
   ],
   "homepage": "https://github.com/rtivital/nier#readme",
-  "dependencies": {},
+  "dependencies": {
+    "ow": "^0.5.0"
+  },
   "devDependencies": {
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
