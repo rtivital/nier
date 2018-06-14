@@ -8,13 +8,16 @@ module.exports = {
     'no-underscore-dangle': 'off',
     'no-console': 'error',
     'global-require': 'off',
-    'max-len': ['error', { code: 120, ignoreStrings: true, ignoreComments: true }],
-    'comma-dangle': ['error', {
-      arrays: 'always-multiline',
-      objects: 'always-multiline',
-      imports: 'always-multiline',
-      exports: 'always-multiline',
-      functions: 'never',
-    }],
+    'max-len': ['error', { code: 120, ignoreStrings: true, ignoreTemplateLiterals: true, ignoreComments: true }],
+    'comma-dangle': [
+      'error',
+      {
+        arrays: 'always-multiline',
+        objects: 'always-multiline',
+        imports: 'always-multiline',
+        exports: 'always-multiline',
+        functions: 'never',
+      },
+    ],
   },
-}
+};
