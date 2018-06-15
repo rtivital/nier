@@ -22,7 +22,13 @@ const curry = require('../curry/curry');
  */
 function chunk(size, value) {
   validateArgumentType('N.chunk', 1, 'Number', size);
-  validateArgumentWith('N.chunk', 1, arg => arg % 1 === 0 && arg > 0, size, 'be a non negative integer');
+  validateArgumentWith({
+    functionName: 'N.chunk',
+    argumentPosition: 1,
+    predicate: arg => arg % 1 === 0 && arg > 0,
+    value: size,
+    message: 'be a non negative integer',
+  });
   validateArgumentType('N.chunk', 2, 'Array', value);
 
   const result = [];
